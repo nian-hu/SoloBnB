@@ -39,6 +39,33 @@ class SessionForm extends React.Component {
     );
   }
 
+  renderNameFields() {
+    return this.props.formType === 'Sign Up' ? (
+      <>
+        <label>
+          <input
+            type="text"
+            className='session-input'
+            value={this.state.fname}
+            onChange={this.handleChange("fname")}
+            placeholder="First Name"
+          />
+        </label>
+
+        <label>
+          <input
+            type="text"
+            className='session-input'
+            value={this.state.lname}
+            onChange={this.handleChange("lname")}
+            placeholder="Last Name"
+          />
+        </label>
+      </>
+    ) : null
+  }
+
+
   render() {
     const { formType, otherForm } = this.props;
 
@@ -53,7 +80,9 @@ class SessionForm extends React.Component {
             {this.renderErrors()}
           </div>
 
-            <label>
+            {this.renderNameFields()}
+
+            {/* <label>
               <input 
                 type="text" 
                 className='session-input'
@@ -71,7 +100,7 @@ class SessionForm extends React.Component {
                 onChange={this.handleChange("lname")}
                 placeholder="Last Name"
               />
-            </label>
+            </label> */}
 
             <label>
               <input 
