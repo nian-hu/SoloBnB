@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { merge } from 'lodash'
+import React from 'react';
+import { merge } from 'lodash';
+import { withRouter } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -13,6 +13,7 @@ class SessionForm extends React.Component {
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   handleSubmit(e) {
@@ -25,6 +26,15 @@ class SessionForm extends React.Component {
     return (e) => {
       this.setState({ [field]: e.target.value })
     }
+  }
+
+  handleDemo(e) {
+    e.preventDefault();
+    const demo_user = { email: 'demo_user@gmail.com', password: 'hunter12' }
+    this.props.processForm(demo_user).then(() => {
+      this.props.closeModal();
+      this.props.history.push('/listings')
+    })
   }
 
   renderErrors() {
@@ -62,6 +72,17 @@ class SessionForm extends React.Component {
           />
         </label>
       </>
+    ) : null
+  }
+
+  renderDemoLogin() {
+    return this.props.formType === 'Log In' ? (
+      <input 
+        className="demo-login"
+        onClick={this.handleDemo}
+        type="submit"
+        value="Demo Login"
+      />
     ) : null
   }
 
@@ -123,6 +144,7 @@ class SessionForm extends React.Component {
             </label>
 
             <input className='session-submit' type="submit" value={formType}/>
+            {this.renderDemoLogin()}
           
         </form>
       </div>
@@ -130,4 +152,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);
