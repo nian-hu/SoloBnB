@@ -4,138 +4,138 @@
 }
 
 //kind of works
-.splash {
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-    color: white;
-    height: 100%;
-    min-width: 100%;
-    text-align: center;
-    display: table;
-    margin: 0;
-    background: #1c1c1c;
-    padding: 0 0;
-}
+// .splash {
+//     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+//     color: white;
+//     height: 100%;
+//     min-width: 100%;
+//     text-align: center;
+//     display: table;
+//     margin: 0;
+//     background: #1c1c1c;
+//     padding: 0 0;
+// }
 
-.splash .inner {
-    display: table-cell;
-    vertical-align: middle;
-}
+// .splash .inner {
+//     display: table-cell;
+//     vertical-align: middle;
+// }
 
-.background-img {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
+// .background-img {
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     -o-background-size: cover;
+//     background-size: cover;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 100%;
+//     width: 100%;
+// }
 
-#bg1 {
-    background: image-url("splash/tongariro.jpg") no-repeat center fixed;
-}
+// #bg1 {
+//     background: image-url("splash/tongariro.jpg") no-repeat center fixed;
+// }
 
-#bg2 {
-    background: image-url("splash/roys_peak.jpg") no-repeat center fixed;
-}
+// #bg2 {
+//     background: image-url("splash/roys_peak.jpg") no-repeat center fixed;
+// }
 
-#bg3 {
-    background: image-url("splash/lake_alta.jpg") no-repeat center fixed;
-}
+// #bg3 {
+//     background: image-url("splash/lake_alta.jpg") no-repeat center fixed;
+// }
 
-#bg4 {
-    background: image-url("splash/santorini.jpg") no-repeat center fixed;
-}
+// #bg4 {
+//     background: image-url("splash/santorini.jpg") no-repeat center fixed;
+// }
 
-#bg5 {
-    background: image-url("splash/australia.jpg") no-repeat center fixed;
-}
+// #bg5 {
+//     background: image-url("splash/australia.jpg") no-repeat center fixed;
+// }
 
-@keyframes backgroundchangeFadeInOut {
-  0% {
-    opacity:1;
-  }
-  17% {
-    opacity:1;
-  }
-  25% {
-    opacity:0;
-  }
-  92% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
-}
+// @keyframes backgroundchangeFadeInOut {
+//   0% {
+//     opacity:1;
+//   }
+//   17% {
+//     opacity:1;
+//   }
+//   25% {
+//     opacity:0;
+//   }
+//   92% {
+//     opacity:0;
+//   }
+//   100% {
+//     opacity:1;
+//   }
+// }
 
-@-webkit-keyframes backgroundchangeFadeInOut {
-  0% {
-    opacity:1;
-  }
-  // 17% {
-  //   opacity:1;
-  // }
-  25% {
-    opacity:0;
-  }
-  // 92% {
-  //   opacity:0;
-  // }
-  75% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
-}
-#backgroundchange div:nth-of-type(1) {
-  animation-delay: 8s; // 8
-  -webkit-animation-delay: 8s;
-}
-#backgroundchange div:nth-of-type(2) {
-  animation-delay: 6s; // 6
-  -webkit-animation-delay: 6s;
-}
-#backgroundchange div:nth-of-type(3) {
-  animation-delay: 4s; // 4
-  -webkit-animation-delay: 4s;
-}
-#backgroundchange div:nth-of-type(4) {
-  animation-delay: 2s; // 2
-  -webkit-animation-delay: 2s;
-}
+// @-webkit-keyframes backgroundchangeFadeInOut {
+//   0% {
+//     opacity:1;
+//   }
+//   // 17% {
+//   //   opacity:1;
+//   // }
+//   25% {
+//     opacity:0;
+//   }
+//   // 92% {
+//   //   opacity:0;
+//   // }
+//   75% {
+//     opacity:0;
+//   }
+//   100% {
+//     opacity:1;
+//   }
+// }
+// #backgroundchange div:nth-of-type(1) {
+//   animation-delay: 8s; // 8
+//   -webkit-animation-delay: 8s;
+// }
+// #backgroundchange div:nth-of-type(2) {
+//   animation-delay: 6s; // 6
+//   -webkit-animation-delay: 6s;
+// }
+// #backgroundchange div:nth-of-type(3) {
+//   animation-delay: 4s; // 4
+//   -webkit-animation-delay: 4s;
+// }
+// #backgroundchange div:nth-of-type(4) {
+//   animation-delay: 2s; // 2
+//   -webkit-animation-delay: 2s;
+// }
 
-#backgroundchange div:nth-of-type(5) {
-  animation-delay: 0; // 0
-  -webkit-animation-delay: 0;
-}
+// #backgroundchange div:nth-of-type(5) {
+//   animation-delay: 0; // 0
+//   -webkit-animation-delay: 0;
+// }
 
-#backgroundchange div {
-animation-name: backgroundchangeFadeInOut;
-animation-timing-function: ease-in-out;
-animation-iteration-count: infinite;
-animation-duration: 12s; // 8
-position: absolute;
+// #backgroundchange div {
+// animation-name: backgroundchangeFadeInOut;
+// animation-timing-function: ease-in-out;
+// animation-iteration-count: infinite;
+// animation-duration: 12s; // 8
+// position: absolute;
 
--webkit-animation-name: backgroundchangeFadeInOut;
--webkit-animation-timing-function: ease-in-out;
--webkit-animation-iteration-count: infinite;
--webkit-animation-duration: 12s; // 8
+// -webkit-animation-name: backgroundchangeFadeInOut;
+// -webkit-animation-timing-function: ease-in-out;
+// -webkit-animation-iteration-count: infinite;
+// -webkit-animation-duration: 12s; // 8
 
-}
+// }
 
 
 //THIS WORKS!
 
-// .splash {
-//     background-image: image-url("splash/new_zealand.jpg");
-//     height: 100vh;
-//     background-size: cover;
-//     position: relative;
-// }
+.splash {
+    background-image: image-url("splash/lake_alta.jpg");
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
 
 /////////
 

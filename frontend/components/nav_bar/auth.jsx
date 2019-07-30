@@ -9,9 +9,9 @@ const Auth = ( {currentUser, logout, openModal} ) => {
       </hgroup>
       ) : (
         <nav className='login-signup'>
-          <button onClick={() => openModal('login')}>Login</button>
-          &nbsp;or&nbsp;
-          <button onClick={() => openModal('signup')}>Signup</button>
+          <button className='session-button' onClick={() => openModal('login')}>Login</button>
+          &nbsp;
+          <button className='session-button' onClick={() => openModal('signup')}>Signup</button>
         </nav>
       );
 

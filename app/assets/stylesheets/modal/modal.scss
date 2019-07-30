@@ -1,5 +1,6 @@
 * {
   font-family: "Montserrat", sans-serif;
+  color: black;
 }
 
 .modal-background {
@@ -32,4 +33,14 @@
   font-size: 50px;
   color: black;
   cursor: pointer;
+}
+
+.session-input {
+  box-sizing: border-box;
+  width: 300px;
+  height: 50px;
+  border: 1px solid gray;
+  font-size: 16px;
+  padding: 11px;
+  border-radius: 5px;
 }
