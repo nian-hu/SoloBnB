@@ -1,6 +1,7 @@
 * {
   font-family: "Montserrat", sans-serif;
   color: black;
+  font-size: 20px;
 }
 
 .modal-background {
@@ -19,28 +20,87 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
+  padding: 50px;
+  border-radius: 5px;
 }
 
 .login-message {
-  height: 70px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
+// .close-button {
+//   float: left;
+//   font-size: 35px;
+//   color: black;
+//   cursor: pointer;
+// }
+
 .close-button {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 50px;
-  color: black;
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
   cursor: pointer;
+  white-space: nowrap;
+  font-size: 35px;
+}
+
+.topright {
+  position: absolute;
+  right: 0;
+  top: 0
 }
 
 .session-input {
   box-sizing: border-box;
-  width: 300px;
-  height: 50px;
-  border: 1px solid gray;
+  width: 100%;
+  border: 1px solid rgb(192, 189, 189);
   font-size: 16px;
-  padding: 11px;
+  padding: 10px;
   border-radius: 5px;
+}
+
+.session-input:hover {
+  border: 1px solid #1a535c;
+}
+
+.other-form {
+  background-color: transparent;
+  color: #1a535c;
+  border-style: none;
+  font-size: 25px;
+}
+
+.other-form:hover {
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+
+.session-submit {
+  background-color: #ff5a5f;
+  color: white;
+  border-style: none;
+  font-size: 25px;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.session-submit:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #ff5a5f; 
+}
+
+.modal-form label, input {
+    display: block;
+}
+
+.modal-form label {
+    margin-bottom: 15px;
 }

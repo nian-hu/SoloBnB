@@ -45,59 +45,54 @@ class SessionForm extends React.Component {
     return (
       <div>
         <form className='modal-form' onSubmit={this.handleSubmit}>
-          <div className='close-button' onClick={this.props.closeModal}>&times;</div>
+          <div className='close-button topright' onClick={this.props.closeModal}>&times;</div>
           
           <h2 className='login-message'>Please {formType} or {otherForm}</h2>
 
           <div className='session-errors'>
             {this.renderErrors()}
           </div>
-          <br/>
 
             <label>
-              First Name
               <input 
                 type="text" 
                 className='session-input'
                 value={this.state.fname}
                 onChange={this.handleChange("fname")}
+                placeholder="First Name"
               />
             </label>
 
-            <br/>
             <label>
-              Last Name
               <input
                 type="text"
                 className='session-input'
                 value={this.state.lname}
                 onChange={this.handleChange("lname")}
+                placeholder="Last Name"
               />
             </label>
 
-            <br/>
             <label>
-              Email Address
               <input 
                 type="text"
                 className='session-input'
                 value={this.state.email}
                 onChange={this.handleChange("email")}
+                placeholder="Email Address"
               />
             </label>
 
-            <br/>
             <label>
-              Password
               <input
                 type="password" 
                 className='session-input'
                 value={this.state.password}
                 onChange={this.handleChange("password")}
+                placeholder="Password"
               />
             </label>
 
-            <br/>
             <input className='session-submit' type="submit" value={formType}/>
           
         </form>
