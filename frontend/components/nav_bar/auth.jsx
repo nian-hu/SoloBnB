@@ -1,25 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
-const Auth = ( {currentUser, logout} ) => {
+const Auth = ( {currentUser, logout, openModal} ) => {
   const display =
     currentUser ? (
-      <div>
-        <h1>{currentUser.fname} {currentUser.lname}</h1>
-        <button onClick={() => logout()}>Logout</button>
-      </div>
-    ) : (
-        <div>
-          <Link className="link" to="/signup">Sign Up</Link>
-          <Link className="link" to="/login">Log In</Link>
-        </div>
+      <hgroup className='header-group'>
+        <h1 className='header-user'>{currentUser.fname} {currentUser.lname}</h1>
+        <button className='header-logout' onClick={() => logout()}>Logout</button>
+      </hgroup>
+      ) : (
+        <nav className='login-signup'>
+          <button onClick={() => openModal('login')}>Login</button>
+          &nbsp;or&nbsp;
+          <button onClick={() => openModal('signup')}>Signup</button>
+        </nav>
       );
 
-  return (
-    <div>
-      {display}
-    </div>
-  )
+  return display;
 }
 
 export default Auth;
