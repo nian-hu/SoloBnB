@@ -1,9 +1,11 @@
 import React from 'react'
-import AuthContainer from './nav_bar/auth_container'
+// import AuthContainer from './nav_bar/auth_container'
 import Modal from '../components/modal/modal'
+import Splash from '../components/splash/splash'
+import { Route, Switch } from 'react-router-dom'
 
 // import GreetingContainer from './greeting/greeting_container'
-// import { Route } from 'react-router-dom'
+
 // import LoginFormContainer from './session/login_form_container'
 // import SignupFormContainer from './session/signup_form_container'
 // import AuthRoute from '../util/route_util'
@@ -14,10 +16,7 @@ const App = () => {
   return (
     <div>
       <Modal />
-      <header>
-        <h1 className="title">SoloBnB</h1>
-        <AuthContainer />
-      </header>
+      <Route exact path='/' component={Splash} /> 
     </div>
   )
 }

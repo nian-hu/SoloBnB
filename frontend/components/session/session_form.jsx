@@ -43,39 +43,63 @@ class SessionForm extends React.Component {
     const { formType, otherForm } = this.props;
 
     return (
-      <div className='session-form-container'>
-        <form onSubmit={this.handleSubmit} className='session-form-box'>
-          <h2>Please {formType} or {otherForm}</h2>
-          <div onClick={this.props.closeModal} className="close-x">X</div>
-          {this.renderErrors()}
-          <div className='session-form'>
-            <br/>
+      <div>
+        <form className='modal-form' onSubmit={this.handleSubmit}>
+          <div className='close-button' onClick={this.props.closeModal}>&times;</div>
+          
+          <h2 className='login-message'>Please {formType} or {otherForm}</h2>
+
+          <div className='session-errors'>
+            {this.renderErrors()}
+          </div>
+          <br/>
+
             <label>
               First Name
-              <input className='session-input' onChange={this.handleChange("fname")} type="text" />
+              <input 
+                type="text" 
+                className='session-input'
+                value={this.state.fname}
+                onChange={this.handleChange("fname")}
+              />
             </label>
 
             <br/>
             <label>
               Last Name
-              <input className='session-input' onChange={this.handleChange("lname")} type="text" />
+              <input
+                type="text"
+                className='session-input'
+                value={this.state.lname}
+                onChange={this.handleChange("lname")}
+              />
             </label>
 
             <br/>
             <label>
               Email Address
-              <input className='session-input' onChange={this.handleChange("email")} type="text" />
+              <input 
+                type="text"
+                className='session-input'
+                value={this.state.email}
+                onChange={this.handleChange("email")}
+              />
             </label>
 
             <br/>
             <label>
               Password
-              <input className='session-input' onChange={this.handleChange("password")} type="password" />
+              <input
+                type="password" 
+                className='session-input'
+                value={this.state.password}
+                onChange={this.handleChange("password")}
+              />
             </label>
 
             <br/>
             <input className='session-submit' type="submit" value={formType}/>
-          </div>
+          
         </form>
       </div>
     )
