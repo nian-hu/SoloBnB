@@ -16,8 +16,9 @@ import ListingIndexContainer from '../components/listings/listing_index_containe
 
 const App = () => {
   return (
-    <div>
+    <div>       
       <Modal />
+      {/* <Route path='/' component={Navbar} /> */}
       <Route exact path='/' component={Splash} />
       <Route exact path='/listings' component={ListingIndexContainer}/> 
     </div>

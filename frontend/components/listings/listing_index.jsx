@@ -1,5 +1,6 @@
 import React from 'react';
-import ListingIndexItem from './listing_index_item'
+import ListingIndexItem from './listing_index_item';
+import NavBarNormal from '../nav_bar/nav_bar_normal'
 
 class ListingIndex extends React.Component {
   componentDidMount() {
@@ -17,6 +18,7 @@ class ListingIndex extends React.Component {
 
     return (
       <div>
+        <NavBarNormal/>
         <ul>
           {listingItems}
         </ul>
