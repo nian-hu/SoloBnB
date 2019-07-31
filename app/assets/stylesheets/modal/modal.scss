@@ -110,9 +110,18 @@
 }
 
 .modal-form label, input {
-    display: block;
+  display: block;
 }
 
 .modal-form label {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
+.red-border {
+  border: 1px solid red;
 }

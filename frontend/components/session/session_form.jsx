@@ -9,22 +9,81 @@ class SessionForm extends React.Component {
       fname: '',
       lname: '',
       email: '',
-      password: ''
+      password: '',
+      errors: {
+        fname: '',
+        lname: '',
+        email: '',
+        password: ''
+      }
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.validateSubmit = this.validateSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
   }
 
-  handleSubmit(e) {
+  // handleSubmit(e) {
+  //   e.preventDefault();
+  //   const user = merge({}, this.state);
+  //   this.props.processForm(user).then(this.props.closeModal);
+  // }
+
+  validateEmail(email) {
+    return /\S+@\S+\.\S+/.test(email);
+  }
+
+  validateSubmit(e) {
     e.preventDefault();
-    const user = merge({}, this.state);
+    let errorObj = {
+      fname: '',
+      lname: '',
+      email: '',
+      password: ''
+    }
+    
+    if (!this.validateEmail(this.state.email)) {
+      errorObj["email"] = 'Email address must be valid'
+    } 
+
+    if (!this.state.password < 6) {
+      errorObj["password"] = 'Password must be at least six characters long'
+    } 
+
+    if (this.state.fname.length === 0) {
+      errorObj["fname"] = 'First name must be filled out'
+    }
+    
+    if (this.state.lname.length === 0) {
+      errorObj["lname"] = 'Last name must be filled out'
+    } 
+    
+    if (Object.values(errorObj).length === 0) {
+      this.handleSubmit();
+    }
+
+    // else {
+    //   this.handleSubmit();
+    //   return null;
+    // }
+
+    this.setState({errors: errorObj});
+  }
+
+  handleSubmit() {
+    const user = {
+      fname: this.state.fname,
+      lname: this.state.lname,
+      email: this.state.email,
+      password: this.state.password
+    };
     this.props.processForm(user).then(this.props.closeModal);
   }
 
   handleChange(field) {
     return (e) => {
       this.setState({ [field]: e.target.value })
+      // this.setState({user: {[field]: e.target.value}})
     }
   }
 
@@ -55,22 +114,26 @@ class SessionForm extends React.Component {
         <label>
           <input
             type="text"
+            // className={`session-input ${inputError}`}
             className='session-input'
             value={this.state.fname}
             onChange={this.handleChange("fname")}
             placeholder="First Name"
           />
         </label>
+        <p className="error-message">{this.state.errors.fname}</p>
 
         <label>
           <input
             type="text"
+            // className={`session-input ${inputError}`}
             className='session-input'
             value={this.state.lname}
             onChange={this.handleChange("lname")}
             placeholder="Last Name"
           />
         </label>
+        <p className="error-message">{this.state.errors.lname}</p>
       </>
     ) : null
   }
@@ -89,10 +152,16 @@ class SessionForm extends React.Component {
 
   render() {
     const { formType, otherForm } = this.props;
+    // const inputError = this.state.errors.fname.length > 0 ? (
+    //   'red-border'
+    //   ) : (
+    //     ''
+    //   )
 
     return (
       <div>
-        <form className='modal-form' onSubmit={this.handleSubmit}>
+        {/* <form className='modal-form' onSubmit={this.handleSubmit}> */}
+        <form className='modal-form' onSubmit={this.validateSubmit}>
           <div className='close-button topright' onClick={this.props.closeModal}>&times;</div>
           
           <h2 className='login-message'>Please {formType} or {otherForm}</h2>
@@ -127,21 +196,25 @@ class SessionForm extends React.Component {
               <input 
                 type="text"
                 className='session-input'
+                // className={`session-input ${inputError}`}
                 value={this.state.email}
                 onChange={this.handleChange("email")}
                 placeholder="Email Address"
               />
             </label>
+            <p className="error-message">{this.state.errors.email}</p>
 
             <label>
               <input
                 type="password" 
                 className='session-input'
+                // className={`session-input ${inputError}`}
                 value={this.state.password}
                 onChange={this.handleChange("password")}
                 placeholder="Password"
               />
             </label>
+            <p className="error-message">{this.state.errors.password}</p>
 
             <input className='session-submit' type="submit" value={formType}/>
             {this.renderDemoLogin()}
