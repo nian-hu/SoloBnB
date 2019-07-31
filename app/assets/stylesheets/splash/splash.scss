@@ -4,6 +4,13 @@
   margin: 0 0 0 0;
 }
 
+.splash {
+    background-image: image-url("splash/lake_alta.jpg");
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
 //kind of works
 // .splash {
 //     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
@@ -17,7 +24,7 @@
 //     padding: 0 0;
 // }
 
-// .splash .inner {
+// html .inner {
 //     display: table-cell;
 //     vertical-align: middle;
 // }
@@ -139,13 +146,13 @@
 //     margin: 0 0 0 0;
 // }
 
-html {
-    background-image: image-url("splash/lake_alta.jpg");
-    height: 100vh;
-    background-size: cover;
-    position: relative;
-    margin: 0 0 0 0;
-}
+// html {
+//     background-image: image-url("splash/lake_alta.jpg");
+//     height: 100vh;
+//     background-size: cover;
+//     position: relative;
+//     margin: 0 0 0 0;
+// }
 
 /////////
 
