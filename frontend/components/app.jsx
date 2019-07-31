@@ -1,8 +1,9 @@
 import React from 'react'
 // import AuthContainer from './nav_bar/auth_container'
-import Modal from '../components/modal/modal'
-import Splash from '../components/splash/splash'
-import { Route, Switch } from 'react-router-dom'
+import Modal from '../components/modal/modal';
+import Splash from '../components/splash/splash';
+import Navbar from '../components/nav_bar/nav_bar';
+import { Route, Switch } from 'react-router-dom';
 
 // import GreetingContainer from './greeting/greeting_container'
 

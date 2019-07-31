@@ -47,8 +47,6 @@ ashlyn = User.create!(email: 'ashlyndrake@gmail.com',
                     lname: 'Drake', 
                     password: 'hunter12')
 
-
-
 ################
 ### LISTINGS ###
 ################
