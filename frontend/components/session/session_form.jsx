@@ -46,28 +46,40 @@ class SessionForm extends React.Component {
       errorObj["email"] = 'Email address must be valid'
     } 
 
-    if (!this.state.password < 6) {
+    if (this.state.password.length < 6) {
       errorObj["password"] = 'Password must be at least six characters long'
     } 
 
-    if (this.state.fname.length === 0) {
+    if (this.state.fname.length === 0 && this.props.formType === 'Sign Up') {
       errorObj["fname"] = 'First name must be filled out'
     }
     
-    if (this.state.lname.length === 0) {
+    if (this.state.lname.length === 0 && this.props.formType === 'Sign Up') {
       errorObj["lname"] = 'Last name must be filled out'
     } 
-    
-    if (Object.values(errorObj).length === 0) {
+
+    // if (Object.values(errorObj).length === 0) {
+    //   this.handleSubmit()
+    // }
+
+    if (Object.values(errorObj).every(val => val.length === 0)) {
       this.handleSubmit();
     }
+
+    this.setState({ errors: errorObj });
+    errorObj = {
+      fname: '',
+      lname: '',
+      email: '',
+      password: ''
+    } 
 
     // else {
     //   this.handleSubmit();
     //   return null;
     // }
 
-    this.setState({errors: errorObj});
+    
   }
 
   handleSubmit() {
@@ -100,7 +112,7 @@ class SessionForm extends React.Component {
     return (
       <ul>
         {this.props.errors.map((error, idx) => (
-          <li key={`error-${idx}`}>
+          <li className='backend-errors' key={`error-${idx}`}>
             {error}
           </li>
         ))}
