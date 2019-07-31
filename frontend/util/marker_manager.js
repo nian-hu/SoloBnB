@@ -11,16 +11,16 @@ export default class MarkerManager {
       }
     })
 
-    const listingObj = {};
-    listings.forEach(listing => {
-      listingObj[listing.id] = listing;
-    })
+    // const listingObj = {};
+    // listings.forEach(listing => {
+    //   listingObj[listing.id] = listing;
+    // })
 
-    Object.values(this.markers).forEach(marker => {
-      if (!Object.keys(listingObj).includes(marker.listingId)) {
-        this.removeMarker(this.markers[listingId])
-      }
-    })
+    // Object.values(this.markers).forEach(marker => {
+    //   if (!Object.keys(listingObj).includes(marker.listingId)) {
+    //     this.removeMarker(this.markers[listingId])
+    //   }
+    // })
   }
 
   createMarkerFromListing(listing) {
@@ -33,8 +33,8 @@ export default class MarkerManager {
     this.markers[listing.id] = marker;
   }
 
-  removeMarker(marker) {
-    this.markers[marker.listingId].setMap(null);
-    delete this.markers[marker.listingId];
-  }
+  // removeMarker(marker) {
+  //   this.markers[marker.listingId].setMap(null);
+  //   delete this.markers[marker.listingId];
+  // }
 }
