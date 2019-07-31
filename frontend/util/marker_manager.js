@@ -24,7 +24,7 @@ export default class MarkerManager {
   }
 
   createMarkerFromListing(listing) {
-    const position = new google.maps.LatLng(listing.lat, listing.lng)
+    const position = new google.maps.LatLng(listing.lat, listing.long)
     const marker = new google.maps.Marker({
       position,
       map: this.map,
