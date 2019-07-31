@@ -4,6 +4,7 @@ import Modal from '../components/modal/modal';
 import Splash from '../components/splash/splash';
 import Navbar from '../components/nav_bar/nav_bar';
 import { Route, Switch } from 'react-router-dom';
+import ListingIndexContainer from '../components/listings/listing_index_container'
 
 // import GreetingContainer from './greeting/greeting_container'
 
@@ -17,7 +18,8 @@ const App = () => {
   return (
     <div>
       <Modal />
-      <Route exact path='/' component={Splash} /> 
+      <Route exact path='/' component={Splash} />
+      <Route exact path='/listings' component={ListingIndexContainer}/> 
     </div>
   )
 }
