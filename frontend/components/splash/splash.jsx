@@ -2,8 +2,7 @@ import React from "react";
 import Navbar from "../nav_bar/nav_bar";
 
 const Splash = () => {
-  debugger
-  return (
+    return (
     <div className="splash">
       <Navbar />
     </div>

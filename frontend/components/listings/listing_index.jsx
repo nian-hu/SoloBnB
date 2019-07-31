@@ -20,7 +20,7 @@ class ListingIndex extends React.Component {
     return (
       <div>
         <NavBarNormal/>
-        <ListingMap/>
+        <ListingMap listings={listings} updateFilter={this.props.updateFilter}/>
         <ul>
           {listingItems}
         </ul>
