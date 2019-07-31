@@ -97,6 +97,18 @@
   color: #ff5a5f; 
 }
 
+.demo-login {
+  background-color: transparent;
+  color: #1a535c;
+  border-style: none;
+  font-size: 15px;
+}
+
+.demo-login:hover {
+  cursor: pointer;
+  border-bottom: 1px solid gray;
+}
+
 .modal-form label, input {
     display: block;
 }
