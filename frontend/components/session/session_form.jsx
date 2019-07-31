@@ -110,7 +110,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className='error-box'>
         {this.props.errors.map((error, idx) => (
           <li className='backend-errors' key={`error-${idx}`}>
             {error}
@@ -174,7 +174,7 @@ class SessionForm extends React.Component {
       <div>
         {/* <form className='modal-form' onSubmit={this.handleSubmit}> */}
         <form className='modal-form' onSubmit={this.validateSubmit}>
-          <div className='close-button topright' onClick={this.props.closeModal}>&times;</div>
+          <div className='close-button topleft' onClick={this.props.closeModal}>&times;</div>
           
           <h2 className='login-message'>Please {formType} or {otherForm}</h2>
 

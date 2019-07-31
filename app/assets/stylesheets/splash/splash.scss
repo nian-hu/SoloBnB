@@ -1,6 +1,7 @@
 .nav {
   z-index: 1;
   position: absolute;
+  margin: 0 0 0 0;
 }
 
 //kind of works
@@ -130,11 +131,20 @@
 
 //THIS WORKS! 
 
-.splash {
+// .splash {
+//     background-image: image-url("splash/lake_alta.jpg");
+//     height: 100vh;
+//     background-size: cover;
+//     position: relative;
+//     margin: 0 0 0 0;
+// }
+
+html {
     background-image: image-url("splash/lake_alta.jpg");
     height: 100vh;
     background-size: cover;
     position: relative;
+    margin: 0 0 0 0;
 }
 
 /////////

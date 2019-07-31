@@ -26,6 +26,8 @@
 
 .login-message {
   font-size: 25px;
+  text-align: center;
+  color: #484848;
 }
 
 // .close-button {
@@ -42,7 +44,8 @@
   vertical-align: middle;
   overflow: hidden;
   text-decoration: none;
-  color: inherit;
+  color: #484848;
+  // color: inherit;
   background-color: inherit;
   text-align: center;
   cursor: pointer;
@@ -50,10 +53,16 @@
   font-size: 35px;
 }
 
-.topright {
+// .topright {
+//   position: absolute;
+//   right: 0;
+//   top: 0
+// }
+
+.topleft {
   position: absolute;
-  right: 0;
-  top: 0
+  left: 0;
+  top: 0;
 }
 
 .session-input {
@@ -63,6 +72,7 @@
   font-size: 16px;
   padding: 10px;
   border-radius: 5px;
+  color: #484848;
 }
 
 .session-input:hover {
@@ -85,10 +95,12 @@
   background-color: #ff5a5f;
   color: white;
   border-style: none;
-  font-size: 25px;
-  padding: 10px;
+  font-size: 18px;
+  padding: 12px;
   box-sizing: border-box;
   width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
 
 .session-submit:hover {
@@ -102,6 +114,7 @@
   color: #1a535c;
   border-style: none;
   font-size: 15px;
+  margin: 0 auto;
 }
 
 .demo-login:hover {
@@ -127,15 +140,16 @@
 }
 
 .error-box {
-  margin: 0 auto;
+  padding: 0 0 0 0;
 }
 
 .backend-errors {
   list-style: none;
-  border: 1px solid gray;
+  border: 1px solid rgb(192, 189, 189);
+  border-radius: 5px;
   margin: 0 auto;
-  font-size: 16px;
-  padding: 10px;
+  font-size: 14px;
+  padding: 20px;
   box-sizing: border-box;
   width: 100%;
   text-align: center;
