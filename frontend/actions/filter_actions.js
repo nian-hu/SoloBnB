@@ -19,13 +19,13 @@ export const clearFilter = () => {
 export const updateFilter = (filter, value) => {
   return (dispatch, getState) => {
     dispatch(changeFilter(filter, value));
-    return fetchListings(getState().ui.filter)(dispatch);
+    return fetchListings(getState().ui.filter.bounds)(dispatch);
   }
 }
 
-export const removeFilter = () => {
-  return (dispatch, getState) => {
-    dispatch(clearFilter());
-    return fetchListings(getState().ui.filter)(dispatch);
-  }
-}
+// export const removeFilter = () => {
+//   return (dispatch, getState) => {
+//     dispatch(clearFilter());
+//     return fetchListings(getState().ui.filter)(dispatch);
+//   }
+// }
