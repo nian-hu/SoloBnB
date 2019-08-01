@@ -1,8 +1,8 @@
 class Api::ListingsController < ApplicationController
-  def index 
-    # @listings = Listing.all;
+ # @listings = Listing.all;
     # @listings = params[:bounds] ? Listing.in_bounds(params[:bounds]) : Listing.all  
-    
+
+  def index  
     if params[:bounds]
       @listings = Listing.includes(:amenities).in_bounds(params[:bounds])
     else
