@@ -1,7 +1,13 @@
 class Api::ListingsController < ApplicationController
   def index 
     # @listings = Listing.all;
-    @listings = params[:bounds] ? Listing.in_bounds(params[:bounds]) : Listing.all  
+    # @listings = params[:bounds] ? Listing.in_bounds(params[:bounds]) : Listing.all  
+    
+    if params[:bounds]
+      @listings = Listing.includes(:amenities).in_bounds(params[:bounds])
+    else
+      @listings = Listing.includes(:amenities).all
+
     if @listings
       render :index 
     else
@@ -10,7 +16,9 @@ class Api::ListingsController < ApplicationController
   end 
 
   def show
-    @listing = Listing.find(params[:id])
+    @listing = Listing.includes(:amenities).find(params[:id])
+    @amenities = @listing.amenities
+
     if @listing 
       render :show 
     else 
