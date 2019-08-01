@@ -1,16 +1,16 @@
 
-// .login-signup {
-//   margin: 30px 0;
-// }
+.login-signup {
+  margin-top: 13px;
+}
 
 .session-button {
   background-color: transparent;
   border: none;
-  font-size: 20px;
+  font-size: 16px;
   color: white;
   font-family: 'Montserrat', sans-serif;
   float: right;
-
+  margin-left: 15px;
 }
 
 .session-button:hover {
@@ -26,6 +26,9 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .nav-logo {
