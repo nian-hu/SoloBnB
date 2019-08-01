@@ -121,7 +121,7 @@ class SessionForm extends React.Component {
   }
 
   renderNameFields() {
-    return this.props.formType === 'Sign Up' ? (
+    return this.props.formType === 'Sign up' ? (
       <>
         <label>
           <input
@@ -151,7 +151,7 @@ class SessionForm extends React.Component {
   }
 
   renderDemoLogin() {
-    return this.props.formType === 'Log In' ? (
+    return this.props.formType === 'Log in' ? (
       <input 
         className="demo-login"
         onClick={this.handleDemo}
@@ -161,6 +161,13 @@ class SessionForm extends React.Component {
     ) : null
   }
 
+  renderOtherForm() {
+    return this.props.formType === 'Log in' ? (
+      "Don't have an account?"
+    ) : (
+      "Already have an account?"
+    )
+  }
 
   render() {
     const { formType, otherForm } = this.props;
@@ -176,7 +183,8 @@ class SessionForm extends React.Component {
         <form className='modal-form' onSubmit={this.validateSubmit}>
           <div className='close-button topleft' onClick={this.props.closeModal}>&times;</div>
           
-          <h2 className='login-message'>Please {formType} or {otherForm}</h2>
+          {/* <h2 className='login-message'>Please {formType} or {otherForm}</h2> */}
+          <h2 className='login-message'>{formType} to continue</h2>
 
           <div className='session-errors'>
             {this.renderErrors()}
@@ -231,6 +239,10 @@ class SessionForm extends React.Component {
 
             <input className='session-submit' type="submit" value={formType}/>
             {this.renderDemoLogin()}
+
+          <p className='bottom-text'>
+            {this.renderOtherForm()} {otherForm}
+          </p>
           
         </form>
       </div>

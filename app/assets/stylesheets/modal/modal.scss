@@ -21,7 +21,8 @@
   transform: translate(-50%, -50%);
   background: white;
   padding: 50px;
-  border-radius: 5px;
+  width: 400px;
+  // border-radius: 3px;
 }
 
 .login-message {
@@ -68,28 +69,37 @@
 .session-input {
   box-sizing: border-box;
   width: 100%;
-  border: 1px solid rgb(192, 189, 189);
+  border: 1px solid rgb(211, 209, 209);
   font-size: 16px;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 3px;
   color: #484848;
 }
 
 .session-input:focus {
-  border: 1px solid #1a535c;
+  border: 1px solid #008489;
   outline: none;
 }
 
 .other-form {
   background-color: transparent;
-  color: #1a535c;
+  color: #008489;
   border-style: none;
-  font-size: 25px;
+  font-size: 15px;
 }
 
 .other-form:hover {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #008489;
   cursor: pointer;
+}
+
+.bottom-text {
+  border-top: 1px solid rgb(192, 189, 189);
+  margin-bottom: 0;
+  font-size: 15px;
+  color: #484848;
+  padding-top: 15px;
+  text-align: left;
 }
 
 .session-submit {
@@ -100,8 +110,8 @@
   padding: 12px;
   box-sizing: border-box;
   width: 100%;
-  border-radius: 5px;
-  margin-bottom: 5px;
+  border-radius: 3px;
+  margin-bottom: 20px;
 }
 
 .session-submit:hover {
@@ -112,7 +122,7 @@
 
 .demo-login {
   background-color: transparent;
-  color: #1a535c;
+  color:#008489;
   border-style: none;
   font-size: 15px;
   margin: 0 auto;
@@ -120,7 +130,7 @@
 
 .demo-login:hover {
   cursor: pointer;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #008489;
 }
 
 .modal-form label, input {
@@ -149,7 +159,7 @@
 .backend-errors {
   list-style: none;
   border: 1px solid rgb(192, 189, 189);
-  border-radius: 5px;
+  border-radius: 3px;
   margin: 0 auto;
   font-size: 14px;
   padding: 20px;
