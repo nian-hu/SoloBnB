@@ -10,10 +10,11 @@ export const receiveAllListings = listings => {
   }
 }
 
-export const receiveListing = listing => {
+export const receiveListing = payload => {
   return {
     type: RECEIVE_LISTING,
-    listing
+    listing: payload.listing,
+    amenities: payload.amenities
   }
 }
 

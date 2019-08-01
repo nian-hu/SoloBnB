@@ -1,6 +1,8 @@
 import React from 'react';
 // import ListingDescription from './listing_description';
 
+// my listing has array of amenities ids!!!!
+
 class ListingShow extends React.Component {
   componentDidMount() {
     const { fetchListing } = this.props;

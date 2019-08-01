@@ -7,6 +7,7 @@ class Api::ListingsController < ApplicationController
       @listings = Listing.includes(:amenities).in_bounds(params[:bounds])
     else
       @listings = Listing.includes(:amenities).all
+    end
 
     if @listings
       render :index 

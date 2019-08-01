@@ -16,7 +16,7 @@ class Amenity < ApplicationRecord
     foreign_key: :amenity_id,
     class_name: :ListingAmenity
 
-  has_one :listing,
+  has_many :listings,
     through: :listing_amenities, 
     source: :listing
 end
