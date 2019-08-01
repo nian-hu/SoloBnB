@@ -68,8 +68,8 @@ ashlyn = User.create!(email: 'ashlyndrake@gmail.com',
 #                           description: "For the intrepid traveler who craves solitude and space for contemplation, this remote cottage located seemingly in the middle of nowhere of Iceland may be your calling. Based on the grounds of a family-run horse farm, this whimsical little hidey-hole is perfect for someone who needs to escape civilization for one, two, maybe seven days. Dive deep into the bleakness of the black sand beaches, feel the wild winds whip around your face as you stand atop a mountain, and gaze awe-struck at the sheer power of unbridled nature. If vast, wind-blown expanses and fog-filled landscapes strike excitement rather than fear in your heart, then look no further — this house is for you.",
 #                           address: "Hofdabrekku 871",
 #                           city: "Vík, Iceland",
-#                           lat: 63.514858,
-#                           long: 18.734949,
+#                           lat: 64.426811,
+#                           long: -14.623470,
 #                           price: 50)
 
 # brooklyn = Listing.create!(host_id: 2,
