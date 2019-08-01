@@ -10,11 +10,18 @@ export const receiveAllListings = listings => {
   }
 }
 
-export const receiveListing = payload => {
+// export const receiveListing = payload => {
+//   return {
+//     type: RECEIVE_LISTING,
+//     listing: payload.listing,
+//     amenities: payload.amenities
+//   }
+// }
+
+export const receiveListing = listing => {
   return {
     type: RECEIVE_LISTING,
-    listing: payload.listing,
-    amenities: payload.amenities
+    listing
   }
 }
 

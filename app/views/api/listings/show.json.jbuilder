@@ -1,5 +1,5 @@
 json.listing do
-  json.partial! 'api/listing/listing', listing: @listing
+  json.partial! 'api/listings/listing', listing: @listing
 end
 
 json.amenities do 

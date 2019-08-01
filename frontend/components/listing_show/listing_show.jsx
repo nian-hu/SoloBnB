@@ -1,11 +1,11 @@
 import React from 'react';
-// import ListingDescription from './listing_description';
-
-// my listing has array of amenities ids!!!!
+import ListingDescription from './listing_description';
+import ListingAmenities from './listing_amenities';
 
 class ListingShow extends React.Component {
   componentDidMount() {
     const { fetchListing } = this.props;
+    // debugger
     fetchListing(this.props.match.params.listingId);
   }
 
@@ -16,19 +16,21 @@ class ListingShow extends React.Component {
   }
 
   render() {
-    const { listing } = this.props;
+    const { listing, amenities } = this.props;
+    // debugger
     if (!listing) {
-      return <div>Fetching listings...</div>
+      return <div>Fetching listing...</div>
+    } else {
+      return (
+        <div>
+          <ListingDescription listing={listing} />
+          {/* <ListingAmenities listing={listing} /> */}
+          <ListingAmenities listing={listing} amenities={amenities} />
+        </div>
+      )
     }
 
-    return (
-      <div>
-        <h1>{listing.title}</h1>
-        <h2>{listing.price}</h2>
-        <p>{listing.description}</p>
-        {/* <ListingDescription listing={listing} /> */}
-      </div>
-    )
+    
   }
 }
 
