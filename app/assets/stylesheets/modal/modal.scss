@@ -66,7 +66,29 @@
   top: 0;
 }
 
+// .session-input {
+//   box-sizing: border-box;
+//   width: 100%;
+//   border: 1px solid rgb(211, 209, 209);
+//   font-size: 16px;
+//   padding: 10px;
+//   border-radius: 3px;
+//   color: #484848;
+// }
+
+// .session-input:focus {
+//   border: 1px solid #008489;
+//   outline: none;
+// }
+
 .session-input {
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.input-label {
   box-sizing: border-box;
   width: 100%;
   border: 1px solid rgb(211, 209, 209);
@@ -74,9 +96,11 @@
   padding: 10px;
   border-radius: 3px;
   color: #484848;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-.session-input:focus {
+.input-label:focus {
   border: 1px solid #008489;
   outline: none;
 }
@@ -175,7 +199,7 @@
 //   right: 200px;
 // }
 
-// .input-label {
-//   display: inline-block;
-//   flex-direction: row-reverse;
-// }
+.input-label {
+  display: flex;
+  justify-content: space-between;
+}

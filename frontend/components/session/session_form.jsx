@@ -123,7 +123,7 @@ class SessionForm extends React.Component {
   renderNameFields() {
     return this.props.formType === 'Sign up' ? (
       <>
-        <label>
+        <div className='input-label'>
           <input
             type="text"
             // className={`session-input ${inputError}`}
@@ -132,10 +132,11 @@ class SessionForm extends React.Component {
             onChange={this.handleChange("fname")}
             placeholder="First Name"
           />
-        </label>
+          <i className="far fa-user"></i>
+        </div>
         <p className="error-message">{this.state.errors.fname}</p>
 
-        <label>
+        <div className='input-label'>
           <input
             type="text"
             // className={`session-input ${inputError}`}
@@ -144,7 +145,8 @@ class SessionForm extends React.Component {
             onChange={this.handleChange("lname")}
             placeholder="Last Name"
           />
-        </label>
+          <i className="far fa-user"></i>
+        </div>
         <p className="error-message">{this.state.errors.lname}</p>
       </>
     ) : null
@@ -212,7 +214,7 @@ class SessionForm extends React.Component {
               />
             </label> */}
 
-            <label className='input-label'>
+            <div className='input-label'>
               <input 
                 type="text"
                 className='session-input'
@@ -221,11 +223,11 @@ class SessionForm extends React.Component {
                 onChange={this.handleChange("email")}
                 placeholder="Email Address"
               />
-              {/* <i id="tiny-icon" className="fal fa-envelope"></i> */}
-            </label>
+            <i className="far fa-envelope"></i>
+            </div>
             <p className="error-message">{this.state.errors.email}</p>
 
-            <label>
+            <div className='input-label'>
               <input
                 type="password" 
                 className='session-input'
@@ -234,7 +236,8 @@ class SessionForm extends React.Component {
                 onChange={this.handleChange("password")}
                 placeholder="Password"
               />
-            </label>
+            <i className="fas fa-unlock-alt"></i>
+            </div>
             <p className="error-message">{this.state.errors.password}</p>
 
             <input className='session-submit' type="submit" value={formType}/>
