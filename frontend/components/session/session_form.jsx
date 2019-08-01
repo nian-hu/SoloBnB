@@ -204,7 +204,7 @@ class SessionForm extends React.Component {
               />
             </label> */}
 
-            <label>
+            <label className='input-label'>
               <input 
                 type="text"
                 className='session-input'
@@ -213,6 +213,7 @@ class SessionForm extends React.Component {
                 onChange={this.handleChange("email")}
                 placeholder="Email Address"
               />
+              {/* <i id="tiny-icon" className="fal fa-envelope"></i> */}
             </label>
             <p className="error-message">{this.state.errors.email}</p>
 

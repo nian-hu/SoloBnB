@@ -75,8 +75,9 @@
   color: #484848;
 }
 
-.session-input:hover {
+.session-input:focus {
   border: 1px solid #1a535c;
+  outline: none;
 }
 
 .other-form {
@@ -124,6 +125,8 @@
 
 .modal-form label, input {
   display: block;
+  // display: inline-block;
+  // display: inline-flex;
 }
 
 .modal-form label {
@@ -154,3 +157,15 @@
   width: 100%;
   text-align: center;
 }
+
+// #tiny-icon {
+//   position: absolute;
+//   color: gray;
+//   display: inline-flex;
+//   right: 200px;
+// }
+
+// .input-label {
+//   display: inline-block;
+//   flex-direction: row-reverse;
+// }
