@@ -5,13 +5,13 @@ const Auth = ( {currentUser, logout, openModal} ) => {
     currentUser ? (
       <hgroup className='header-group'>
         <h1 className='header-user'>{currentUser.fname} {currentUser.lname}</h1>
-        <button className='header-logout' onClick={() => logout()}>Logout</button>
+        <button className='header-logout' onClick={() => logout()}>Log out</button>
       </hgroup>
       ) : (
         <nav className='login-signup'>
-          <button className='session-button' onClick={() => openModal('login')}>Login</button>
+          <button className='session-button' onClick={() => openModal('login')}>Log in</button>
           &nbsp;
-          <button className='session-button' onClick={() => openModal('signup')}>Signup</button>
+          <button className='session-button' onClick={() => openModal('signup')}>Sign up</button>
         </nav>
       );
 

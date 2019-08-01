@@ -26,7 +26,7 @@
 }
 
 .login-message {
-  font-size: 25px;
+  font-size: 23px;
   text-align: center;
   color: #484848;
   margin-bottom: 25px;
@@ -87,7 +87,7 @@
   width: 100%;
   height: 100%;
   // border: none;
-  border: 1px solid rgb(211, 209, 209);
+  border: 1px solid rgb(231, 231, 231);
   border-radius: 3px;
   color: #484848;
   font-size: 16px;
@@ -143,12 +143,13 @@
   background-color: #ff5a5f;
   color: white;
   border-style: none;
-  font-size: 18px;
+  font-size: 16px;
   padding: 12px;
   box-sizing: border-box;
   width: 100%;
   border-radius: 3px;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .session-submit:hover {
