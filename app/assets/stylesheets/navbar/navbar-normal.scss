@@ -1,31 +1,33 @@
-.session-button {   // .session-button
+.nav-normal {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+}
+
+.session-button-normal {   // .session-button
   background-color: transparent;
   border: none;
-  font-size: 25px;
-  color: white;
+  font-size: 16px;
+  color: gray;
   font-family: 'Montserrat', sans-serif;
   float: right;
 }
 
-.session-button:hover {
+.session-button-normal:hover {
   border-bottom: 1px solid white;
   cursor: pointer;
 }
 
-.session-button-normal {     // this is new
-  background-color: white;
-  color: black;
-}
 
 // MAKE THIS A DROPDOWN FEATURE
 
-.header-logout {
+.header-logout-normal {
   background-color: transparent;
   border: none;
   color: white;
 }
 
-.header-logout:hover {
+.header-logout-normal:hover {
   border-bottom: 1px solid white;
   cursor: pointer;
 }

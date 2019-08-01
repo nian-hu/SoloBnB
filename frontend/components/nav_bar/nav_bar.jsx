@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthContainer from './auth_container';
+import Auth from './auth';
 
 //props.pathname.location = '/' then it's transparent
 //
@@ -21,8 +21,8 @@ const NavBar = (props) => {
   //className = {`nav-${navOpacity} nav-${navPositioning}`}
 
   return (
-    <div className='nav'>  
-      <AuthContainer />
+    <div className='nav-splash'>  
+      <Auth />
     </div>
   )
 }
