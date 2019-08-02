@@ -9,3 +9,15 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.13);
   cursor: pointer;
 }
+
+.listings-index-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  .listings-items-index {
+    width: 60%;
+  }
+  .listings-map {
+    width: 30%;
+  }
+}

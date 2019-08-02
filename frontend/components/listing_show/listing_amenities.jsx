@@ -20,7 +20,7 @@ class ListingAmenities extends React.Component {
 
     const amenityItems = amenities.map(amenity => {
       return (
-        <li key={amenity.id}>
+        <li className="amenities-item" key={amenity.id}>
           {amenity.name}
         </li>
       )
@@ -30,9 +30,12 @@ class ListingAmenities extends React.Component {
     
     return (
       <div className='amenities-box'>
-        <ul>
-          {amenityItems}
-        </ul> 
+        Amenities
+        <div className='amenities-list'>
+          <ul>
+            {amenityItems}
+          </ul> 
+        </div>
       </div>
     )
   }

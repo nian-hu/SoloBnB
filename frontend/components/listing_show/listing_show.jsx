@@ -1,6 +1,7 @@
 import React from 'react';
 import ListingDescription from './listing_description';
 import ListingAmenities from './listing_amenities';
+import NavBarNormal from '../nav_bar/nav_bar_normal';
 
 class ListingShow extends React.Component {
   componentDidMount() {
@@ -23,9 +24,16 @@ class ListingShow extends React.Component {
     } else {
       return (
         <div>
-          <ListingDescription listing={listing} />
-          {/* <ListingAmenities listing={listing} /> */}
-          <ListingAmenities listing={listing} amenities={amenities} />
+          <NavBarNormal />
+          <div className='listing-show-container'>
+            <div className='listing-description'>
+              <ListingDescription listing={listing} />
+            </div>
+
+            <div className='listing-amenities'>
+              <ListingAmenities listing={listing} amenities={amenities} />
+            </div>
+          </div>
         </div>
       )
     }
