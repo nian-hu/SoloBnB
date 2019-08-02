@@ -4,9 +4,7 @@ class ListingPhotos extends React.Component {
 
   render() {
     const { listing } = this.props;
-    debugger
     if (Object.keys(listing).length === 0) return null;
-    debugger
 
     return (
       <div className="listing-photos-container">

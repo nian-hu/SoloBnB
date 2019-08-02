@@ -113,7 +113,6 @@ bali3 = open("https://solobnb-seeds.s3.amazonaws.com/bali3.jpg")
 bali4 = open("https://solobnb-seeds.s3.amazonaws.com/bali4.jpg")
 bali5 = open("https://solobnb-seeds.s3.amazonaws.com/bali5.jpg")
 
-
 bali.photos.attach(io: bali1, filename: 'bali1.jpg')
 bali.photos.attach(io: bali2, filename: 'bali2.jpg')
 bali.photos.attach(io: bali3, filename: 'bali3.jpg')
@@ -127,8 +126,22 @@ iceland4 = open("https://solobnb-seeds.s3.amazonaws.com/iceland4.jpg")
 iceland5 = open("https://solobnb-seeds.s3.amazonaws.com/iceland5.jpg")
 
 iceland.photos.attach(io: iceland1, filename: 'iceland1.jpg')
+iceland.photos.attach(io: iceland2, filename: 'iceland2.jpg')
+iceland.photos.attach(io: iceland3, filename: 'iceland3.jpg')
+iceland.photos.attach(io: iceland4, filename: 'iceland4.jpg')
+iceland.photos.attach(io: iceland5, filename: 'iceland5.jpg')
 
+brooklyn1 = open("https://solobnb-seeds.s3.amazonaws.com/brooklyn1.jpg")
+brooklyn2 = open("https://solobnb-seeds.s3.amazonaws.com/brooklyn2.jpg")
+brooklyn3 = open("https://solobnb-seeds.s3.amazonaws.com/brooklyn3.jpg")
+brooklyn4 = open("https://solobnb-seeds.s3.amazonaws.com/brooklyn4.jpg")
+brooklyn5 = open("https://solobnb-seeds.s3.amazonaws.com/brooklyn5.jpg")
 
+brooklyn.photos.attach(io: brooklyn1, filename: 'brooklyn1.jpg')
+brooklyn.phoistos.attach(io: brooklyn2, filename: 'brooklyn2.jpg')
+brooklyn.photos.attach(io: brooklyn3, filename: 'brooklyn3.jpg')
+brooklyn.photos.attach(io: brooklyn4, filename: 'brooklyn4.jpg')
+brooklyn.photos.attach(io: brooklyn5, filename: 'brooklyn5.jpg')
 
 
 

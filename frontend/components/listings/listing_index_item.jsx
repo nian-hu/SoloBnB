@@ -83,11 +83,11 @@ class ListingIndexItem extends React.Component {
   
         <div className='listing-index-item-photo-container'>
           <Carousel width={"300px"} heightMode={"first"} wrapAround={true}>
-            <img src="https://wp.homepolish.com/wp-content/uploads/Homepolish-interior-design-bd31a-1350x900.jpg"/>
-            <img src="https://wp.homepolish.com/wp-content/uploads/Homepolish-interior-design-bd31a-1350x900.jpg"/>
-            <img src="https://wp.homepolish.com/wp-content/uploads/Homepolish-interior-design-bd31a-1350x900.jpg"/>
-            <img src="https://wp.homepolish.com/wp-content/uploads/Homepolish-interior-design-bd31a-1350x900.jpg"/>
-            <img src="https://wp.homepolish.com/wp-content/uploads/Homepolish-interior-design-bd31a-1350x900.jpg"/>
+            <img src={this.props.listing.photoUrls[0]} />
+            <img src={this.props.listing.photoUrls[1]} />
+            <img src={this.props.listing.photoUrls[2]} />
+            <img src={this.props.listing.photoUrls[3]} />
+            <img src={this.props.listing.photoUrls[4]} />
           </Carousel>
         </div>
 
