@@ -2,6 +2,7 @@ import React from 'react';
 import ListingDescription from './listing_description';
 import ListingAmenities from './listing_amenities';
 import NavBarNormal from '../nav_bar/nav_bar_normal';
+import ListingPhotos from './listing_photos';
 
 class ListingShow extends React.Component {
   componentDidMount() {
@@ -25,6 +26,7 @@ class ListingShow extends React.Component {
       return (
         <div>
           <NavBarNormal />
+          <ListingPhotos listing={listing}/>
           <div className='listing-show-container'>
             <div className='listing-description'>
               <ListingDescription listing={listing} />
