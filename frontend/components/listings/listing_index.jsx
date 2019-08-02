@@ -5,12 +5,15 @@ import ListingMap from '../listing_map/listing_map';
 
 class ListingIndex extends React.Component {
   componentDidMount() {
+    // what is happening here??
+
     // const { fetchListings } = this.props;
     // fetchListings(); 
   }
 
   render() {
     const { listings } = this.props;
+    if (!listings) return null;
     const listingItems = listings.map((listing, idx) => {
       return (
         <div key={idx} className="listing-item">

@@ -4,9 +4,9 @@ class Api::ListingsController < ApplicationController
 
   def index  
     if params[:bounds]
-      @listings = Listing.includes(:amenities).in_bounds(params[:bounds])
+      @listings = Listing.with_attached_photos.includes(:amenities).in_bounds(params[:bounds])
     else
-      @listings = Listing.includes(:amenities).all
+      @listings = Listing.with_attached_photos.includes(:amenities).all
     end
 
     if @listings
@@ -17,7 +17,7 @@ class Api::ListingsController < ApplicationController
   end 
 
   def show
-    @listing = Listing.includes(:amenities).find(params[:id])
+    @listing = Listing.with_attached_photos.includes(:amenities).find(params[:id])
     @amenities = @listing.amenities
 
     if @listing 
@@ -28,7 +28,7 @@ class Api::ListingsController < ApplicationController
   end
 
   def listing_params
-    params.require(:listing).permit(:title, :host_id, :description, :address, :city, :lat, :long, :price)
+    params.require(:listing).permit(:title, :host_id, :description, :address, :city, :lat, :long, :price, photos: [])
   end
 
   def bounds

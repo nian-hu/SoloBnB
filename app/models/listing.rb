@@ -19,6 +19,8 @@ class Listing < ApplicationRecord
   validates :title, :host_id, :description, :lat, :long, :price, presence: true 
   validates :address, presence: true, uniqueness: true
 
+  has_many_attached :photos
+
   belongs_to :host,
     primary_key: :id, 
     foreign_key: :host_id,

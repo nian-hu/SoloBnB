@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
+
+
 User.destroy_all
 Amenity.destroy_all
 ListingAmenity.destroy_all
@@ -103,6 +106,30 @@ bali = ashlyn.listings.create!(host_id: ashlyn.id,
                       price: 40,
                       # amenity_ids: [wifi.id, ac.id, laundry.id]
                     )
+
+bali1 = open("https://solobnb-seeds.s3.amazonaws.com/bali1.jpg")
+bali2 = open("https://solobnb-seeds.s3.amazonaws.com/bali2.jpg")
+bali3 = open("https://solobnb-seeds.s3.amazonaws.com/bali3.jpg")
+bali4 = open("https://solobnb-seeds.s3.amazonaws.com/bali4.jpg")
+bali5 = open("https://solobnb-seeds.s3.amazonaws.com/bali5.jpg")
+
+
+bali.photos.attach(io: bali1, filename: 'bali1.jpg')
+bali.photos.attach(io: bali2, filename: 'bali2.jpg')
+bali.photos.attach(io: bali3, filename: 'bali3.jpg')
+bali.photos.attach(io: bali4, filename: 'bali4.jpg')
+bali.photos.attach(io: bali5, filename: 'bali5.jpg')
+
+iceland1 = open("https://solobnb-seeds.s3.amazonaws.com/iceland1.jpg")
+iceland2 = open("https://solobnb-seeds.s3.amazonaws.com/iceland2.jpg")
+iceland3 = open("https://solobnb-seeds.s3.amazonaws.com/iceland3.jpg")
+iceland4 = open("https://solobnb-seeds.s3.amazonaws.com/iceland4.jpg")
+iceland5 = open("https://solobnb-seeds.s3.amazonaws.com/iceland5.jpg")
+
+iceland.photos.attach(io: iceland1, filename: 'iceland1.jpg')
+
+
+
 
 
 # iceland = Listing.create!(host_id: 2,
