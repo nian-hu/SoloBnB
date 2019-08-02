@@ -89,7 +89,10 @@ class SessionForm extends React.Component {
       email: this.state.email,
       password: this.state.password
     };
-    this.props.processForm(user).then(this.props.closeModal);
+    this.props.processForm(user).then(() => {
+      this.props.closeModal();
+      this.props.history.push('/myAccount');
+    })
   }
 
   handleChange(field) {
@@ -104,7 +107,7 @@ class SessionForm extends React.Component {
     const demo_user = { email: 'demo_user@gmail.com', password: 'hunter12' }
     this.props.processForm(demo_user).then(() => {
       this.props.closeModal();
-      this.props.history.push('/myAccount')
+      this.props.history.push('/myAccount');
     })
   }
 
