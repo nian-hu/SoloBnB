@@ -95,13 +95,13 @@ img {
   display: flex;
 }
 
-.columna {
+.primary-column {
   overflow: hidden;
   flex: 2;
   border: 1px solid black;
 }
 
-.columnb {
+.secondary-column {
   overflow: hidden;
   flex: 1;
   display: flex;
@@ -109,16 +109,16 @@ img {
   border: 1px solid black;
 }
 
-.column1 {
+.subcolumn {
   overflow: hidden;
   flex: 1;
 }
 
-.column1 img {
+.subcolumn img {
   height: 100%;
 }
 
-.columna img {
+.primary-column img {
   height: 100%;
   cursor: pointer;
 }

@@ -7,26 +7,26 @@ class ListingPhotos extends React.Component {
     return (
       <div className="listing-photos-container">
         <div className="row">
-          <div className="columna">
+          <div className="primary-column">
             <img src="https://wp.homepolish.com/wp-content/uploads/Homepolish-interior-design-79f54-800x500.jpg" />
           </div>
 
-          <div className="columnb">
-            <div className="column1">
+          <div className="secondary-column">
+            <div className="subcolumn">
               <img src="https://wp.homepolish.com/wp-content/uploads/Homepolish-interior-design-79f54-800x500.jpg" />
             </div>
 
-            <div className="column1">
+            <div className="subcolumn">
               <img src="https://wp.homepolish.com/wp-content/uploads/Homepolish-interior-design-79f54-800x500.jpg" />
             </div>
           </div>
 
-          <div className="columnb">
-            <div className="column1">
+          <div className="secondary-column">
+            <div className="subcolumn">
               <img src="https://wp.homepolish.com/wp-content/uploads/Homepolish-interior-design-79f54-800x500.jpg" />
             </div>
 
-            <div className="column1">
+            <div className="subcolumn">
               <img src="https://wp.homepolish.com/wp-content/uploads/Homepolish-interior-design-79f54-800x500.jpg" />
             </div>
           </div>
