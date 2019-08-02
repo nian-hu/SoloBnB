@@ -22,6 +22,7 @@ const NavBar = (props) => {
 
   return (
     <div className='nav-splash'>  
+      <div className='nav-logo'></div>
       <Auth />
     </div>
   )

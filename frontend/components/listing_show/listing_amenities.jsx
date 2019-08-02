@@ -40,9 +40,9 @@ class ListingAmenities extends React.Component {
       }
     }
 
-    const amenityItems = amenities.map(amenity => {
+    const amenityItems = amenities.map((amenity, idx) => {
       return (
-        <li className="amenities-item" key={amenity.id}>
+        <li className="amenities-item" key={idx}>
           <div className='amenity-icon-container'>
             <div className='amenity-icon'> 
               {icon(amenity)}

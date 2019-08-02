@@ -33,15 +33,15 @@ class ListingIndexItem extends React.Component {
     // debugger
     const icon = amenityIds.map((id, idx) => {
       if (id === 34) {
-        return <i key={idx} className="fas fa-wifi"></i>
+        return <i key={idx} className="fas fa-wifi"></i>;
       } else if (id === 35) {
-        return <i key={idx} className="fas fa-snowflake"></i>;
+        return <i key={idx} className="fas fa-snowflake"></i>;;
       } else if (id === 36) {
-        return <i key={idx} className="fas fa-sun"></i>;
+        return <i key={idx} className="fas fa-sun"></i>;;
       } else if (id === 37) {
-        return <i key={idx} className="fas fa-tint"></i>;
+        return <i key={idx} className="fas fa-tint"></i>;;
       } else if (id === 38) {
-        return <i key={idx} className="fas fa-utensils"></i>;
+        return <i key={idx} className="fas fa-utensils"></i>;;
       }
     })
 
@@ -99,7 +99,7 @@ class ListingIndexItem extends React.Component {
           </div>
 
           <div className='listing-index-amenities'>
-            <div className='listing-item-amenities'>{icon}</div>
+            <ul className='listing-item-amenities'>{icon}</ul>
           </div>
 
           <div className='listing-index-price'>

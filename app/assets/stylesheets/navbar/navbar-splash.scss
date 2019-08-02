@@ -1,6 +1,10 @@
 .nav-splash {
   z-index: 1;
   position: absolute;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .session-button {   // .session-button

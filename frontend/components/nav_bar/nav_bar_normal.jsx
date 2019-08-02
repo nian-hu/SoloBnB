@@ -5,6 +5,7 @@ const NavBarNormal = (props) => {
   
   return (
     <div className='nav-normal'>  
+      <div className='nav-logo'></div>
       <AuthNormal />
     </div>
   )
