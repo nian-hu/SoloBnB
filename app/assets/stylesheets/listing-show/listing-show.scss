@@ -1,0 +1,147 @@
+.listing-show-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  // .listing-description {
+    
+  // }
+}
+
+.listing-description {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.listing-amenities {
+  padding-left: 20%;
+  padding-right: 20%;
+  // border: 1px solid black;
+  // padding-left: 150px;
+  // padding-right: 150px;
+}
+
+.amenities-box {
+
+}
+
+.amenities-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  .amenities-col1 {
+    width: 50%;
+  }
+  .amenities-col2 {
+    width: 50%;
+  }
+}
+
+
+.amenities-item {
+  list-style: none;
+  padding: 10px;
+}
+
+.amenities-items {
+  padding: 0 0 0 0;
+}
+
+.listing-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.listing-copy {
+  font-size: 14px;
+  color:#484848;
+  border-top: 1px solid rgb(204, 203, 203);
+  border-bottom: 1px solid rgb(204, 203, 203);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.listing-title {
+  color: #484848;
+  font-size: 20px;
+}
+
+.listing-price {
+  color: #484848;
+  font-size: 16px;
+}
+
+.amenity-icon-container {
+  display: flex;
+  // justify-content: space-around;
+}
+
+.amenity-icon {
+  padding-right: 10px;
+  opacity: 0.5;
+}
+
+.amenity-name {
+  color: #484848;
+  font-size: 14px;
+}
+
+.amenities-title {
+  font-size: 17px;
+  color: #484848;
+}
+
+.listing-photos-container {
+  padding-bottom: 15px;
+}
+
+img {
+  width: 100%;
+}
+
+.row {
+  max-height: 100%;
+  display: flex;
+}
+
+.primary-column {
+  overflow: hidden;
+  flex: 2;
+  border: 1px solid black;
+}
+
+.secondary-column {
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.subcolumn {
+  overflow: hidden;
+  flex: 1;
+}
+
+.subcolumn img {
+  height: 100%;
+}
+
+.primary-column img {
+  height: 100%;
+  cursor: pointer;
+}
+
+.listing-photos-container img:hover {
+  cursor: pointer;
+}
+
+.listing-photos-container .row:hover img {
+  filter: brightness(70%);
+}
+
+.listing-photos-container .row img:hover {
+  filter: brightness(100%);
+  transition: transform 0.7s;
+  transform: scale(1.08);
+}

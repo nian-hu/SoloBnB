@@ -1,20 +1,28 @@
 import React from 'react';
-import AuthContainer from './auth_container';
-// import Contact from './contact';
+import Auth from './auth';
 
-const NavBar = () => {
+//props.pathname.location = '/' then it's transparent
+//
+
+const NavBar = (props) => {
+  
+  // const navOpacity = props.pathname.location === '/' ? (
+  //   'transparent'
+  // ) : (
+  //   'opaque'
+  // )
+
+  // const navPositioning = props.pathname.location === '/' ? (
+  //   'splash'
+  // ) : (
+  //   'normal'
+  // )
+
+  //className = {`nav-${navOpacity} nav-${navPositioning}`}
+
   return (
-    <div className='navbar'>
-      <div className='nav-logo'>
-      </div>
-
-      {/* <div className='nav-contact'>
-        <Contact />
-      </div> */}
-
-      <div className='nav-auth'>
-        <AuthContainer />
-      </div>
+    <div className='nav-splash'>  
+      <Auth />
     </div>
   )
 }

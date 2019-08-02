@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../nav_bar/nav_bar";
 
 const Splash = () => {
-  return (
+    return (
     <div className="splash">
       <Navbar />
     </div>

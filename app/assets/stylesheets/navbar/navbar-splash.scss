@@ -1,0 +1,32 @@
+.nav-splash {
+  z-index: 1;
+  position: absolute;
+}
+
+.session-button {   // .session-button
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  float: right;
+}
+
+.session-button:hover {
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+
+
+// MAKE THIS A DROPDOWN FEATURE
+
+.header-logout {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.header-logout:hover {
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
