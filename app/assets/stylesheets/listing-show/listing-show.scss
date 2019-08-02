@@ -26,7 +26,16 @@
 
 .amenities-list {
   display: flex;
+  width: 100%;
+  justify-content: space-around;
+  .amenities-col1 {
+    width: 50%;
+  }
+  .amenities-col2 {
+    width: 50%;
+  }
 }
+
 
 .amenities-item {
   list-style: none;

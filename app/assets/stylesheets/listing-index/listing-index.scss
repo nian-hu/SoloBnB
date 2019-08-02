@@ -1,8 +1,9 @@
 .listing-item {
   background-color: white;
-  border: 1px solid rgb(192, 189, 189);
-  padding: 20px;
-  margin-bottom: 15px;
+  border: 1px solid rgb(207, 206, 206);
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 20px;
 }
 
 .listing-item:hover {
@@ -16,8 +17,49 @@
   justify-content: space-around;
   .listings-items-index {
     width: 60%;
+    // width: 70%;
   }
   .listings-map {
     width: 30%;
+    // width: 20%;
   }
 }
+
+.listing-item-title {
+  color: #484848;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.listing-item-price {
+  color: #484848;
+  font-size: 13px;
+}
+
+.listing-index-price {
+  margin-top: 100px;
+  // float: right;
+}
+
+.listing-index-item-photo-container {
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.listing-index-item-container {
+  display: flex;
+  // align-content: flex-start;
+}
+
+.listing-index-item-content-container {
+  padding-left: 20px;
+}
+
+.fas {
+  opacity: 0.7;
+  padding-right: 5px;
+  font-size: 15px;
+}
+
+// .listing-item-amenities {
+// }

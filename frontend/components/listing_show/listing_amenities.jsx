@@ -62,9 +62,19 @@ class ListingAmenities extends React.Component {
       <div className='amenities-box'>
         <h1 className='amenities-title'>Amenities</h1>
         <div className='amenities-list'>
-          <ul className='amenities-items'>
-            {amenityItems}
-          </ul> 
+
+          <div className='amenities-col1'>
+            <ul className='amenities-items'>
+              {amenityItems}
+            </ul> 
+          </div>
+
+            <div className='amenities-col2'>
+              <ul className='amenities-items'>
+                {amenityItems}
+              </ul> 
+            </div>
+
         </div>
       </div>
     )

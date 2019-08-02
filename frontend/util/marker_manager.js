@@ -25,10 +25,26 @@ export default class MarkerManager {
 
   createMarkerFromListing(listing) {
     const position = new google.maps.LatLng(listing.lat, listing.long)
+    // const markerIcon = {
+    //   fillColor: "red",
+    //   fillOpacity: 1,
+    //   scale: 1.15,
+    //   strokeColor: "#484848",
+    //   strokeWeight: 0.3
+    // }
+
     const marker = new google.maps.Marker({
       position,
       map: this.map,
-      listingId: listing.id
+      animation: google.maps.Animation.DROP,
+      listingId: listing.id,
+      // icon: markerIcon,
+      label: {
+        text: `${listing.price}`,
+        fontSize: "12px",
+        fontWeight: "bold",
+        color: "white"
+      }
     })
     this.markers[listing.id] = marker;
   }
