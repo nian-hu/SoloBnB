@@ -16,9 +16,10 @@ class ListingAmenities extends React.Component {
     //   state.entities.amenities[id]
     // })
 
-    // debugger
+    if (amenities.length === 0) return null;
 
     const icon = amenity => {
+      if (amenity === undefined) return null;
       switch (amenity.name) {
         case 'Wifi': {
           return <i className="fas fa-wifi"></i>;
@@ -41,6 +42,7 @@ class ListingAmenities extends React.Component {
     }
 
     const amenityItems = amenities.map((amenity, idx) => {
+      if (amenity === undefined) return null;
       return (
         <li className="amenities-item" key={idx}>
           <div className='amenity-icon-container'>

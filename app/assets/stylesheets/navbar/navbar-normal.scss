@@ -4,15 +4,17 @@
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  width: 95%;
 }
 
 .session-button-normal {   // .session-button
   background-color: transparent;
   border: none;
-  font-size: 16px;
+  font-size: 14px;
   color: #484848;
   font-family: 'Montserrat', sans-serif;
   float: right;
+  padding-left: 15px;
 }
 
 .session-button-normal:hover {

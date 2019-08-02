@@ -45,7 +45,6 @@ class ListingIndexItem extends React.Component {
       }
     })
 
-
     // const icon = amenity_id => {
     //   switch (amenity_id) {
     //     case 36: {
@@ -98,9 +97,9 @@ class ListingIndexItem extends React.Component {
             <p className='listing-item-title'>{title}</p>
           </div>
 
-          <div className='listing-index-amenities'>
+          {/* <div className='listing-index-amenities'>
             <ul className='listing-item-amenities'>{icon}</ul>
-          </div>
+          </div> */}
 
           <div className='listing-index-price'>
             <p className='listing-item-price'>${price}/night</p>

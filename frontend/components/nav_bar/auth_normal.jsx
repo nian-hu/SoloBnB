@@ -23,13 +23,13 @@ const AuthNormal = ({ currentUser, logout, openModal }) => {
     currentUser ? (
       <hgroup className='header-group-normal'>
         <h1 className='header-user-normal'>{currentUser.fname} {currentUser.lname}</h1>
-        <button className='header-logout-normal' onClick={() => logout()}>Logout</button>
+        <button className='header-logout-normal' onClick={() => logout()}>Log out</button>
       </hgroup>
     ) : (
         <nav className='login-signup-normal'>
-          <button className='session-button-normal' onClick={() => openModal('login')}>Login</button>
+          <button className='session-button-normal' onClick={() => openModal('login')}>Log in</button>
           &nbsp;
-          <button className='session-button-normal' onClick={() => openModal('signup')}>Signup</button>
+          <button className='session-button-normal' onClick={() => openModal('signup')}>Sign up</button>
         </nav>
       );
 
