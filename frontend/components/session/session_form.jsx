@@ -50,11 +50,11 @@ class SessionForm extends React.Component {
       errorObj["password"] = 'Password must be at least six characters long'
     } 
 
-    if (this.state.fname.length === 0 && this.props.formType === 'Sign Up') {
+    if (this.state.fname.length === 0 && this.props.formType === 'Sign up') {
       errorObj["fname"] = 'First name must be filled out'
     }
     
-    if (this.state.lname.length === 0 && this.props.formType === 'Sign Up') {
+    if (this.state.lname.length === 0 && this.props.formType === 'Sign up') {
       errorObj["lname"] = 'Last name must be filled out'
     } 
 
@@ -65,6 +65,8 @@ class SessionForm extends React.Component {
     if (Object.values(errorObj).every(val => val.length === 0)) {
       this.handleSubmit();
     }
+
+    debugger
 
     this.setState({ errors: errorObj });
     errorObj = {

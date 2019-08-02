@@ -5,6 +5,7 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 import SessionForm from './session_form';
 
 const msp = state => {
+  debugger
   return {
     errors: state.errors.session,
     formType: 'Sign up'
