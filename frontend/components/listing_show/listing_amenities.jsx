@@ -14,7 +14,7 @@ class ListingAmenities extends React.Component {
     let newItems = amenityItems.slice(0, 4)
 
     if (newItems.length > 1) {
-      let midpt = Math.floor(newItems.length / 2);
+      let midpt = Math.ceil(newItems.length / 2);
 
       let amenityItems1 = newItems.slice(0, midpt);
       let amenityItems2 = newItems.slice(midpt);

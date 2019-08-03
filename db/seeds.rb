@@ -138,11 +138,14 @@ brooklyn4 = open("https://solobnb-seeds.s3.amazonaws.com/brooklyn4.jpg")
 brooklyn5 = open("https://solobnb-seeds.s3.amazonaws.com/brooklyn5.jpg")
 
 brooklyn.photos.attach(io: brooklyn1, filename: 'brooklyn1.jpg')
-brooklyn.phoistos.attach(io: brooklyn2, filename: 'brooklyn2.jpg')
+brooklyn.photos.attach(io: brooklyn2, filename: 'brooklyn2.jpg')
 brooklyn.photos.attach(io: brooklyn3, filename: 'brooklyn3.jpg')
 brooklyn.photos.attach(io: brooklyn4, filename: 'brooklyn4.jpg')
 brooklyn.photos.attach(io: brooklyn5, filename: 'brooklyn5.jpg')
 
+user1 = open("https://solobnb-seeds.s3.amazonaws.com/user1.jpg")
+
+demo.photo.attach(io: user1, filename: 'user1.jpg')
 
 
 # iceland = Listing.create!(host_id: 2,

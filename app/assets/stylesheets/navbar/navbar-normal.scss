@@ -31,13 +31,37 @@
 
 // MAKE THIS A DROPDOWN FEATURE
 
-.header-logout-normal {
-  background-color: transparent;
-  border: none;
-  color: white;
-}
+// .header-logout-normal {
+//   background-color: transparent;
+//   border: none;
+//   color: #484848;
+// }
 
-.header-logout-normal:hover {
-  border-bottom: 1px solid white;
-  cursor: pointer;
+// .header-logout-normal:hover {
+//   border-bottom: 1px solid #484848;
+//   cursor: pointer;
+// }
+
+// .header-profile-container {
+//   border-radius: 50%;
+//   overflow: hidden;
+//   width: 30px;
+//   height: 30px;
+// }
+
+// .header-profile-picture {
+//   max-width: 30px;
+//   height: auto;
+// }
+
+// .header-profile-container {
+//   border-radius: 50%;
+//   overflow: hidden;
+//   width: 30px;
+//   height: 30px;
+// }
+
+.header-profile-picture {
+  max-width: 50px;
+  border-radius: 50%;
 }

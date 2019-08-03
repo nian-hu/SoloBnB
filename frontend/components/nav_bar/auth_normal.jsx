@@ -19,12 +19,18 @@ const mdp = dispatch => {
 }
 
 const AuthNormal = ({ currentUser, logout, openModal }) => {
+  debugger
+  
   const display =
     currentUser ? (
-      <hgroup className='header-group-normal'>
-        <h1 className='header-user-normal'>{currentUser.fname} {currentUser.lname}</h1>
-        <button className='header-logout-normal' onClick={() => logout()}>Log out</button>
-      </hgroup>
+      <div className='header-profile-container'>
+        {/* <h1>Someone is logged in </h1>
+        <h1>That person is {currentUser.fname}</h1> */}
+        
+        {/* <h1 className='header-user-normal'>{currentUser.fname} {currentUser.lname}</h1> */}
+        {/* <button className='header-logout-normal' onClick={() => logout()}>Log out</button> */}
+        <img className='header-profile-picture' src={currentUser.photoUrl}/>
+      </div>
     ) : (
         <nav className='login-signup-normal'>
           <button className='session-button-normal' onClick={() => openModal('login')}>Log in</button>
