@@ -5,6 +5,7 @@ import LoginFormContainer from '../session/login_form_container';
 import SignupFormContainer from '../session/signup_form_container';
 import AmenitiesModal from '../listing_show/amenities_modal';
 
+//add functionality in here for clicking outside navbar dropdown?
 
 const msp = state => {
   debugger
