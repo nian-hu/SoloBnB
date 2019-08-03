@@ -25,6 +25,7 @@ class AuthNormal extends React.Component {
     this.state = {
       dropdown: false
     }
+    this.logout = this.props.logout.bind(this);
   }
 
   handleDropdown() {
@@ -33,16 +34,23 @@ class AuthNormal extends React.Component {
 
   render() {
 
-    const { currentUser, logout, openModal } = this.props;
+    // const { currentUser, logout, openModal } = this.props;
+    const { currentUser, openModal } = this.props;
+
 
     const dropdown = this.state.dropdown ? (
       <div className='dropdown-container'>
         <ul className='dropdown-list'>
           <li className='dropdown-item'>
-            Hello
+            Profile
           </li>
           <li className='dropdown-item'>
-            Sup
+            Account
+          </li>
+          <li className='dropdown-item'>
+            <button onClick={this.logout} >
+              Log Out
+            </button>
           </li>
         </ul>
       </div>
