@@ -7,6 +7,28 @@ class ListingAmenities extends React.Component {
     super(props)
   }
 
+  findAmenities(amenityItems) {
+    let amenityItems1;
+    let amenityItems2;
+
+    let newItems = amenityItems.slice(0, 4)
+
+    if (newItems.length > 1) {
+      let midpt = Math.floor(newItems.length / 2);
+
+      let amenityItems1 = newItems.slice(0, midpt);
+      let amenityItems2 = newItems.slice(midpt);
+      return {
+        amenityItems1: amenityItems1,
+        amenityItems2: amenityItems2
+      }
+    } else {
+      return {
+        amenityItems1: newItems
+      }
+    }
+  }
+
   render() {
     const { listing } = this.props;
     const { amenities } = this.props;
@@ -60,7 +82,30 @@ class ListingAmenities extends React.Component {
     })
 
     // debugger
+    //what is amenity items?
+    // amenity items is an array full of objects
+    // [{}, {}, {}, {}, {}]
+
+    // [1, 2, 3, 4, 5]
+    // [1, 2, 3, 4]
     
+    //splitting them in half
+    //if the length is greater than 1 but less than 5
+
+    // let amenityItems1;
+    // let amenityItems2;
+
+    // if (amenityItems.length > 1 && amenityItems.length < 5) {
+    //   let midpt = Math.floor(amenityItems.length / 2);
+    //   let amenityItems1 = amenityItems.slice(0, midpt);
+    //   let amenityItems2 = amenityItems.slice(midpt);
+    //   return amenityItems1;
+    // }
+    //
+    // debugger
+
+    let ameObj = this.findAmenities(amenityItems)
+
     return (
       <div className='amenities-box'>
         <h1 className='amenities-title'>Amenities</h1>
@@ -68,13 +113,17 @@ class ListingAmenities extends React.Component {
 
           <div className='amenities-col1'>
             <ul className='amenities-items'>
-              {amenityItems}
+              {/* {amenityItems} */}
+              {/* {amenityItems1} */}
+              {ameObj.amenityItems1}
             </ul> 
           </div>
 
             <div className='amenities-col2'>
               <ul className='amenities-items'>
-                {amenityItems}
+                {/* {amenityItems} */}
+                {/* {amenityItems2} */}
+                {ameObj.amenityItems2}
               </ul> 
             </div>
 
