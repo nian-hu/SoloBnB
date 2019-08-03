@@ -7,7 +7,8 @@ class ListingDescription extends React.Component {
       <div className='listing-box'>
         <div className='listing-header'>
           <h1 className='listing-title'>{listing.title}</h1>
-          <h2 className='listing-price'>${listing.price}/night</h2>
+          {/* <h2 className='listing-price'>${listing.price}/night</h2> */}
+          <h2 className='listing-city'>{listing.city}</h2>
         </div>
         <p className='listing-copy'>{listing.description}</p>
       </div>

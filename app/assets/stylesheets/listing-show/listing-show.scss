@@ -10,6 +10,7 @@
 .listing-description {
   padding-left: 20%;
   padding-right: 20%;
+  padding-top: 10px;
 }
 
 .listing-amenities {
@@ -72,12 +73,20 @@
 
 .listing-title {
   color: #484848;
-  font-size: 20px;
+  font-size: 22px;
+  padding-bottom: 10px;
 }
 
-.listing-price {
+// .listing-price {
+//   color: #484848;
+//   font-size: 16px;
+//   font-weight: normal; 
+// }
+
+.listing-city {
   color: #484848;
   font-size: 16px;
+  font-weight: normal; 
 }
 
 .amenity-icon-container {

@@ -62,6 +62,13 @@
 // }
 
 .header-profile-picture {
-  max-width: 50px;
+  max-width: 40px;
   border-radius: 50%;
+}
+
+.header-profile-picture:hover {
+  cursor: pointer;
+  // border: 1px solid #008489;
+  transform: scale(1.10);
+  transition: transform 0.9s;
 }
