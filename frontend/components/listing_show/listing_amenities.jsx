@@ -44,17 +44,17 @@ class ListingAmenities extends React.Component {
     const amenityItems = amenities.map((amenity, idx) => {
       if (amenity === undefined) return null;
       return (
-        <li className="amenities-item" key={idx}>
+        <div className="amenities-item" key={idx}>
           <div className='amenity-icon-container'>
-            <div className='amenity-icon'> 
+            {/* <div className='amenity-icon'>  */}
               {icon(amenity)}
-            </div>
+            {/* </div> */}
 
             <div className='amenity-name'>
               {amenity.name}
             </div>
           </div>
-        </li>
+        </div>
       )
     })
 

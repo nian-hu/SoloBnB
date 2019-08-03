@@ -3,6 +3,8 @@ import ListingDescription from './listing_description';
 import ListingAmenities from './listing_amenities';
 import NavBarNormal from '../nav_bar/nav_bar_normal';
 import ListingPhotos from './listing_photos';
+// import IndividualMap from '../listing_map/individual_map';
+// import ListingShowMap from './listing_show_map';
 
 class ListingShow extends React.Component {
   componentDidMount() {
@@ -34,6 +36,10 @@ class ListingShow extends React.Component {
 
             <div className='listing-amenities'>
               <ListingAmenities listing={listing} amenities={amenities} />
+            </div>
+
+            <div className='listing-show-map'>
+              {/* <ListingShowMap/> */}
             </div>
           </div>
         </div>

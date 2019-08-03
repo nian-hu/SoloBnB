@@ -137,7 +137,7 @@ class SessionForm extends React.Component {
             onChange={this.handleChange("fname")}
             placeholder="First Name"
           />
-          <i className="far fa-user"></i>
+          <i id='modal-icon' className="far fa-user"></i>
         </div>
         <p className="error-message">{this.state.errors.fname}</p>
 
@@ -150,7 +150,7 @@ class SessionForm extends React.Component {
             onChange={this.handleChange("lname")}
             placeholder="Last Name"
           />
-          <i className="far fa-user"></i>
+          <i id='modal-icon' className="far fa-user"></i>
         </div>
         <p className="error-message">{this.state.errors.lname}</p>
       </>
@@ -228,7 +228,7 @@ class SessionForm extends React.Component {
                 onChange={this.handleChange("email")}
                 placeholder="Email Address"
               />
-            <i className="far fa-envelope"></i>
+            <i id='modal-icon' className="far fa-envelope"></i>
             </div>
             <p className="error-message">{this.state.errors.email}</p>
 
@@ -241,7 +241,7 @@ class SessionForm extends React.Component {
                 onChange={this.handleChange("password")}
                 placeholder="Password"
               />
-            <i className="fas fa-unlock-alt"></i>
+            <i id='modal-icon' className="fas fa-unlock-alt"></i>
             </div>
             <p className="error-message">{this.state.errors.password}</p>
 
