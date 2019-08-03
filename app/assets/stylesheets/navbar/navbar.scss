@@ -12,7 +12,9 @@
   float: right;
   margin-left: 15px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
+// somehow this fixed cursor pointer issue? above
 
 .session-button:hover {
   border-bottom: 1px solid white;
