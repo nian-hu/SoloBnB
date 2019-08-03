@@ -3,7 +3,9 @@ import ListingDescription from './listing_description';
 import ListingAmenities from './listing_amenities';
 import NavBarNormal from '../nav_bar/nav_bar_normal';
 import ListingPhotos from './listing_photos';
-// import IndividualMap from '../listing_map/individual_map';
+import IndividualMap from '../listing_map/individual_map';
+// import ListingMap from '../listing_map/listing_map';
+
 // import ListingShowMap from './listing_show_map';
 
 class ListingShow extends React.Component {
@@ -22,9 +24,11 @@ class ListingShow extends React.Component {
   render() {
     const { listing, amenities } = this.props;
     // debugger
-    if (!listing) {
+    if (Object.keys(listing).length === 0) {
+      debugger
       return <div>Fetching listing...</div>
     } else {
+      debugger
       return (
         <div>
           <NavBarNormal />
@@ -38,8 +42,9 @@ class ListingShow extends React.Component {
               <ListingAmenities listing={listing} amenities={amenities} />
             </div>
 
-            <div className='listing-show-map'>
-              {/* <ListingShowMap/> */}
+            <div className='individual-map-container'>
+              The neighborhood
+              <IndividualMap listing={listing}/>
             </div>
           </div>
         </div>

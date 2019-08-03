@@ -10,6 +10,7 @@ export default class MarkerManager {
         this.createMarkerFromListing(listing);
       }
     })
+  }
 
     // const listingObj = {};
     // listings.forEach(listing => {
@@ -21,7 +22,7 @@ export default class MarkerManager {
     //     this.removeMarker(this.markers[listingId])
     //   }
     // })
-  }
+  
 
   createMarkerFromListing(listing) {
     const position = new google.maps.LatLng(listing.lat, listing.long)
