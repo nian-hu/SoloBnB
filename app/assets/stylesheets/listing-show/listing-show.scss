@@ -24,6 +24,7 @@
 
 .amenities-box {
   border-bottom: 1px solid rgb(204, 203, 203);
+  padding-bottom: 20px;
 }
 
 .amenities-list {
@@ -41,7 +42,7 @@
 
 .amenities-item {
   list-style: none;
-  padding: 10px;
+  padding: 20px 10px 5px 0px;
 }
 
 .amenities-items {
@@ -83,9 +84,9 @@
   // justify-content: space-around;
 }
 
-.amenity-icon {
+#amenity-icon {
   padding-right: 10px;
-  opacity: 0.5;
+  color: gray;
 }
 
 .amenity-name {
@@ -96,6 +97,21 @@
 .amenities-title {
   font-size: 17px;
   color: #484848;
+}
+
+.amenities-show-all {
+  padding-top: 15px;
+  font-size: 16px;
+  color: #008489;
+  font-weight: bolder;
+  // width: 40%;
+  border: none;
+}
+
+.amenities-show-all:hover {
+  // border-bottom: 1px solid #008489;
+  text-decoration: underline solid #008489; 
+  cursor: pointer;
 }
 
 .listing-photos-container {
@@ -155,3 +171,4 @@ img {
   transition: transform 0.7s;
   transform: scale(1.08);
 }
+

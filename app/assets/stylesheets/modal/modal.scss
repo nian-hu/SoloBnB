@@ -126,7 +126,8 @@
 }
 
 .other-form:hover {
-  border-bottom: 1px solid #008489;
+  // border-bottom: 1px solid #008489;
+  text-decoration: underline solid #008489; 
   cursor: pointer;
 }
 
@@ -169,7 +170,8 @@
 
 .demo-login:hover {
   cursor: pointer;
-  border-bottom: 1px solid #008489;
+  text-decoration: underline solid #008489; 
+  // border-bottom: 1px solid #008489;
 }
 
 .modal-form label, input {

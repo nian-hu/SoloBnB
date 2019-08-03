@@ -1,4 +1,5 @@
 import React from 'react';
+import { openAmenitiesModal } from '../../actions/modal_actions';
 
 class ListingAmenities extends React.Component {
   constructor(props) {
@@ -22,19 +23,19 @@ class ListingAmenities extends React.Component {
       if (amenity === undefined) return null;
       switch (amenity.name) {
         case 'Wifi': {
-          return <i className="fas fa-wifi"></i>;
+          return <i id='amenity-icon' className="fas fa-wifi"></i>;
         }
         case 'Air conditioning': {
-          return <i className="fas fa-snowflake"></i>;
+          return <i id='amenity-icon' className="fas fa-snowflake"></i>;
         }
         case 'Heat': {
-          return <i className="fas fa-sun"></i>;
+          return <i id='amenity-icon' className="fas fa-sun"></i>;
         } 
         case 'Laundry': {
-          return <i className="fas fa-tint"></i>;
+          return <i id='amenity-icon' className="fas fa-tint"></i>;
         }
         case 'Kitchen': {
-          return <i className="fas fa-utensils"></i>;
+          return <i id='amenity-icon' className="fas fa-utensils"></i>;
         }
         default:
           return null;
@@ -78,6 +79,10 @@ class ListingAmenities extends React.Component {
             </div>
 
         </div>
+        
+        <button className='amenities-show-all' onClick={() => openAmenitiesModal('amenities', amenities)}>
+          Show all amenities
+        </button>
       </div>
     )
   }
