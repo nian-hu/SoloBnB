@@ -43,7 +43,7 @@ class ListingShow extends React.Component {
             </div>
 
             <div className='individual-map-container'>
-              The neighborhood
+              <h1 className='individual-map-title'>The neighborhood</h1>
               <IndividualMap listing={listing}/>
             </div>
           </div>

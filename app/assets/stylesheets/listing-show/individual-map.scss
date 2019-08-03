@@ -1,13 +1,26 @@
 .individual-map {
   height: 500px;
   min-width: 350px;
-  height: 100vh;
+  // height: 100vh;
+  // height: 65%;
+  height: 100%;
   overflow: hidden;
 }
 
 .individual-map-container {
   height: 500px;
   min-width: 350px;
-  height: 100vh;
+  // height: 100vh;
+  height: 50vh;
   overflow: hidden;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+//haven't tested this out yet
+
+.individual-map-title {
+  font-size: 17px;
+  color: #484848;
+  padding-bottom: 20px;
 }
