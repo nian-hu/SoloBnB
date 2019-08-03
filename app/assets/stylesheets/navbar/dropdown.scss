@@ -18,7 +18,7 @@
   color: #747474;
   font-size: 15px;
   border-bottom: 1px solid rgb(194, 194, 194);
-  width: 75%;
+  width: 85%;
   margin-left: 15px;
 }
 
@@ -33,6 +33,22 @@
   outline: none;
 }
 
+.dropdown-logout {
+  border-bottom: 1px solid rgb(194, 194, 194);
+  width: 85%;
+  margin-left: 15px;
+}
+
+.dropdown-logout:hover {
+  cursor: pointer;
+  color: teal;
+  border-bottom: 1px solid #484848;
+}
+
+.dropdown-logout:focus {
+  outline: none;
+}
+
 .logout-button {
   background: transparent;
   border: none;
@@ -41,10 +57,14 @@
   padding: 0 0 0 0;
   width: 100%;
   text-align: left;
+  height: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .logout-button:hover {
   cursor: pointer;
+  color: teal;
 }
 
 .logout-button:focus {
