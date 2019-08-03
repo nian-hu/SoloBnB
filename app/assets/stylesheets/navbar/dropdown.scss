@@ -28,3 +28,25 @@
   border-bottom: 1px solid #484848;
   // text-decoration: underline solid gray;
 }
+
+.dropdown-item:focus {
+  outline: none;
+}
+
+.logout-button {
+  background: transparent;
+  border: none;
+  color: #747474;
+  font-size: 15px;
+  padding: 0 0 0 0;
+  width: 100%;
+  text-align: left;
+}
+
+.logout-button:hover {
+  cursor: pointer;
+}
+
+.logout-button:focus {
+  outline: none;
+}

@@ -48,7 +48,7 @@ class AuthNormal extends React.Component {
             Account
           </li>
           <li className='dropdown-item'>
-            <button onClick={this.logout} >
+            <button className='logout-button' onClick={this.logout} >
               Log Out
             </button>
           </li>
