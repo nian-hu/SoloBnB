@@ -36,7 +36,7 @@ class IndividualMap extends React.Component {
     // debugger
     const mapOptions = {
       center: { lat: listing.lat, lng: listing.long },
-      zoom: 9
+      zoom: 13
     };
 
     // const mapNode = document.getElementById('individual-map')

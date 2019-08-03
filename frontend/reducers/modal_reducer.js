@@ -11,7 +11,6 @@ const modalReducer = (state = null, action) => {
       return modal;
     } 
     case OPEN_AMENITIES_MODAL: {
-      debugger
       // is it resetting the state too many times here?
       return {
         modal: action.modal,

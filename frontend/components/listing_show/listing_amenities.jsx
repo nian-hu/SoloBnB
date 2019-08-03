@@ -80,7 +80,7 @@ class ListingAmenities extends React.Component {
 
         </div>
         
-        <button className='amenities-show-all' onClick={() => openAmenitiesModal('amenities', amenities)}>
+        <button className='amenities-show-all' onClick={() => dispatch(openAmenitiesModal('amenities', amenities))}>
           Show all amenities
         </button>
       </div>

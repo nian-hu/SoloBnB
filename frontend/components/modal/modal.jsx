@@ -19,22 +19,29 @@ const mdp = dispatch => {
   };
 };
 
-function Modal({ modal, closeModal }) {
-  if (!modal) {
-    return null;
+// function Modal({ modal, closeModal }) {
+function Modal(props) {
+  const { closeModal } = props;
+  let amenities;
+  let modal;
+
+  if (props.modal && typeof props.modal === 'object') {
+    modal = props.modal.modal;
+
+    if (props.modal.amenities) {
+      amenities = props.modal.amenities;
+    }
+  } else {
+    modal = props.modal;
   }
 
-  if (typeof modal === 'object' && Object.keys(modal).length === 0) {
-    return null;
-  }
+  if (!modal) return null;
 
-  debugger
-
-  let component;
   // if (typeof modal === 'object' && modal.modal === 'amenities') {
   //   component == <AmenitiesModal/>
   // }
 
+  let component;
   switch (modal) {
     case 'login':
       component = <LoginFormContainer />;
@@ -42,8 +49,9 @@ function Modal({ modal, closeModal }) {
     case 'signup':
       component = <SignupFormContainer />;
       break;
-    case (typeof modal === 'object' && modal.modal === 'amenities'):
-      component = <AmenitiesModal />
+    case 'amenities':
+      debugger
+      component = <AmenitiesModal amenities={amenities} />
       break;
     default:
       return null;
