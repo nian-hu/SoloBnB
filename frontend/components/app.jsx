@@ -6,6 +6,8 @@ import Navbar from '../components/nav_bar/nav_bar';
 import { Route, Switch } from 'react-router-dom';
 import ListingIndexContainer from '../components/listings/listing_index_container'
 import ListingShowContainer from '../components/listing_show/listing_show_container'
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
+
 // import Background from '../components/splash/background';
 
 // import GreetingContainer from './greeting/greeting_container'
@@ -22,7 +24,9 @@ const App = () => {
       <Modal />
       {/* <Background /> */}
       {/* <Route path='/' component={Navbar} /> */}
-      <Route exact path='/' component={Splash} />
+      {/* <Route exact path='/' component={Splash} /> */}
+      <AuthRoute exact path='/' component={Splash} />
+
       <Route exact path='/listings' component={ListingIndexContainer}/> 
       <Route path='/listings/:listingId' component={ListingShowContainer}/>
       {/* <Route path='/myAccount' component={UserShowContainer} /> */}
