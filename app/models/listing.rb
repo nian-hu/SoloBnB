@@ -35,6 +35,11 @@ class Listing < ApplicationRecord
     through: :listing_amenities, 
     source: :amenity
 
+  has_many :bookings,
+    primary_key: :id,
+    foreign_key: :listing_id,
+    class_name: :Booking
+
   def self.in_bounds(bounds)
     self.where("lat < ?", bounds[:northEast][:lat])
         .where("lat > ?", bounds[:southWest][:lat])
