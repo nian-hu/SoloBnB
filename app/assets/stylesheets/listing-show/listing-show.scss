@@ -110,6 +110,10 @@
   padding-left: 0;
 }
 
+.amenities-show-all:focus {
+  outline: none;
+}
+
 .amenities-show-all:hover {
   // border-bottom: 1px solid #008489;
   text-decoration: underline solid #008489; 

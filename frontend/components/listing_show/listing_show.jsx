@@ -26,7 +26,8 @@ class ListingShow extends React.Component {
     // debugger
     if (Object.keys(listing).length === 0) {
       debugger
-      return <div>Fetching listing...</div>
+      // return <div>Fetching listing...</div>
+      return <div className="loader">Loading...</div>
     } else {
       debugger
       return (
