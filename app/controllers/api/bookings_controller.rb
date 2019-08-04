@@ -47,7 +47,7 @@ class Api::BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    render :index
+    render json: ['Booking canceled']
   end
 
   private

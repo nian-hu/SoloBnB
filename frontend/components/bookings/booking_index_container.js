@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import BookingIndex from './booking_index';
-import { fetchAllBookings } from '../../actions/booking_actions';
+import { fetchAllBookings, deleteBooking } from '../../actions/booking_actions';
 
 const msp = state => {
   const bookings = Object.values(state.entities.bookings)
@@ -12,7 +12,8 @@ const msp = state => {
 
 const mdp = dispatch => {
   return {
-    fetchAllBookings: () => dispatch(fetchAllBookings())
+    fetchAllBookings: () => dispatch(fetchAllBookings()),
+    deleteBooking: id => dispatch(deleteBooking(id))
   }
 }
 

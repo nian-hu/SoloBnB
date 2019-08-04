@@ -3,27 +3,38 @@ import moment from 'moment';
 import ListingIndexItem from '../listings/listing_index_item';
 import { connect } from 'react-redux';
 import { fetchListing } from '../../actions/listing_actions';
+import { withRouter } from 'react-router-dom';
 
-const msp = (state, ownProps) => {
-  const booking = ownProps.booking;
-  const listing = state.entities.listings[booking.listing_id];
+// const msp = (state, ownProps) => {
+//   const booking = ownProps.booking;
+//   const listing = state.entities.listings[booking.listing_id];
 
-  return {
-    listing
-  }
-}
+//   return {
+//     listing
+//   }
+// }
 
-const mdp = dispatch => {
-  return {
-    fetchListing: (id) => dispatch(fetchListing(id))
-  }
-}
+// const mdp = dispatch => {
+//   return {
+//     fetchListing: (id) => dispatch(fetchListing(id))
+//   }
+// }
 
 class BookingIndexItem extends React.Component {
-  componentDidMount() {
-    debugger
-    // const { listing, booking } = this.props;
-    this.props.fetchListing(this.props.booking.listing_id)
+  constructor(props) {
+    super(props);
+    this.cancelBooking = this.cancelBooking.bind(this);
+  }
+
+  // componentDidMount() {
+  //   debugger
+  //   // const { listing, booking } = this.props;
+  //   this.props.fetchListing(this.props.booking.listing_id)
+  // }
+
+  cancelBooking(bookingId) {
+    this.props.deleteBooking(bookingId);
+    this.props.history.push('/listings')
   }
 
   render() {
@@ -48,7 +59,7 @@ class BookingIndexItem extends React.Component {
           {moment(booking.start_date).format("LL")} - {moment(booking.end_date).format("LL")}
           </h1>
 
-          <button className='cancel-booking-button'>
+          <button onClick={() => this.cancelBooking(booking.id)} className='cancel-booking-button'>
             Cancel Booking
           </button>
         </div>
@@ -62,4 +73,5 @@ class BookingIndexItem extends React.Component {
   }
 }
 
-export default connect(msp, mdp)(BookingIndexItem);
+// export default connect(msp, mdp)(BookingIndexItem);
+export default withRouter(BookingIndexItem);

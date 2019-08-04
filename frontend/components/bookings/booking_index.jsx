@@ -21,7 +21,7 @@ class BookingIndex extends React.Component {
           {/* <h1>Booking Index Item Goes Here</h1>
           <h2>{booking.start_date}</h2>
           <h2>{booking.end_date}</h2> */}
-          <BookingIndexItem booking={booking} />
+          <BookingIndexItem booking={booking} deleteBooking={this.props.deleteBooking} />
         </div>
       )
     })
