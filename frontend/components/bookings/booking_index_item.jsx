@@ -44,8 +44,13 @@ class BookingIndexItem extends React.Component {
     return (
       <div className='booking-index-item-content-container'>
         <div className='booking-index-item-header'>
-          <h1>
-          {moment(booking.start_date).format("LL")} - {moment(booking.end_date).format("LL")}</h1>
+          <h1 className='booking-item-dates'>
+          {moment(booking.start_date).format("LL")} - {moment(booking.end_date).format("LL")}
+          </h1>
+
+          <button className='cancel-booking-button'>
+            Cancel Booking
+          </button>
         </div>
 
         <div className='booking-index-item'>

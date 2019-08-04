@@ -12,6 +12,7 @@
   padding-left: 20px;
   padding-right: 20px;
   border: 1px solid rgb(182, 181, 181);
+  margin-bottom: 20px;
 }
 
 .booking-index-item-content-container:hover {
@@ -26,4 +27,42 @@
 
 .booking-index-info {
   padding-bottom: 30px;
+}
+
+.booking-index-text {
+  color: #484848;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.booking-item-dates {
+  color: #484848;
+  font-size: 18px;
+  padding-bottom: 10px;
+  font-weight: normal;
+}
+
+.booking-index-item-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-booking-button {
+  background: transparent;
+  font-size: 14px;
+  padding: 10px;
+  color: #484848;
+  border: 1px solid lightgray;
+}
+
+.cancel-booking-button:hover {
+  cursor: pointer;
+  // color: #008489;
+  border: 1px solid #008489;
+  transition: transform 0.5s;
+  transform: scale(1.04);
+}
+
+.cancel-booking-button:focus {
+  outline: none;
 }

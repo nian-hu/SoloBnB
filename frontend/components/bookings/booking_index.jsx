@@ -40,7 +40,9 @@ class BookingIndex extends React.Component {
         <div className='main-booking-info'>
           <div className='booking-index-info'>
             <h1 className='upcoming-plans'>Upcoming Plans</h1>
-            {bookingIndexText}
+            <div className='booking-index-text'>
+              {bookingIndexText}
+            </div>
           </div>
           <div className='booking-items'>
             {bookingItems}
