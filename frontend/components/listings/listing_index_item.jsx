@@ -28,22 +28,25 @@ class ListingIndexItem extends React.Component {
   }
 
   render() {
-    const { title, price } = this.props.listing
+    const { title, price, city } = this.props.listing
     const amenityIds = this.props.listing.amenity_ids;
     // debugger
-    const icon = amenityIds.map((id, idx) => {
-      if (id === 34) {
-        return <i key={idx} className="fas fa-wifi"></i>;
-      } else if (id === 35) {
-        return <i key={idx} className="fas fa-snowflake"></i>;;
-      } else if (id === 36) {
-        return <i key={idx} className="fas fa-sun"></i>;;
-      } else if (id === 37) {
-        return <i key={idx} className="fas fa-tint"></i>;;
-      } else if (id === 38) {
-        return <i key={idx} className="fas fa-utensils"></i>;;
-      }
-    })
+    // this isn't working because the IDs change every time! 
+    // need to fetch amenity info from other slice of state
+
+    // const icon = amenityIds.map((id, idx) => {
+    //   if (id === 34) {
+    //     return <i key={idx} id='amenity-icon' className="fas fa-wifi"></i>;
+    //   } else if (id === 35) {
+    //     return <i key={idx} id='amenity-icon' className="fas fa-snowflake"></i>;;
+    //   } else if (id === 36) {
+    //     return <i key={idx} id='amenity-icon' className="fas fa-sun"></i>;;
+    //   } else if (id === 37) {
+    //     return <i key={idx} id='amenity-icon' className="fas fa-tint"></i>;;
+    //   } else if (id === 38) {
+    //     return <i key={idx} id='amenity-icon' className="fas fa-utensils"></i>;;
+    //   }
+    // })
 
     // const icon = amenity_id => {
     //   switch (amenity_id) {
@@ -68,10 +71,10 @@ class ListingIndexItem extends React.Component {
     // }
 
     // debugger
-    // const amenityItems = this.props.amenities.map(amenity => {
+    // const amenityList = this.props.amenities.map(amenity => {
     //   return (
     //     <li>
-    //       Here is an amenity: {amenity.name}
+    //       {amenity.name}
     //     </li>
     //   )
     // })
@@ -97,9 +100,9 @@ class ListingIndexItem extends React.Component {
             <p className='listing-item-title'>{title}</p>
           </div>
 
-          {/* <div className='listing-index-amenities'>
-            <ul className='listing-item-amenities'>{icon}</ul>
-          </div> */}
+          <div className='listing-index-city'>
+            <p className='listing-item-city'>{city}</p>
+          </div>
 
           <div className='listing-index-price'>
             <p className='listing-item-price'>${price}/night</p>

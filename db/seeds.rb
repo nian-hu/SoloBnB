@@ -98,7 +98,7 @@ iceland = isabella.listings.create!(host_id: isabella.id,
 
 bali = ashlyn.listings.create!(host_id: ashlyn.id,
                       title: "Luxurious villa in Bali",
-                      description: "For the overworked, perpetually sleep-deprived jetsetter who craves nothing more than a deep-tissue massage by the jungle and an early-morning dip in a private pool, this luxurious villa located in the heart of Bali is exactly what the doctor ordered. Surely you did not think that luxury villas were solely the domain of honeymooning couples or raucous groups of friends? Whoever said that you can’t take a five-hour-long flower bath by yourself was certainly misguided. At this luxury villa, you can receive the pampering that you need to make your body less sore as well as the glamorous Instagram photos that you need to make your friends back home more jealous.",
+                      description: "For the overworked, perpetually sleep-deprived jetsetter who craves nothing more than a deep-tissue massage by the jungle and an early-morning dip in a private pool, this luxurious villa located in the heart of Bali is exactly what the doctor ordered. Surely you did not think that luxury villas were solely the domain of honeymooning couples or raucous groups of friends? Whoever said that you can’t take a five-hour-long flower bath by yourself was certainly misguided. At this luxury villa, you can receive the pampering that you so desperately need.",
                       address: "Jl. Raya Nyuh Kuning Pengosekan",
                       city: "Ubud, Indonesia",
                       lat: -8.533019,

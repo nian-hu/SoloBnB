@@ -29,7 +29,8 @@
   color: #484848;
   font-size: 16px;
   font-weight: bold;
-  padding-top: 10px;
+  padding-top: 15px;
+  padding-left: 10px;
 }
 
 .listing-item-price {
@@ -39,8 +40,8 @@
 }
 
 .listing-index-price {
-  margin-top: 150px;
-  margin-left: 100px;
+  margin-top: 120px;
+  margin-left: 110px;
 }
 
 .listing-index-item-photo-container {
@@ -63,16 +64,22 @@
   }
 }
 
+.listing-index-city {
+  font-size: 14px;
+  padding-left: 10px;
+  padding-top: 7px;
+}
+
 // .listing-index-item-content-container {
 //   padding-left: 20px;
 //   width: 100%;
 // }
 
-.fas {
-  opacity: 0.7;
-  padding-right: 5px;
-  font-size: 15px;
-}
+// .fas {
+//   opacity: 0.7;
+//   padding-right: 5px;
+//   font-size: 15px;
+// }
 
 // .listing-index-item-icon {
 //   padding-right: 5px;
