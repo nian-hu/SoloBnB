@@ -50,6 +50,8 @@ class ListingShow extends React.Component {
               <ListingShowCalendar />
             </div> */}
 
+            <div></div>
+
             <div className='individual-map-container'>
               <h1 className='individual-map-title'>The neighborhood</h1>
               <IndividualMap listing={listing}/>

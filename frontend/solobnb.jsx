@@ -4,6 +4,7 @@ import configureStore from './store/store'
 import Root from './components/root'
 import { login, signup } from './actions/session_actions'
 import { openAmenitiesModal } from './actions/modal_actions'
+import 'react-dates/initialize';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -18,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
-  const nian = { fname: 'Nian', lname: 'Hu', email: 'nianhu96@gmail.com', password: 'hunter12' }
-  window.nian = nian;
+  // const nian = { fname: 'Nian', lname: 'Hu', email: 'nianhu96@gmail.com', password: 'hunter12' }
+  // window.nian = nian;
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;

@@ -15,9 +15,9 @@ const msp = state => {
 
 const mdp = dispatch => {
   return {
-    action: (booking, listingId) => dispatch(createBooking(booking, listingId)), 
+    createBooking: (booking, listingId) => dispatch(createBooking(booking, listingId)), 
     receiveBooking: (booking) => dispatch(receiveBooking(booking)),
-    openModal: (modal) => dispatch(openModal(modal))
+    openLoginModal: () => dispatch(openModal('login'))
   }
 }
 
