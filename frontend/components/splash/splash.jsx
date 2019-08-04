@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../nav_bar/nav_bar";
-import SplashForm from './splash_form';
+// import SplashForm from './splash_form';
 
 const Splash = () => {
     return (
     <div className="splash">
       <Navbar />
-      <SplashForm />
+      {/* <SplashForm /> */}
     </div>
   )
 }
