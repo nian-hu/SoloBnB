@@ -14,7 +14,9 @@ class BookingForm extends React.Component {
     const { booking, formType, createBooking, receiveBooking, openModal } = this.props;
     
     e.preventDefault();
-
+    return (
+      <h1>The form has been submitted</h1>
+    )
   }
 
   render() {

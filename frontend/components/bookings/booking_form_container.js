@@ -1,6 +1,7 @@
 import BookingForm from './booking_form';
 import { connect } from 'react-redux';
-import { openModal } from '../../action/modal_actions';
+import { openModal } from '../../actions/modal_actions'
+// import { openModal } from '../../action/modal_actions';
 import { createBooking, receiveBooking } from '../../actions/booking_actions';
 
 const msp = state => {
