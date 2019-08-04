@@ -17,6 +17,10 @@
 
   .booking-form-container {
     width: 40%;
+    position: sticky;
+    top: 20px;
+    // position: fixed;
+    // margin-left: 60%;
   }
 }
 
@@ -37,7 +41,7 @@
   border: 1px solid rgb(197, 197, 197);
   padding: 20px;
   float: left;
-  position: sticky;
+  // position: sticky;
   // width: 90%;
   height: 50%;
 }
@@ -97,13 +101,13 @@
 }
 
 .listing-copy {
-  font-size: 14px;
+  font-size: 14.5px;
   color:#484848;
   border-top: 1px solid rgb(204, 203, 203);
   border-bottom: 1px solid rgb(204, 203, 203);
   padding-top: 20px;
   padding-bottom: 20px;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .listing-title {
