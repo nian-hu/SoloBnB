@@ -49,7 +49,7 @@ class BookingIndexItem extends React.Component {
         </div>
 
         <div className='booking-index-item'>
-          <ListingIndexItem listing={listing} />
+          <ListingIndexItem listing={booking.listing} />
           {/* <h1>Figure this out</h1> */}
         </div>
       </div>
