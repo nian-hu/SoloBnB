@@ -1,21 +1,56 @@
-.listing-show-container {
+.main-section {
+  margin: 20px;
+  // width: 85%;
+  height: 100%;
+  max-width: 1048px;
+  position: relative;
+  // top: 70px;
+  //maybe
+  display: flex;
+  justify-content: space-between;
+  padding-left: 8%;
+  padding-right: 8%;
+
+  .content {
+    width: 70%;
+  }
+
+  .booking-form-container {
+    width: 40%;
+  }
+}
+
+.content {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   // .listing-description {
     
   // }
+  float: left;
+  margin-right: 60px;
+  // width: 55%;
+  box-sizing: border-box;
+}
+
+.booking-form-container {
+  border: 1px solid rgb(197, 197, 197);
+  padding: 20px;
+  float: left;
+  position: sticky;
+  // width: 90%;
+  height: 50%;
 }
 
 .listing-description {
-  padding-left: 20%;
-  padding-right: 20%;
+  // padding-left: 20%;
+  // padding-right: 20%;
   padding-top: 10px;
 }
 
 .listing-amenities {
-  padding-left: 20%;
-  padding-right: 20%;
+  // padding-left: 20%;
+  // padding-right: 20%;
   padding-top: 20px;
   padding-bottom: 20px;
   // border: 1px solid black;
@@ -58,7 +93,7 @@
 
 .listing-header {
   padding-bottom: 20px;
-  padding-top: 10px;
+  // padding-top: 10px;
 }
 
 .listing-copy {
@@ -73,7 +108,7 @@
 
 .listing-title {
   color: #484848;
-  font-size: 22px;
+  font-size: 26px;
   padding-bottom: 10px;
 }
 

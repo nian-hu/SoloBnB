@@ -37,30 +37,35 @@ class ListingShow extends React.Component {
         <div>
           <NavBarNormal />
           <ListingPhotos listing={listing}/>
-          <div className='listing-show-container'>
-            <div className='listing-description'>
-              <ListingDescription listing={listing} />
+          
+          <div className="main-section">
+            
+            <div className='content'>
+              <div className='listing-description'>
+                <ListingDescription listing={listing} />
+              </div>
+
+              <div className='listing-amenities'>
+                <ListingAmenities listing={listing} amenities={amenities} />
+              </div>
+
+              {/* <div className='listing-show-calendar'>
+                <h1>Availability</h1>
+                <ListingShowCalendar />
+              </div> */}
+
+              <div className='individual-map-container'>
+                <h1 className='individual-map-title'>The neighborhood</h1>
+                <IndividualMap listing={listing}/>
+              </div>
             </div>
 
-            <div className='listing-amenities'>
-              <ListingAmenities listing={listing} amenities={amenities} />
-            </div>
-
-            {/* <div className='listing-show-calendar'>
-              <h1>Availability</h1>
-              <ListingShowCalendar />
-            </div> */}
-
-            <div className='listing-show-calendar'>
-              <h1>Availability</h1>
+            {/* <div className='booking-form'> */}
               <BookingForm />
-            </div>
+            {/* </div> */}
 
-            <div className='individual-map-container'>
-              <h1 className='individual-map-title'>The neighborhood</h1>
-              <IndividualMap listing={listing}/>
-            </div>
           </div>
+
         </div>
       )
     }
