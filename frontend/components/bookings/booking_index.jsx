@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBarNormal from '../nav_bar/nav_bar_normal';
-import BookingIndexItem from './booking_index_item';
+import BookingIndexItem from "../bookings/booking_index_item";
 
 class BookingIndex extends React.Component {
   componentDidMount() {
@@ -37,13 +37,15 @@ class BookingIndex extends React.Component {
     return (
       <div>
         <NavBarNormal />
-        <div className='booking-index-info'>
-          <h1>Upcoming Plans</h1>
-          {bookingIndexText}
+        <div className='main-booking-info'>
+          <div className='booking-index-info'>
+            <h1 className='upcoming-plans'>Upcoming Plans</h1>
+            {bookingIndexText}
+          </div>
+          <div className='booking-items'>
+            {bookingItems}
+          </div>
         </div>
-        <ul>
-          {bookingItems}
-        </ul>
       </div>
     )
     

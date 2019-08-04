@@ -1,0 +1,29 @@
+.main-booking-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 10%;
+  padding-right: 20%;
+}
+
+.booking-index-item-content-container {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid rgb(182, 181, 181);
+}
+
+.booking-index-item-content-container:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.13);
+  cursor: pointer;
+}
+
+.upcoming-plans {
+  color: #484848;
+  font-size: 30px;
+}
+
+.booking-index-info {
+  padding-bottom: 30px;
+}
