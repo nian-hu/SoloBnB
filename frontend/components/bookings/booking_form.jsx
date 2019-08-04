@@ -20,7 +20,13 @@ class BookingForm extends React.Component {
   }
 
   renderStars() {
-    
+    const stars = [];
+
+    for (let i = 0; i < 5; i++) {
+      stars.push(<i key={i} className="far fa-star"></i>)
+    }
+
+    return stars;
   }
 
   render() {
@@ -33,7 +39,7 @@ class BookingForm extends React.Component {
             <p className='booking-price'>${this.props.listing.price}</p>
             <p className='per-night'>per night</p>
           </div>
-          <p className='booking-stars'>5 stars</p>
+          <p className='booking-stars'>{this.renderStars()}</p>
         </div>
 
         <h1 className='booking-form-dates-title'>Dates</h1>
