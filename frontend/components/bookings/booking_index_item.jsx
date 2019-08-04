@@ -33,8 +33,9 @@ class BookingIndexItem extends React.Component {
   // }
 
   cancelBooking(bookingId) {
-    this.props.deleteBooking(bookingId);
-    this.props.history.push('/listings')
+    this.props.deleteBooking(bookingId).
+      then(() => this.props.fetchAllBookings())
+    // this.props.history.push('/listings')
   }
 
   render() {
