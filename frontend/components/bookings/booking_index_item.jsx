@@ -20,11 +20,11 @@ const mdp = dispatch => {
 }
 
 class BookingIndexItem extends React.Component {
-  // componentDidMount() {
-  //   debugger
-  //   // const { listing, booking } = this.props;
-  //   this.props.fetchListing(this.props.booking.listing_id)
-  // }
+  componentDidMount() {
+    debugger
+    // const { listing, booking } = this.props;
+    this.props.fetchListing(this.props.booking.listing_id)
+  }
 
   render() {
     // if (!listing) return 'Fetching';
@@ -49,8 +49,8 @@ class BookingIndexItem extends React.Component {
         </div>
 
         <div className='booking-index-item'>
-          {/* <ListingIndexItem listing={listing} /> */}
-          <h1>Figure this out</h1>
+          <ListingIndexItem listing={listing} />
+          {/* <h1>Figure this out</h1> */}
         </div>
       </div>
     )

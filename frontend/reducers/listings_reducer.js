@@ -1,4 +1,5 @@
 import { RECEIVE_ALL_LISTINGS, RECEIVE_LISTING } from '../actions/listing_actions';
+import { RECEIVE_BOOKING } from '../actions/booking_actions';
 import { merge } from 'lodash';
 
 const listingsReducer = (state = {}, action) => {
@@ -13,6 +14,11 @@ const listingsReducer = (state = {}, action) => {
       // debugger
       return newState;
     }
+    // case RECEIVE_BOOKING: {
+    //   const newState = merge({}, state);
+    //   newState[action.booking.listing_id] = action.listing;
+    //   return newState;
+    // }
     default: {
       return state;
     }
