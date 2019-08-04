@@ -13,7 +13,11 @@ class ListingIndex extends React.Component {
 
   render() {
     const { listings } = this.props;
-    if (!listings) return null;
+    // if (!listings) {return null;}
+    if (!listings) {
+      return <div className="loader">Loading...</div>
+    }
+
     const listingItems = listings.map((listing, idx) => {
       return (
         <div key={idx} className="listing-item">

@@ -23,14 +23,14 @@ class Api::BookingsController < ApplicationController
     # year month day
 
 
-    debugger
+    # debugger
 
     if @booking.save
       @guest = @booking.guest
-      debugger
+      # debugger
       render :show
     else
-      debugger
+      # debugger
       render json: ['Invalid booking'], status: 401
     end
   end

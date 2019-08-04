@@ -19,7 +19,7 @@ class BookingForm extends React.Component {
 
     const startDate = moment(this.state.startDate).format("YYYY/MM/DD");
     const endDate = moment(this.state.endDate).format("YYYY/MM/DD");
-    debugger
+    // debugger
 
     // react moment does this:
     // 08/16/2019
@@ -34,16 +34,16 @@ class BookingForm extends React.Component {
 
     e.preventDefault();
     if (userId) {
-      debugger
+      // debugger
       createBooking({
         start_date: startDate,
         end_date: endDate, // not showing up in controller?
         guest_id: userId,
         listing_id: this.props.listing.id
       });
-      debugger
+      // debugger
       // change this later!
-      // this.props.history.push('/');
+      this.props.history.push('/bookings');
     } else {
       openLoginModal();
     }
