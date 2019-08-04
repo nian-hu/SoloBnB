@@ -61,7 +61,7 @@ class ListingShow extends React.Component {
             </div>
 
             {/* <div className='booking-form'> */}
-              <BookingForm />
+              <BookingForm listing={listing}/>
             {/* </div> */}
 
           </div>

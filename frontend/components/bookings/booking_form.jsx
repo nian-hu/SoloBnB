@@ -19,15 +19,21 @@ class BookingForm extends React.Component {
     )
   }
 
+  renderStars() {
+    
+  }
+
   render() {
-    // const { booking, formType, action, receiveBooking, openModal } = this.props;
+    // const { listing, formType, action, receiveBooking, openModal } = this.props;
 
     return (
       <div className='booking-form-container'>
         <div className='booking-form-info'>
-          <p>$50</p>
-          <p>per night</p>
-          <p>5 stars</p>
+          <div className='price-info'>
+            <p className='booking-price'>${this.props.listing.price}</p>
+            <p className='per-night'>per night</p>
+          </div>
+          <p className='booking-stars'>5 stars</p>
         </div>
 
         <h1 className='booking-form-dates-title'>Dates</h1>

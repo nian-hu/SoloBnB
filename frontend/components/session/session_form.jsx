@@ -131,11 +131,12 @@ class SessionForm extends React.Component {
         <div className='input-label'>
           <input
             type="text"
-            // className={`session-input ${inputError}`}
-            className='session-input'
+            className={`session-input ${this.state.errors.fname.length ? 'red-border' : ''}`}
+            // className='session-input'
             value={this.state.fname}
             onChange={this.handleChange("fname")}
             placeholder="First Name"
+            // className={ this.state.errors.fname.length ? 'red-border' : '' }
           />
           <i id='modal-icon' className="far fa-user"></i>
         </div>
@@ -145,7 +146,8 @@ class SessionForm extends React.Component {
           <input
             type="text"
             // className={`session-input ${inputError}`}
-            className='session-input'
+            className={`session-input ${this.state.errors.lname.length ? 'red-border' : ''}`}
+            // className='session-input'
             value={this.state.lname}
             onChange={this.handleChange("lname")}
             placeholder="Last Name"
@@ -222,8 +224,9 @@ class SessionForm extends React.Component {
             <div className='input-label'>
               <input 
                 type="text"
-                className='session-input'
+                // className='session-input'
                 // className={`session-input ${inputError}`}
+                className={`session-input ${this.state.errors.email.length ? 'red-border' : ''}`}
                 value={this.state.email}
                 onChange={this.handleChange("email")}
                 placeholder="Email Address"
@@ -235,8 +238,9 @@ class SessionForm extends React.Component {
             <div className='input-label'>
               <input
                 type="password" 
-                className='session-input'
+                // className='session-input'
                 // className={`session-input ${inputError}`}
+                className={`session-input ${this.state.errors.password.length ? 'red-border' : ''}`}
                 value={this.state.password}
                 onChange={this.handleChange("password")}
                 placeholder="Password"

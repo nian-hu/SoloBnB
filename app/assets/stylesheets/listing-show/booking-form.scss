@@ -2,6 +2,7 @@
   font-size: 14px;
   font-weight: normal;
   padding-bottom: 7px;
+  padding-top: 20px;
 }
 
 .reservation-button {
@@ -21,4 +22,26 @@
   cursor: pointer;
   background-color: white;
   color: #ff5a5f; 
+}
+
+.booking-form-info {
+  border-bottom: 1px solid rgb(184, 184, 184);
+  padding-bottom: 20px;
+}
+
+.booking-price {
+  font-size: 22px;
+  font-weight: bolder;
+  color: #484848;
+}
+
+.price-info {
+  display: flex;
+  padding-bottom: 7px;
+}
+
+.per-night {
+  padding-left: 3px;
+  font-size: 12px;
+  padding-top: 8px;
 }
