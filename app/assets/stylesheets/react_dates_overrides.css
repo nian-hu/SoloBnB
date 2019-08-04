@@ -655,7 +655,7 @@
 .DateInput_input {
   box-sizing: border-box;
   font-weight: 200;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 24px;
   color: #484848;
   background-color: #fff;
@@ -730,7 +730,8 @@
 }
 .DateRangePickerInput__withBorder {
   border-radius: 2px;
-  border: 1px solid #dbdbdb
+  border: 1px solid #dbdbdb;
+  width: 100%;
 }
 .DateRangePickerInput__rtl {
   direction: rtl
@@ -810,7 +811,8 @@
 }
 .DateRangePicker {
   position: relative;
-  display: inline-block
+  display: inline-block;
+  width: 100%;
 }
 .DateRangePicker__block {
   display: block

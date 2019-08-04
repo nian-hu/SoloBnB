@@ -26,6 +26,23 @@ class AuthNormal extends React.Component {
       dropdown: false
     }
     this.logout = this.props.logout.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClick, false)
+  } 
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClick, false)
+  }
+
+  handleClick(e) {
+    if (this.dropdownRef && this.dropdownRef.contains(e.target)) {
+      return;
+    } 
+
+    this.setState({dropdown: false})
   }
 
   handleDropdown() {
@@ -58,7 +75,7 @@ class AuthNormal extends React.Component {
 
     const display =
       currentUser ? (
-        <div className='header-profile-container'>
+        <div ref={(dropdownRef) => this.dropdownRef = dropdownRef } className='header-profile-container'>
           {/* <h1>Someone is logged in </h1>
         <h1>That person is {currentUser.fname}</h1> */}
 

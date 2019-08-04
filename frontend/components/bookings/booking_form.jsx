@@ -30,7 +30,7 @@ class BookingForm extends React.Component {
           <p>5 stars</p>
         </div>
 
-        <h1>Dates</h1>
+        <h1 className='booking-form-dates-title'>Dates</h1>
         <div className='booking-form-date-picker'>
           <DateRangePicker
             startDate={this.state.startDate} // momentPropTypes.momentObj or null,
@@ -48,7 +48,7 @@ class BookingForm extends React.Component {
         />
         </div>
 
-        <button onClick={this.handleSubmit}>
+        <button onClick={this.handleSubmit} className='reservation-button'>
           Reserve
         </button>
       </div>
