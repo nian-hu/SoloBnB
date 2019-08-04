@@ -2,22 +2,41 @@ import React from 'react';
 import 'react-dates/initialize';
 import { DateRangePicker, isSameDay } from 'react-dates';
 import moment from 'moment';
+import { withRouter } from 'react-router-dom';
 
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = props.booking; // {startDate: null, endDate: null}
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
   }
 
   handleSubmit(e) {
-    const { booking, formType, createBooking, receiveBooking, openModal } = this.props;
-    
+    const { userId, booking, formType, createBooking, receiveBooking, openModal } = this.props;
+    const startDate = moment(this.state.startDate).format('L');
+    const endDate = moment(this.state.endDate).format('L');
+
     e.preventDefault();
-    return (
-      <h1>The form has been submitted</h1>
-    )
+    if (userId) {
+      createBooking({
+        start_date: startDate,
+        end_date: endDate,
+        guest_id: userId,
+        listing_id: this.props.listing.id
+      });
+      // change this later!
+      this.props.history.push('/');
+    } else {
+      openModal('login');
+    }
   }
+
+  // handleChange(field) {
+  //   return (e) => {
+  //     this.setState({[field]: e.target.value})
+  //   }
+  // }
 
   renderStars() {
     const stars = [];
@@ -68,4 +87,4 @@ class BookingForm extends React.Component {
   }  
 }
 
-export default BookingForm;
+export default withRouter(BookingForm);

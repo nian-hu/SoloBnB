@@ -43,9 +43,9 @@ export const fetchBooking = id => {
   }
 }
 
-export const createBooking = (booking, listingId) => {
+export const createBooking = (booking) => {
   return dispatch => {
-    return BookingAPIUtil.createBooking(booking, listingId)
+    return BookingAPIUtil.createBooking(booking)
       .then(booking => {
         return dispatch(receiveBooking(booking))
       })

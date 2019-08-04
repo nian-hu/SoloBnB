@@ -12,10 +12,20 @@ export const fetchBooking = id => {
   })
 }
 
-export const createBooking = (booking, listingId) => {
+// export const createBooking = (booking, listingId) => {
+//   return $.ajax({
+//     method: 'POST',
+//     url: `api/listings/${listingId}/bookings`,
+//     data: {
+//       booking
+//     }
+//   })
+// }
+
+export const createBooking = (booking) => {
   return $.ajax({
     method: 'POST',
-    url: `api/listings/${listingId}/bookings`,
+    url: `api/listings/${booking.listingId}/bookings`,
     data: {
       booking
     }

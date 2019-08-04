@@ -10,13 +10,16 @@ const msp = state => {
       startDate: null,
       endDate: null
     },
-    formType: 'Create booking'
+    formType: 'Create booking',
+    //check if there's a user logged in
+    //they can't make a booking if they're not logged in!
+    userId: state.session.id // 32
   }
 }
 
 const mdp = dispatch => {
   return {
-    createBooking: (booking, listingId) => dispatch(createBooking(booking, listingId)), 
+    createBooking: (booking) => dispatch(createBooking(booking)), 
     receiveBooking: (booking) => dispatch(receiveBooking(booking)),
     openLoginModal: () => dispatch(openModal('login'))
   }
