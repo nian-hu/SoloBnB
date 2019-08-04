@@ -13,22 +13,39 @@ class BookingForm extends React.Component {
   }
 
   handleSubmit(e) {
-    const { userId, booking, formType, createBooking, receiveBooking, openModal } = this.props;
-    const startDate = moment(this.state.startDate).format('L');
-    const endDate = moment(this.state.endDate).format('L');
+    const { userId, booking, formType, createBooking, receiveBooking, openLoginModal } = this.props;
+    // const startDate = moment(this.state.startDate).format('L');
+    // const endDate = moment(this.state.endDate).format('L');
+
+    const startDate = moment(this.state.startDate).format("YYYY/MM/DD");
+    const endDate = moment(this.state.endDate).format("YYYY/MM/DD");
+    debugger
+
+    // react moment does this:
+    // 08/16/2019
+    // month day year
+
+    // find a way to organize it like this instead
+    // 16/08/2019
+    // send it up that way
+    // change it to day/month/year
+    // OR year month date
+
 
     e.preventDefault();
     if (userId) {
+      debugger
       createBooking({
         start_date: startDate,
-        end_date: endDate,
+        end_date: endDate, // not showing up in controller?
         guest_id: userId,
         listing_id: this.props.listing.id
       });
+      debugger
       // change this later!
-      this.props.history.push('/');
+      // this.props.history.push('/');
     } else {
-      openModal('login');
+      openLoginModal();
     }
   }
 

@@ -11,13 +11,26 @@ class Api::BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    # @booking.end_date = params[:booking][:end_date]
+    # debugger
+
     @booking.guest_id = current_user.id
-    @booking.listing_id = params[:listing_id]
+    # @booking.listing_id = params[:listing_id]
+
+    # the param i'm passing in is formatted as day month year 
+    # but i'm sending up month day year
+
+    # year month day
+
+
+    debugger
 
     if @booking.save
       @guest = @booking.guest
+      debugger
       render :show
     else
+      debugger
       render json: ['Invalid booking'], status: 401
     end
   end
