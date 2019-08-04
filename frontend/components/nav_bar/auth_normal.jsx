@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
 // import Auth from './auth';
+import { withRouter } from 'react-router-dom';
 
 const msp = state => {
   const { entities, session } = state;
@@ -58,8 +59,8 @@ class AuthNormal extends React.Component {
     const dropdown = this.state.dropdown ? (
       <div className='dropdown-container'>
         <ul className='dropdown-list'>
-          <li className='dropdown-item'>
-            Profile
+          <li className='dropdown-item' onClick={() => this.props.history.push('/bookings')}>
+            Trips
           </li>
           <li className='dropdown-item'>
             Account
@@ -128,4 +129,4 @@ class AuthNormal extends React.Component {
 //   return display;
 // }
 
-export default connect(msp, mdp)(AuthNormal);
+export default withRouter(connect(msp, mdp)(AuthNormal));
