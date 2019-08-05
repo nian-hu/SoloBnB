@@ -77,7 +77,7 @@ class ListingMap extends React.Component {
       const newLong = parseFloat(newParams.get('long')) || -73.948810;
       // debugger
 
-      debugger
+      // debugger
       
       this.map.setCenter({
         lat: newLat,
