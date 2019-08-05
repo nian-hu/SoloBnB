@@ -72,7 +72,7 @@ class ListingMap extends React.Component {
       const newParams = new URLSearchParams(`${this.props.history.location.hash}`);
       const newLat = parseFloat(newParams.get('lat'));
       const newLong = parseFloat(newParams.get('long'));
-      debugger
+      // debugger
       
       this.map.setCenter({
         lat: newLat,

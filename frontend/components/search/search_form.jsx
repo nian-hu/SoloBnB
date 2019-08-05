@@ -77,8 +77,9 @@ class SearchForm extends React.Component {
     //   long: place.geometry.location.lng()
     // })
 
-    const lat = this.state.lat;
-    const long = this.state.long;
+    // include default lat/long for williamsburg
+    const lat = this.state.lat || 40.716880;
+    const long = this.state.long || -73.948810;
     const startDate = moment(this.state.startDate).format("YYYY/MM/DD");
     const endDate = moment(this.state.endDate).format("YYYY/MM/DD");
 
