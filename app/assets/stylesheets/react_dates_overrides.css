@@ -31,7 +31,7 @@
 }
 .SingleDatePickerInput__withBorder {
   border-radius: 2px;
-  border: 1px solid #dbdbdb
+  /* border: 1px solid #dbdbdb */
 }
 .SingleDatePickerInput__rtl {
   direction: rtl
@@ -639,8 +639,9 @@
   background: #fff;
   position: relative;
   display: inline-block;
-  width: 150px;
-  vertical-align: middle
+  /* width: 150px; */
+  vertical-align: middle;
+  width: 100%;
 }
 .DateInput__small {
   width: 97px
