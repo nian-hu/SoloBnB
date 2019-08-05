@@ -13,7 +13,9 @@ class SearchForm extends React.Component {
       lat: null,
       long: null,
       startDate: null,
-      endDate: null
+      endDate: null,
+      focused1: false,
+      focused2: false
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -169,11 +171,12 @@ class SearchForm extends React.Component {
               <SingleDatePicker
                 date={this.state.startDate} // momentPropTypes.momentObj or null
                 onDateChange={startDate => this.setState({ startDate })} // PropTypes.func.isRequired
-                focused={this.state.focused} // PropTypes.bool
-                onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
+                focused={this.state.focused1} // PropTypes.bool
+                onFocusChange={({ focused: focused1 }) => this.setState({ focused1 })} // PropTypes.func.isRequired
                 id="start-date" // PropTypes.string.isRequired,
                 numberOfMonths={1}
                 placeholder={'mm/dd/yyyy'}
+                readOnly={true}
               />
             </div>
 
@@ -182,11 +185,12 @@ class SearchForm extends React.Component {
               <SingleDatePicker
                 date={this.state.endDate} // momentPropTypes.momentObj or null
                 onDateChange={endDate => this.setState({ endDate })} // PropTypes.func.isRequired
-                focused={this.state.focused} // PropTypes.bool
-                onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
+                focused={this.state.focused2} // PropTypes.bool
+                onFocusChange={({ focused: focused2 }) => this.setState({ focused2 })} // PropTypes.func.isRequired
                 id="end-date" // PropTypes.string.isRequired,
                 numberOfMonths={1}
                 placeholder={'mm/dd/yyyy'}
+                readOnly={true}
               />
             </div>
           </div>
