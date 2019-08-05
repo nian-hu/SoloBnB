@@ -68,13 +68,16 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className='searchbar-container'>
-        <i className="fa fa-search" aria-hidden="true"></i>
-        <input 
-          type="text"
-          id="searchbar-input"
-          placeholder="Search"
-          // onKeyPress={this.handleSubmit}
-        />
+        {/* <i className="fa fa-search" aria-hidden="true"></i> */}
+        <div className='searchbar-icon'></div>
+        <div className='searchbar'>
+          <input 
+            type="text"
+            id="searchbar-input"
+            placeholder="Search"
+            // onKeyPress={this.handleSubmit}
+          />
+        </div>
       </div>
     )
   }

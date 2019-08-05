@@ -9,8 +9,8 @@ const NavBarNormal = (props) => {
     <div className='nav-normal'>  
       {/* <div className='nav-logo' onClick={this.props.history.push('/')}></div> */}
       <div className='nav-logo' onClick={() => props.history.push('/')}></div>
-      <AuthNormal />
       <SearchBar />
+      <AuthNormal />
     </div>
   )
 }
