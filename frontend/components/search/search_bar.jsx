@@ -26,23 +26,43 @@ class SearchBar extends React.Component {
       lat: place.geometry.location.lat(),
       long: place.geometry.location.lng()
     })
+    //new addition
+    this.handleSubmit();
   }
 
+  // handleSubmit(e) {
+  //   if (e.key === 'Enter') {
+  //     e.preventDefault();
+
+  //     const lat = this.state.lat || 40.716880;
+  //     const long = this.state.long || -73.948810;
+
+  //     const hash = `&lat=${lat}&long=${long}&checkin=null&checkin=null`
+
+  //     // redirect to listings page
+  //     this.props.history.push({
+  //       pathname: '/listings',
+  //       hash: hash
+  //     })
+  //   }
+  // }
+
   handleSubmit(e) {
-    if (e.key === 'Enter') {
+    if (e) {
       e.preventDefault();
-
-      const lat = this.state.lat || 40.716880;
-      const long = this.state.long || -73.948810;
-
-      const hash = `&lat=${lat}&long=${long}&checkin=null&checkin=null`
-
-      // redirect to listings page
-      this.props.history.push({
-        pathname: '/listings',
-        hash: hash
-      })
     }
+
+    const lat = this.state.lat || 40.716880;
+    const long = this.state.long || -73.948810;
+
+    const hash = `&lat=${lat}&long=${long}&checkin=null&checkin=null`
+
+    // redirect to listings page
+    this.props.history.push({
+      pathname: '/listings',
+      hash: hash
+    })
+
   }
 
   render() {
@@ -53,7 +73,7 @@ class SearchBar extends React.Component {
           type="text"
           id="searchbar-input"
           placeholder="Search"
-          onKeyPress={this.handleSubmit}
+          // onKeyPress={this.handleSubmit}
         />
       </div>
     )
