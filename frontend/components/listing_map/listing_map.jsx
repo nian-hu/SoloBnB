@@ -8,8 +8,10 @@ class ListingMap extends React.Component {
     const paramsString = this.props.history.location.hash;
     const searchParams = new URLSearchParams(paramsString)
 
-    const lat = parseFloat(searchParams.get('lat'))
-    const long = parseFloat(searchParams.get('long'))
+    const lat = parseFloat(searchParams.get('lat')) || 40.716880; 
+    const long = parseFloat(searchParams.get('long')) || -73.948810;
+    // debugger
+
     const startDate = searchParams.get('checkin')
     const endDate = searchParams.get('checkout')
 
@@ -44,6 +46,7 @@ class ListingMap extends React.Component {
 
     // this.map = new google.maps.Map(this.mapNode, mapOptions);
 
+    // debugger
     this.map = new google.maps.Map(this.mapNode, this.mapOptions);
     // debugger
 
@@ -70,9 +73,11 @@ class ListingMap extends React.Component {
   componentDidUpdate(prevProps) {
     if (this.props.history.location.hash !== prevProps.location.hash) {
       const newParams = new URLSearchParams(`${this.props.history.location.hash}`);
-      const newLat = parseFloat(newParams.get('lat'));
-      const newLong = parseFloat(newParams.get('long'));
+      const newLat = parseFloat(newParams.get('lat')) || 40.716880;
+      const newLong = parseFloat(newParams.get('long')) || -73.948810;
       // debugger
+
+      debugger
       
       this.map.setCenter({
         lat: newLat,
