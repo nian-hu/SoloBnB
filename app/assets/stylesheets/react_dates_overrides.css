@@ -639,9 +639,9 @@
   background: #fff;
   position: relative;
   display: inline-block;
-  /* width: 150px; */
+  width: 150px;
   vertical-align: middle;
-  width: 100%;
+  /* width: 100%; */
 }
 .DateInput__small {
   width: 97px
