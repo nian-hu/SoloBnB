@@ -8,7 +8,6 @@ import AmenitiesModal from '../listing_show/amenities_modal';
 //add functionality in here for clicking outside navbar dropdown?
 
 const msp = state => {
-  debugger
   return {
     modal: state.ui.modal // either a string or an obj
   };
@@ -51,14 +50,11 @@ function Modal(props) {
       component = <SignupFormContainer />;
       break;
     case 'amenities':
-      debugger
       component = <AmenitiesModal amenities={amenities} />
       break;
     default:
       return null;
   }
-
-  debugger
 
   return (
     <div className="modal-background" onClick={closeModal}>

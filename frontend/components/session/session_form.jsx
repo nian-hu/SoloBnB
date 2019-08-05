@@ -66,8 +66,6 @@ class SessionForm extends React.Component {
       this.handleSubmit();
     }
 
-    debugger
-
     this.setState({ errors: errorObj });
     errorObj = {
       fname: '',

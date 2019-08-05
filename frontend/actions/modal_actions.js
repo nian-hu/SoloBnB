@@ -10,15 +10,11 @@ export const openModal = (modal) => {
 }
 
 export const openAmenitiesModal = (modal, amenities) => {
-  debugger
-  const pojo = {
+  return {
     type: OPEN_AMENITIES_MODAL,
     modal,
     amenities
   }
-  debugger
-  return pojo;
-  // this action is never being dispatched...?
 }
 
 export const closeModal = () => {

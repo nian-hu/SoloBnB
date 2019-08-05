@@ -28,11 +28,9 @@ class ListingShow extends React.Component {
     const { listing, amenities } = this.props;
     // debugger
     if (Object.keys(listing).length === 0) {
-      debugger
       // return <div>Fetching listing...</div>
       return <div className="loader">Loading...</div>
     } else {
-      debugger
       return (
         <div>
           <NavBarNormal />

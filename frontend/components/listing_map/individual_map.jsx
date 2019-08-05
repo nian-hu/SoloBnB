@@ -16,8 +16,6 @@ class IndividualMap extends React.Component {
     const listing = this.props.listing; 
     // const lat = parseFloat(listing.lat)
     // const long = parseFloat(listing.long)
-
-    debugger
     // let mapOptions;
 
     // if (Object.keys(listing).length === 0) {
