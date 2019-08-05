@@ -10,6 +10,13 @@ class BookingForm extends React.Component {
     this.state = props.booking; // {startDate: null, endDate: null}
     this.handleSubmit = this.handleSubmit.bind(this);
     // this.handleChange = this.handleChange.bind(this);
+    this.isBlocked = this.isBlocked.bind(this);
+  }
+
+  isBlocked(day1) {
+    return this.props.bookedDates.some(day2 => {
+      return isSameDay(day1, day2);
+    })
   }
 
   handleSubmit(e) {
@@ -93,6 +100,7 @@ class BookingForm extends React.Component {
             numberOfMonths={1}
             startDatePlaceholderText="Check In"
             endDatePlaceholderText="Check Out"
+            isDayBlocked={this.isBlocked}
         />
         </div>
 
