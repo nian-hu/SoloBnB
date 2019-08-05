@@ -1,9 +1,15 @@
 import { UPDATE_FILTER, CLEAR_FILTER } from '../actions/filter_actions';
 import { merge } from 'lodash';
 
+// const defaultState = {
+//   bounds: {},
+//   filter: {}
+// }
+
 const defaultState = {
   bounds: {},
-  filter: {}
+  // dates: {}
+  // filter: {}
 }
 
 const filterReducer = (state = defaultState, action) => {

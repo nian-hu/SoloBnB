@@ -36,7 +36,10 @@ class ListingIndex extends React.Component {
             </ul>
           </div>
           <div className="listings-map">
-            <ListingMap listings={listings} updateFilter={this.props.updateFilter}/>
+            <ListingMap
+              listings={listings}
+              updateFilter={this.props.updateFilter}
+            />
           </div>
         </div>
       </div>
