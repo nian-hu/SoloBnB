@@ -141,7 +141,7 @@ class SearchForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='search-form-container'>
         <div className='welcome-message-container'>
           <h1 className='main-welcome-message'>
             Traveling alone doesn't have to suck.
@@ -151,7 +151,7 @@ class SearchForm extends React.Component {
           </h2>
         </div>
 
-        <form>
+        <form className='search-form'>
           <div className='location-search-container'>
             <label>WHERE</label>
             <input
