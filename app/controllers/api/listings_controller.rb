@@ -12,6 +12,9 @@ class Api::ListingsController < ApplicationController
 
     if params[:filterObj][:dates].values.any?('null')
       @listings = Listing.with_attached_photos.includes(:amenities).in_bounds(params[:filterObj][:bounds])
+    elsif params[:filterObj][:dates].values.any?('')
+      # debugger
+      @listings = Listing.with_attached_photos.includes(:amenities).in_bounds(params[:filterObj][:bounds])
     else
       @listings = Listing.with_attached_photos.includes(:amenities).available_in_bounds(params[:filterObj][:bounds], params[:filterObj][:dates])
     end
