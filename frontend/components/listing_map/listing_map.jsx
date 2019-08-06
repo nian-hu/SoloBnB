@@ -53,7 +53,7 @@ class ListingMap extends React.Component {
 
     // this.map = new google.maps.Map(this.mapNode, mapOptions);
 
-    debugger
+    // debugger
     this.map = new google.maps.Map(this.mapNode, this.mapOptions);
     // debugger
 
@@ -70,7 +70,7 @@ class ListingMap extends React.Component {
   componentDidUpdate(prevProps) {
     // debugger
     if (this.props.history.location.hash !== prevProps.location.hash) {
-      debugger
+      // debugger
       const newParams = new URLSearchParams(`${this.props.history.location.hash}`);
       const newLat = parseFloat(newParams.get('lat')) || 40.716880;
       const newLong = parseFloat(newParams.get('long')) || -73.948810;
