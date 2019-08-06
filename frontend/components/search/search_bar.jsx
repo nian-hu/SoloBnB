@@ -25,9 +25,9 @@ class SearchBar extends React.Component {
       address: place.formatted_address,
       lat: place.geometry.location.lat(),
       long: place.geometry.location.lng()
-    })
+    }, this.handleSubmit)
     //new addition
-    this.handleSubmit();
+    // this.handleSubmit();
   }
 
   // handleSubmit(e) {
