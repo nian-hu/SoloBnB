@@ -23,7 +23,7 @@ class ListingMap extends React.Component {
     // use this to set center of map!
     this.mapOptions = {
       center: this.center,
-      zoom: 13
+      zoom: 8
     }
     //check what the dates are
     // debugger
