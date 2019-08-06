@@ -9,6 +9,7 @@ const Splash = () => {
     <div className="splash">
       <Navbar />
       <SearchForm />
+      {/* <EntireListingIndex /> */}
       {/* <SplashForm /> */}
     </div>
   )

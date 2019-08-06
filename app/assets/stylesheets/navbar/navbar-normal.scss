@@ -7,6 +7,13 @@
   align-items: center;
   width: 95%;
 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  border-bottom: 1px solid #ccc;
+
   // .sub-nav-normal {
   //   display: flex;
   //   width: 50%;
