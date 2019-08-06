@@ -39,8 +39,9 @@ class ListingIndex extends React.Component {
     if (listings.length === 0) {
       return (
         <div>
-          <NavBarNormal />
-          <div className='listings-index-container'>
+          {/* <NavBarNormal /> */}
+          {/* <div className='listings-index-container'> */}
+          <div>
             <div className='no-listing-message'>
               <h1>No available listings found</h1>
               <p>
@@ -71,9 +72,10 @@ class ListingIndex extends React.Component {
 
     return (
       <div>
-        <NavBarNormal/>
-        <div className="listings-index-container">
-          <div className="listings-items-index">
+        {/* <NavBarNormal/> */}
+        {/* <div className="listings-index-container"> */}
+          {/* <div className="listings-items-index"> */}
+          <div>
             <ul className="listings-list">
               {listingItems}
             </ul>
@@ -84,7 +86,6 @@ class ListingIndex extends React.Component {
               updateFilter={this.props.updateFilter}
             />
           </div> */}
-        </div>
       </div>
     )
   }

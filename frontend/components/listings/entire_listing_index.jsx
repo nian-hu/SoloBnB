@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { updateFilter } from '../../actions/filter_actions'; 
 import ListingMap from '../listing_map/listing_map'; 
 import ListingIndex from './listing_index_container';
+import NavBarNormal from '../nav_bar/nav_bar_normal';
 
 const msp = state => {
   const listings = Object.values(state.entities.listings);
@@ -28,12 +29,15 @@ class EntireListingIndex extends React.Component {
 
     return (
       <div>
-        <div>
-          <ListingIndex listings={listings}/>
-        </div>
+        <NavBarNormal />
+        <div className='listings-index-container'>
+          <div className='listings-items-index'>
+            <ListingIndex listings={listings}/>
+          </div>
 
-        <div>
-          <ListingMap updateFilter={updateFilter} listings={listings}/>
+          <div className='listings-map'>
+            <ListingMap updateFilter={updateFilter} listings={listings}/>
+          </div>
         </div>
       </div>
     )
