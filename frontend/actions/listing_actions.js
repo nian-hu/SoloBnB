@@ -4,6 +4,7 @@ export const RECEIVE_ALL_LISTINGS = 'RECEIVE_ALL_LISTINGS';
 export const RECEIVE_LISTING = 'RECEIVE_LISTING'
 
 export const receiveAllListings = listings => {
+  debugger
   return {
     type: RECEIVE_ALL_LISTINGS,
     listings
@@ -25,9 +26,10 @@ export const receiveListing = listing => {
   }
 }
 
-export const fetchListings = (filters) => {
+export const fetchListings = (filterObj) => {
+  debugger
   return dispatch => {
-    return ListingAPIUtil.fetchListings(filters)
+    return ListingAPIUtil.fetchListings(filterObj)
       .then(listings => {
         return dispatch(receiveAllListings(listings))
       })

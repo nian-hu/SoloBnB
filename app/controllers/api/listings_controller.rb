@@ -3,10 +3,17 @@ class Api::ListingsController < ApplicationController
     # @listings = params[:bounds] ? Listing.in_bounds(params[:bounds]) : Listing.all  
 
   def index  
-    if params[:bounds]
-      @listings = Listing.with_attached_photos.includes(:amenities).in_bounds(params[:bounds])
+    # if params[:bounds]
+    #   @listings = Listing.with_attached_photos.includes(:amenities).in_bounds(params[:bounds])
+    # else
+    #   @listings = Listing.with_attached_photos.includes(:amenities).all
+    # end
+    debugger
+
+    if params[:filterObj][:dates].values.any?('null')
+      @listings = Listing.with_attached_photos.includes(:amenities).in_bounds(params[:filterObj][:dates])
     else
-      @listings = Listing.with_attached_photos.includes(:amenities).all
+      @listings = Listing.with_attached_photos.includes(:amenities).available_in_bounds(params[:filterObj][:bounds], params[:filterObj][:dates])
     end
 
     if @listings
@@ -27,11 +34,19 @@ class Api::ListingsController < ApplicationController
     end
   end
 
-  def listing_params
-    params.require(:listing).permit(:title, :host_id, :description, :address, :city, :lat, :long, :price, photos: [])
-  end
+  private
+
+  # def listing_params
+  #   params.require(:listing).permit(:title, :host_id, :description, :address, :city, :lat, :long, :price, photos: [])
+  # end
 
   def bounds
-    params[:bounds]
+    params[:filterObj][:bounds]
+  end
+
+  def dates
+    params[:filterOb][:dates] 
+    # this is an object 
+    # { startDate: _, endDate: _ }
   end
 end

@@ -12,8 +12,8 @@ class ListingMap extends React.Component {
     const long = parseFloat(searchParams.get('long')) || -73.948810;
     // debugger
 
-    const startDate = searchParams.get('checkin')
-    const endDate = searchParams.get('checkout')
+    const startDate = searchParams.get('checkin') || null;
+    const endDate = searchParams.get('checkout') || null;
 
     this.center = {
       lat: lat,
@@ -25,7 +25,8 @@ class ListingMap extends React.Component {
       center: this.center,
       zoom: 10
     }
-    // debugger
+    //check what the dates are
+    debugger
 
     this.dates = {
       startDate: startDate,
@@ -62,11 +63,11 @@ class ListingMap extends React.Component {
         northEast: { lat: directions.north, lng: directions.east },
         southWest: { lat: directions.south, lng: directions.west }
       }
-      this.props.updateFilter("bounds", bounds)
-      // this.props.updateFilter({
-      //   "bounds": bounds,
-      //   "dates": this.dates
-      // })
+      // this.props.updateFilter("bounds", bounds)
+      this.props.updateFilter({
+        "bounds": bounds,
+        "dates": this.dates
+      })
     })
   }
 
