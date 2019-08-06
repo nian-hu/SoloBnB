@@ -34,6 +34,7 @@ class ListingShow extends React.Component {
       return (
         <div>
           <NavBarNormal />
+          <div className='listing-show-content'>
           <ListingPhotos listing={listing}/>
           
           <div className="main-section">
@@ -63,7 +64,7 @@ class ListingShow extends React.Component {
             {/* </div> */}
 
           </div>
-
+          </div>
         </div>
       )
     }
