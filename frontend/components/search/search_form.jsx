@@ -82,9 +82,24 @@ class SearchForm extends React.Component {
     // include default lat/long for williamsburg
     const lat = this.state.lat || 40.716880;
     const long = this.state.long || -73.948810;
-    const startDate = moment(this.state.startDate).format("YYYY/MM/DD") || null;
-    const endDate = moment(this.state.endDate).format("YYYY/MM/DD") || null;
 
+    let startDate;
+    let endDate;
+
+    if (this.state.startDate === null) {
+      startDate = null;
+    } else {
+      startDate = moment(this.state.startDate).format("YYYY/MM/DD");
+    }
+    
+    if (this.state.endDate === null) {
+      endDate = null;
+    } else {
+      endDate = moment(this.state.endDate).format("YYYY/MM/DD");
+    }
+
+    // debugger
+    
     const hash = `&lat=${lat}&long=${long}&checkin=${startDate}&checkout=${endDate}`
 
     // redirect to listings page
