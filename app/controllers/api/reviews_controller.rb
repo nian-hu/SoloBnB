@@ -5,7 +5,7 @@ class Api::ReviewsController < ApplicationController
 
     if @review.save 
       @user = @review.user
-      render :create
+      render :show
     else 
       render json: @review.errors.full_messages, status: 422
     end
@@ -13,6 +13,7 @@ class Api::ReviewsController < ApplicationController
 
   def index
     @reviews = Review.where(listing_id: params[:listing_id])
+    render :index
   end 
 
   def update
