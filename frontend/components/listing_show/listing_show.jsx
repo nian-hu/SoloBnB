@@ -1,7 +1,8 @@
 import React from 'react';
 import ListingDescription from './listing_description';
 import ListingAmenities from './listing_amenities';
-import NavBarNormal from '../nav_bar/nav_bar_normal';
+// import NavBarNormal from '../nav_bar/nav_bar_normal';
+import NavBarShow from '../nav_bar/nav_bar_show';
 import ListingPhotos from './listing_photos';
 import IndividualMap from '../listing_map/individual_map';
 import ListingShowCalendar from '../calendar/listing_show_calendar';
@@ -33,7 +34,7 @@ class ListingShow extends React.Component {
     } else {
       return (
         <div>
-          <NavBarNormal />
+          <NavBarShow />
           <div className='listing-show-content'>
           <ListingPhotos listing={listing}/>
           

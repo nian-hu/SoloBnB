@@ -1,0 +1,105 @@
+.nav-show {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  // width: 95%;
+  // width: 100%;
+
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // z-index: 9;
+
+  // .sub-nav-normal {
+  //   display: flex;
+  //   width: 50%;
+  //   align-items: center;
+  //   justify-content: space-evenly;
+
+  .sub-nav-show {
+    display: flex;
+    width: 63%;
+    align-items: center;
+    margin-left: 10px;
+
+    .nav-logo {
+      margin-right: 20px;
+    }
+  }
+
+  .sub-nav-show2 {
+    // width: 40%;
+  }
+}
+
+
+.nav-logo:hover {
+  cursor: pointer;
+  transform: scale(1.10);
+  transition: transform 0.9s;
+}
+
+.session-button-normal {   // .session-button
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  color: #484848;
+  font-family: 'Montserrat', sans-serif;
+  float: right;
+  padding-left: 15px;
+}
+
+.session-button-normal:hover {
+  border-bottom: 1px solid #484848;
+  cursor: pointer;
+}
+
+
+// MAKE THIS A DROPDOWN FEATURE
+
+// .header-logout-normal {
+//   background-color: transparent;
+//   border: none;
+//   color: #484848;
+// }
+
+// .header-logout-normal:hover {
+//   border-bottom: 1px solid #484848;
+//   cursor: pointer;
+// }
+
+// .header-profile-container {
+//   border-radius: 50%;
+//   overflow: hidden;
+//   width: 30px;
+//   height: 30px;
+// }
+
+// .header-profile-picture {
+//   max-width: 30px;
+//   height: auto;
+// }
+
+// .header-profile-container {
+//   border-radius: 50%;
+//   overflow: hidden;
+//   width: 30px;
+//   height: 30px;
+// }
+
+.header-profile-picture {
+  max-width: 40px;
+  border-radius: 50%;
+}
+
+.header-profile-picture:hover {
+  cursor: pointer;
+  // border: 1px solid #008489;
+  transform: scale(1.10);
+  transition: transform 0.9s;
+}
