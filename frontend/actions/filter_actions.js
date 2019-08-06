@@ -23,7 +23,7 @@ export const clearFilter = () => {
 // }
 
 export const updateFilter = (filterObj) => {
-  debugger
+  // debugger
   return (dispatch, getState) => {
     Object.keys(filterObj).forEach(filter => {
       dispatch(changeFilter(filter, filterObj[filter]));

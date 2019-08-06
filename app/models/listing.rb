@@ -48,7 +48,7 @@ class Listing < ApplicationRecord
   end
 
   def self.available_in_bounds(bounds, dates)
-    debugger
+    # debugger
     overlap = Booking.select('listing_id')
                       .where('? BETWEEN start_date AND end_date
                             OR ? BETWEEN start_date AND end_date',

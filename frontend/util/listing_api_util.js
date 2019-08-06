@@ -5,7 +5,7 @@
 // }
 
 export const fetchListings = (filterObj) => {
-  debugger
+  // debugger
   return $.ajax({
     method: 'GET',
     url: 'api/listings',

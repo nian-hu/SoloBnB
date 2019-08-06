@@ -14,12 +14,12 @@ const defaultState = {
 
 const filterReducer = (state = defaultState, action) => {
   Object.freeze(state);
-  debugger
+  // debugger
   switch (action.type) {
     case UPDATE_FILTER: {
       const newState = merge({}, state);
       newState[action.filter] = action.value;
-      debugger
+      // debugger
       return newState;
     }
     case CLEAR_FILTER: {

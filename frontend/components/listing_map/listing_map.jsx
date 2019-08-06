@@ -26,7 +26,7 @@ class ListingMap extends React.Component {
       zoom: 10
     }
     //check what the dates are
-    debugger
+    // debugger
 
     this.dates = {
       startDate: startDate,
