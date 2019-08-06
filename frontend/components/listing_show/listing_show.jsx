@@ -7,6 +7,7 @@ import ListingPhotos from './listing_photos';
 import IndividualMap from '../listing_map/individual_map';
 import ListingShowCalendar from '../calendar/listing_show_calendar';
 import BookingForm from '../bookings/booking_form_container';
+import ListingAvailability from './listing_availability';
 
 // import ListingMap from '../listing_map/listing_map';
 
@@ -26,7 +27,7 @@ class ListingShow extends React.Component {
   }
 
   render() {
-    const { listing, amenities } = this.props;
+    const { listing, amenities, bookedDates } = this.props;
     // debugger
     if (Object.keys(listing).length === 0) {
       // return <div>Fetching listing...</div>
@@ -49,10 +50,10 @@ class ListingShow extends React.Component {
                 <ListingAmenities listing={listing} amenities={amenities} />
               </div>
 
-              {/* <div className='listing-show-calendar'>
+              <div className='listing-availability'>
                 <h1>Availability</h1>
-                <ListingShowCalendar />
-              </div> */}
+                <ListingAvailability listing={listing} />
+              </div>
 
               <div className='individual-map-container'>
                 <h1 className='individual-map-title'>The neighborhood</h1>
