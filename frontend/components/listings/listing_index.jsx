@@ -18,6 +18,34 @@ class ListingIndex extends React.Component {
       return <div className="loader">Loading...</div>
     }
 
+    if (listings.length === 0) {
+      return (
+        <div>
+          <NavBarNormal />
+          <div className='listings-index-container'>
+            <div className='no-listing-message'>
+              <h1>No available listings found</h1>
+              <p>
+                Try adjusting your search by moving or zooming out on the map.
+              </p>
+              <p>
+                Or try another set of dates to see if there are availabilities.
+              </p>
+            </div>
+
+            <div>
+              <div className="listings-map">
+                <ListingMap
+                  listings={listings}
+                  updateFilter={this.props.updateFilter}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
     const listingItems = listings.map((listing, idx) => {
       return (
         <div key={idx} className="listing-item">

@@ -72,10 +72,12 @@ class ListingMap extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
+    // debugger
     if (this.props.history.location.hash !== prevProps.location.hash) {
       const newParams = new URLSearchParams(`${this.props.history.location.hash}`);
       const newLat = parseFloat(newParams.get('lat')) || 40.716880;
       const newLong = parseFloat(newParams.get('long')) || -73.948810;
+      // debugger
       // debugger
 
       // debugger
@@ -84,7 +86,7 @@ class ListingMap extends React.Component {
         lat: newLat,
         lng: newLong
       })
-    }
+    } 
 
     this.MarkerManager.updateMarkers(this.props.listings);
   }

@@ -16,7 +16,9 @@
   border-radius: 3px;
   border: 1px solid #EBEBEB;
   align-items: center;
-  margin-right: 42%;
+  width: 80%;
+  // margin-right: 42%;
+  // transition: all 200ms ease-in;
 }
 
 .searchbar-container:hover {
@@ -24,8 +26,9 @@
   transition: box-shadow 200ms ease-in;
 }
 
-.searchbar-container:focus {
-
+.searchbar:focus {
+  transition: transform 0.7s;
+  transform: scale(1.08);
 }
 
 .searchbar {

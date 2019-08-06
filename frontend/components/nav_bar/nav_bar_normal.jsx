@@ -8,9 +8,14 @@ const NavBarNormal = (props) => {
   return (
     <div className='nav-normal'>  
       {/* <div className='nav-logo' onClick={this.props.history.push('/')}></div> */}
-      <div className='nav-logo' onClick={() => props.history.push('/')}></div>
-      <SearchBar />
+      <div className='sub-nav-normal'>
+        <div className='nav-logo' onClick={() => props.history.push('/')}></div>
+        <SearchBar />
+      </div>
+
+      <div className='sub-nav-normal2'>
       <AuthNormal />
+      </div>
     </div>
   )
 }

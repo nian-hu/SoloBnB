@@ -6,7 +6,29 @@
   justify-content: space-between;
   align-items: center;
   width: 95%;
+
+  // .sub-nav-normal {
+  //   display: flex;
+  //   width: 50%;
+  //   align-items: center;
+  //   justify-content: space-evenly;
+
+  .sub-nav-normal {
+    display: flex;
+    width: 63%;
+    align-items: center;
+    margin-left: 10px;
+
+    .nav-logo {
+      margin-right: 20px;
+    }
+  }
+
+  .sub-nav-normal2 {
+    // width: 40%;
+  }
 }
+
 
 .nav-logo:hover {
   cursor: pointer;
