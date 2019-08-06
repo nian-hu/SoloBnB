@@ -5,15 +5,15 @@ import { withRouter } from 'react-router-dom';
 class ListingMap extends React.Component {
   constructor(props) {
     super(props);
-    const paramsString = this.props.history.location.hash;
-    const searchParams = new URLSearchParams(paramsString)
+    // const paramsString = this.props.history.location.hash;
+    this.searchParams = new URLSearchParams(`${this.props.history.location.hash}`)
 
-    const lat = parseFloat(searchParams.get('lat')) || 40.716880; 
-    const long = parseFloat(searchParams.get('long')) || -73.948810;
+    const lat = parseFloat(this.searchParams.get('lat')) || 40.716880; 
+    const long = parseFloat(this.searchParams.get('long')) || -73.948810;
     // debugger
 
-    const startDate = searchParams.get('checkin') || null;
-    const endDate = searchParams.get('checkout') || null;
+    const startDate = this.searchParams.get('checkin') || null;
+    const endDate = this.searchParams.get('checkout') || null;
 
     this.center = {
       lat: lat,
@@ -32,7 +32,13 @@ class ListingMap extends React.Component {
       startDate: startDate,
       endDate: endDate
     }
+    console.log('constructing')
+
   }
+
+  // componentWillUnmount() {
+  //   console.log('unmounting')
+  // }
 
   componentDidMount() {
     // const mapOptions = {
@@ -47,14 +53,19 @@ class ListingMap extends React.Component {
 
     // this.map = new google.maps.Map(this.mapNode, mapOptions);
 
-    // debugger
+    debugger
     this.map = new google.maps.Map(this.mapNode, this.mapOptions);
     // debugger
 
     this.MarkerManager = new MarkerManager(this.map);
-    this.MarkerManager.updateMarkers(this.props.listings);
     this.registerListeners();
+    this.MarkerManager.updateMarkers(this.props.listings);
+    // this.clearHash()
   }
+
+  // clearHash() {
+  //   this.searchParams = '';
+  // }
 
   componentDidUpdate(prevProps) {
     // debugger
@@ -72,24 +83,25 @@ class ListingMap extends React.Component {
         lat: newLat,
         lng: newLong
       })
-    } else {
-      // debugger
-      google.maps.event.addListener(this.map, 'idle', () => {
-        const directions = this.map.getBounds().toJSON();
-        const bounds = {
-          northEast: { lat: directions.north, lng: directions.east },
-          southWest: { lat: directions.south, lng: directions.west }
-        }
-        // this.props.updateFilter("bounds", bounds)
-        this.props.updateFilter({
-          "bounds": bounds,
-          "dates": {
-            startDate: null,
-            endDate: null
-          }
-        })
-      })
     }
+    // } else {
+    //   // debugger
+    //   google.maps.event.addListener(this.map, 'idle', () => {
+    //     const directions = this.map.getBounds().toJSON();
+    //     const bounds = {
+    //       northEast: { lat: directions.north, lng: directions.east },
+    //       southWest: { lat: directions.south, lng: directions.west }
+    //     }
+    //     // this.props.updateFilter("bounds", bounds)
+    //     this.props.updateFilter({
+    //       "bounds": bounds,
+    //       "dates": {
+    //         startDate: null,
+    //         endDate: null
+    //       }
+    //     })
+    //   })
+    // }
 
     this.MarkerManager.updateMarkers(this.props.listings);
   }

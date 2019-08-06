@@ -8,6 +8,7 @@ import ListingIndexContainer from '../components/listings/listing_index_containe
 import ListingShowContainer from '../components/listing_show/listing_show_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import BookingIndexContainer from '../components/bookings/booking_index_container'; 
+import EntireListingIndex from '../components/listings/entire_listing_index';
 
 // import Background from '../components/splash/background';
 
@@ -29,7 +30,8 @@ const App = () => {
       <AuthRoute exact path='/' component={Splash} />
       <ProtectedRoute exact path='/bookings' component={BookingIndexContainer}/>
 
-      <Route exact path='/listings' component={ListingIndexContainer}/> 
+      <Route exact path='/listings' component={EntireListingIndex} /> 
+      {/* <Route exact path='/listings' component={ListingIndexContainer}/>  */}
       <Route path='/listings/:listingId' component={ListingShowContainer}/>
       {/* <Route path='/myAccount' component={UserShowContainer} /> */}
     </div>

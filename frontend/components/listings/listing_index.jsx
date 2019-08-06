@@ -1,15 +1,27 @@
 import React from 'react';
 import ListingIndexItem from './listing_index_item';
 import NavBarNormal from '../nav_bar/nav_bar_normal';
-import ListingMap from '../listing_map/listing_map';
+// import ListingMap from '../listing_map/listing_map';
 
 class ListingIndex extends React.Component {
+
+  constructor (props) {
+    super(props)
+    // this.listingMap = (
+    //   <ListingMap
+    //     listings={this.props.listings}
+    //     updateFilter={this.props.updateFilter}
+    //   />
+    // )
+  }
+
   componentDidMount() {
     // what is happening here??
 
     // const { fetchListings } = this.props;
     // fetchListings(); 
     window.scrollTo(0, 0)
+    
   }
 
   // componentDidUpdate() {
@@ -19,6 +31,7 @@ class ListingIndex extends React.Component {
   render() {
     const { listings } = this.props;
     // if (!listings) {return null;}
+    // this.listingMap.listings = listings
     if (!listings) {
       return <div className="loader">Loading...</div>
     }
@@ -38,14 +51,11 @@ class ListingIndex extends React.Component {
               </p>
             </div>
 
-            <div>
+            {/* <div>
               <div className="listings-map">
-                <ListingMap
-                  listings={listings}
-                  updateFilter={this.props.updateFilter}
-                />
+                {this.listingMap}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       )
@@ -68,12 +78,12 @@ class ListingIndex extends React.Component {
               {listingItems}
             </ul>
           </div>
-          <div className="listings-map">
+          {/* <div className="listings-map">
             <ListingMap
               listings={listings}
               updateFilter={this.props.updateFilter}
             />
-          </div>
+          </div> */}
         </div>
       </div>
     )

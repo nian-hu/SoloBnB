@@ -10,11 +10,12 @@ const msp = state => {
   }
 }
 
-const mdp = dispatch => {
-  return {
-    fetchListings: () => dispatch(fetchListings()),
-    updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
-  }
-}
+// const mdp = dispatch => {
+//   return {
+//     fetchListings: () => dispatch(fetchListings()),
+//     updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
+//   }
+// }
 
-export default connect(msp, mdp)(ListingIndex)
+// export default connect(msp, mdp)(ListingIndex)
+export default connect(msp, null)(ListingIndex)
