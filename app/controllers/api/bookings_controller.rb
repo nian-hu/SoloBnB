@@ -31,7 +31,7 @@ class Api::BookingsController < ApplicationController
       render :show
     else
       # debugger
-      render json: ['Invalid booking'], status: 401
+      render json: ['Invalid booking'], status: 422
     end
   end
 
@@ -40,7 +40,7 @@ class Api::BookingsController < ApplicationController
     if @booking.update_attributes(booking_params)
       render :show
     else
-      render json: ['Invalid update'], status: 401
+      render json: ['Invalid update'], status: 422
     end
   end
 
