@@ -20,7 +20,7 @@ class ListingIndex extends React.Component {
 
     // const { fetchListings } = this.props;
     // fetchListings(); 
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
     
   }
 

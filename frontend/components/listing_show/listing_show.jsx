@@ -8,6 +8,7 @@ import IndividualMap from '../listing_map/individual_map';
 import ListingShowCalendar from '../calendar/listing_show_calendar';
 import BookingForm from '../bookings/booking_form_container';
 import ListingAvailability from './listing_availability';
+import ReviewIndex from '../reviews/review_index_container';
 
 // import ListingMap from '../listing_map/listing_map';
 
@@ -53,6 +54,11 @@ class ListingShow extends React.Component {
               <div className='listing-availability'>
                 <h1>Availability</h1>
                 <ListingAvailability listing={listing} />
+              </div>
+
+              <div className='listing-reviews'>
+                <h1 className='reviews-header'>Reviews</h1>
+                <ReviewIndex listing={listing} />
               </div>
 
               <div className='individual-map-container'>
