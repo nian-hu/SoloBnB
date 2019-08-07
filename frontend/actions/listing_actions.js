@@ -11,23 +11,26 @@ export const receiveAllListings = listings => {
   }
 }
 
-// export const receiveListing = payload => {
-//   return {
-//     type: RECEIVE_LISTING,
-//     listing: payload.listing,
-//     amenities: payload.amenities
-//   }
-// }
+export const receiveListing = payload => {
+  return {
+    type: RECEIVE_LISTING,
+    listing: payload.listing,
+    amenities: payload.amenities,
+    reviews: payload.reviews,
+    bookings: payload.bookings
+  }
+}
 
 //listing is an object containing lots of keys
 // including amenities, listings, and reviews
 //includ bookings in here later too
-export const receiveListing = listing => {
-  return {
-    type: RECEIVE_LISTING,
-    listing
-  }
-}
+
+// export const receiveListing = listing => {
+//   return {
+//     type: RECEIVE_LISTING,
+//     listing
+//   }
+// }
 
 export const fetchListings = (filterObj) => {
   // debugger

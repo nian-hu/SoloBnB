@@ -17,7 +17,7 @@ const reviewsReducer = (state = {}, action) => {
       delete newState[action.reviewId];
     }
     case RECEIVE_LISTING: {
-      const reviews = action.listing.reviews
+      const reviews = action.reviews
       return merge({}, state, reviews);
     }
     default: {

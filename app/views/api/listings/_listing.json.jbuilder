@@ -1,4 +1,4 @@
-json.extract! listing, :id, :host_id, :title, :description, :address, :city, :lat, :long, :price, :amenity_ids
+json.extract! listing, :id, :host_id, :title, :description, :address, :city, :lat, :long, :price, :amenity_ids, :booking_ids, :review_ids
 
 if listing.photos.attached?
   # debugger

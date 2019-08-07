@@ -242,3 +242,15 @@ ListingAmenity.create!(
 ################
 #### REVIEWS ###
 ################
+
+Review.create!(
+  listing_id: bali.id,
+  author_id: nian.id,
+  body: "Hands down the coolest experience of my life! After all my friends flaked on me, I decided to go ahead and book a trip to Bali anyway. Best decision ever! You absolutely have to come here and try out the massages and the flower bath. And the view of the rice paddies from the villa is absolutely insane. My friends back home are SO jealous. I got tons of amazing photos and gained like 2,000 followers on Instagram. Shoot me a follow: @nianhu",
+  accuracy: 5,
+  communication: 4,
+  cleanliness: 5,
+  location: 5,
+  check_in: 5,
+  value: 5
+)

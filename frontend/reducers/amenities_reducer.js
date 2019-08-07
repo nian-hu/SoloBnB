@@ -6,7 +6,7 @@ const amenitiesReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_LISTING: {
       // const amenities = action.amenities;
-      const amenities = action.listing.amenities;
+      const amenities = action.amenities;
       // debugger
       return merge({}, state, amenities);
     }

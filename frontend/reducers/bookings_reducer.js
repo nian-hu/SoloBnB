@@ -19,8 +19,9 @@ const bookingsReducer = (state = {}, action) => {
       return newState;
     }
     case RECEIVE_LISTING: {
-      const bookings = action.listing.bookings;
-      return merge({}, bookings);
+      // const bookings = action.listing.bookings;
+      const bookings = action.bookings;
+      return merge({}, state, bookings);
     }
     default: {
       return state;
