@@ -2,25 +2,28 @@ import React from 'react';
 import 'react-dates/initialize';
 import { DayPickerRangeController } from 'react-dates';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import moment from 'moment';
+import { isSameDay } from 'react-dates';
 
-// const msp = (state, ownProps) => {
-//   const bookings = Object.values(state.entities.bookings).filter(obj => obj.listing_id === ownProps.listing.id)
-//   const bookedDates = [];
+const msp = (state, ownProps) => {
+  const listingId = parseInt(ownProps.match.params.listingId)
+  const bookings = Object.values(state.entities.bookings).filter(obj => obj['listing_id'] === listingId)
+  const bookedDates = [];
 
-//   bookings.forEach(booking => {
-//     let start = moment(booking.start_date);
-//     let end = moment(booking.end_date);
-//     while (start < end) {
-//       bookedDates.push(start);
-//       start = moment(start, 'MM/DD/YYYY').add(1, 'days');
-//     }
-//   })
-//   debugger
+  bookings.forEach(booking => {
+    let start = moment(booking.start_date);
+    let end = moment(booking.end_date);
+    while (start < end) {
+      bookedDates.push(start);
+      start = moment(start, 'MM/DD/YYYY').add(1, 'days');
+    }
+  })
 
-//   return (
-//     bookedDates
-//   )
-// }
+  return {
+    bookedDates
+  }
+}
 
 class ListingAvailability extends React.Component {
   constructor(props) {
@@ -30,14 +33,14 @@ class ListingAvailability extends React.Component {
       endDate: null,
       focusedInput: null
     }
-    // this.isBlocked = this.isBlocked.bind(this);
+    this.isBlocked = this.isBlocked.bind(this);
   }
 
-  // isBlocked(day1) {
-  //   return this.props.bookedDates.some(day2 => {
-  //     return isSameDay(day1, day2);
-  //   })
-  // }
+  isBlocked(day1) {
+    return this.props.bookedDates.some(day2 => {
+      return isSameDay(day1, day2);
+    })
+  }
 
   render() {
     return (
@@ -50,12 +53,12 @@ class ListingAvailability extends React.Component {
           onFocusChange={focusedInput => this.setState({ focusedInput })}
           numberOfMonths={2}
           noBorder={true}
-          // isDayBlocked={this.isBlocked}
+          isDayBlocked={this.isBlocked}
         />
       </div>
     )
   }
 }
 
-export default ListingAvailability;
-// export default connect(msp, null)(ListingAvailability);
+// export default ListingAvailability;
+export default withRouter(connect(msp, null)(ListingAvailability));
