@@ -61,6 +61,7 @@ class BookingIndexItem extends React.Component {
 
     const { listing } = this.props;
 
+    // temporary!
     const cancelButton = moment(booking.start_date).isAfter(moment(), 'day') ? (
       <button onClick={() => this.cancelBooking(booking.id)} className='cancel-booking-button'>
         Cancel Booking
@@ -70,6 +71,7 @@ class BookingIndexItem extends React.Component {
       )
 
     // only display review button if the booking end date has passed
+    //change this to BEFORE
     const reviewButton = moment(booking.end_date).isAfter(moment(), 'day') ? (
       // <button onClick={() => this.createReview(booking.listing.id)} className='review-button'>
       <button onClick={() => dispatch(openReviewModal('create-review', booking.listing.id))} className='review-button'>

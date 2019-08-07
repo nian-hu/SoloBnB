@@ -13,12 +13,12 @@ class ReviewForm extends React.Component {
     debugger
     this.state = {
       body: '',
-      accuracy: '',
-      communication: '',
-      cleanliness: '',
-      location: '',
-      check_in: '',
-      value: '',
+      accuracy: 0,
+      communication: 0,
+      cleanliness: 0,
+      location: 0,
+      check_in: 0,
+      value: 0,
       listing_id: props.listingId
     }
     this.handleChange = this.handleChange.bind(this);
@@ -52,6 +52,12 @@ class ReviewForm extends React.Component {
   //   this.setState({ [category]:  })
   // }
 
+  handleRatingChange(field, rating) {
+    return e => {
+      this.setState({ [field]: rating })
+    }
+  }
+
   render() {
     const { formType } = this.props;
     // const inputs = [1, 2, 3, 4, 5];
@@ -61,7 +67,7 @@ class ReviewForm extends React.Component {
         <div className='close-button topleft' onClick={this.props.closeModal}>&times;</div>
 
         <form onSubmit={this.handleSubmit}>
-          <h1>{formType}</h1>
+          <h1 className='review-form-title'>{formType}</h1>
 
           <div>
             <h1>Review</h1>
@@ -74,11 +80,16 @@ class ReviewForm extends React.Component {
 
           <div>
             <h1>Accuracy</h1>
-            <input
+            {/* <input
               type="text"
               value={this.state.accuracy}
               onChange={this.handleChange('accuracy')}
-            />
+            /> */}
+            < i className={`${ this.state.accuracy >= 1 ? "fill" : "white" } fas fa-star`} onClick={this.handleRatingChange("accuracy", 1)} ></i >
+            < i className={`${ this.state.accuracy >= 2 ? "fill" : "white" } fas fa-star`} onClick={this.handleRatingChange("accuracy", 2)} ></i >
+            < i className={`${ this.state.accuracy >= 3 ? "fill" : "white" } fas fa-star`} onClick={this.handleRatingChange("accuracy", 3)} ></i >
+            < i className={`${ this.state.accuracy >= 4 ? "fill" : "white" } fas fa-star`} onClick={this.handleRatingChange("accuracy", 4)} ></i >
+            < i className={`${ this.state.accuracy >= 5 ? "fill" : "white" } fas fa-star`} onClick={this.handleRatingChange("accuracy", 5)} ></i >
           </div>
 
           <div>
