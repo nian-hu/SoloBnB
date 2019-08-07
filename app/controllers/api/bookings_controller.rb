@@ -25,6 +25,7 @@ class Api::BookingsController < ApplicationController
 
     # debugger
 
+    
     if @booking.save
       @guest = @booking.guest
       # debugger

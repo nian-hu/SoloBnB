@@ -4,6 +4,9 @@ import ListingIndexItem from '../listings/listing_index_item';
 import { connect } from 'react-redux';
 import { fetchListing } from '../../actions/listing_actions';
 import { withRouter } from 'react-router-dom';
+import { openModal } from '../../actions/modal_actions';
+import { openReviewModal } from '../../actions/modal_actions';
+
 
 // const msp = (state, ownProps) => {
 //   const booking = ownProps.booking;
@@ -24,6 +27,7 @@ class BookingIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.cancelBooking = this.cancelBooking.bind(this);
+    // this.createReview = this.createReview.bind(this);
   }
 
   // componentDidMount() {
@@ -37,6 +41,10 @@ class BookingIndexItem extends React.Component {
       then(() => this.props.fetchAllBookings())
     // this.props.history.push('/listings')
   }
+
+  // createReview(listingId) {
+  //   openModal('review', {listingId: listingId})
+  // }
 
   render() {
     // if (!listing) return 'Fetching';
@@ -53,6 +61,36 @@ class BookingIndexItem extends React.Component {
 
     const { listing } = this.props;
 
+    const cancelButton = moment(booking.start_date).isAfter(moment(), 'day') ? (
+      <button onClick={() => this.cancelBooking(booking.id)} className='cancel-booking-button'>
+        Cancel Booking
+          </button>
+    ) : (
+        null
+      )
+
+    // only display review button if the booking end date has passed
+    const reviewButton = moment(booking.end_date).isAfter(moment(), 'day') ? (
+      // <button onClick={() => this.createReview(booking.listing.id)} className='review-button'>
+      <button onClick={() => dispatch(openReviewModal('create-review', booking.listing.id))} className='review-button</button>'>
+        Write Review
+            {/* {reviewButtonText} */}
+      </button>
+    ) : (
+      null
+    )
+
+    // THIS BUTTON WILL EDIT REVIEWS
+    // const reviewButton2 = moment(booking.end_date).isAfter(moment(), 'day') ? (
+    //   // <button onClick={() => this.createReview(booking.listing.id)} className='review-button'>
+    //   <button onClick={() => dispatch(openReviewModal('update-review', booking.listing.id))} className='review-button</button>'>
+    //     Write Review
+    //         {/* {reviewButtonText} */}
+    //   </button>
+    // ) : (
+    //   null
+    // )
+
     return (
       <div className='booking-index-item-content-container'>
         <div className='booking-index-item-header'>
@@ -60,9 +98,12 @@ class BookingIndexItem extends React.Component {
           {moment(booking.start_date).format("LL")} - {moment(booking.end_date).format("LL")}
           </h1>
 
-          <button onClick={() => this.cancelBooking(booking.id)} className='cancel-booking-button'>
+          {cancelButton}
+          {/* <button onClick={() => this.cancelBooking(booking.id)} className='cancel-booking-button'>
             Cancel Booking
-          </button>
+          </button> */}
+
+          {reviewButton}
         </div>
 
         <div className='booking-index-item'>

@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../session/login_form_container';
 import SignupFormContainer from '../session/signup_form_container';
 import AmenitiesModal from '../listing_show/amenities_modal';
+// import ReviewModal from '../reviews/review_modal';
+import CreateReviewContainer from '../reviews/create_review_container';
+import UpdateReviewContainer from '../reviews/update_review_container';
 
 //add functionality in here for clicking outside navbar dropdown?
 
@@ -23,6 +26,7 @@ const mdp = dispatch => {
 function Modal(props) {
   const { closeModal } = props;
   let amenities;
+  let listingId;
   let modal;
 
   if (props.modal && typeof props.modal === 'object') {
@@ -31,6 +35,12 @@ function Modal(props) {
     if (props.modal.amenities) {
       amenities = props.modal.amenities;
     }
+
+    if (props.modal.listingId) {
+      listingId = props.modal.listingId;
+    }
+
+
   } else {
     modal = props.modal;
   }
@@ -51,6 +61,12 @@ function Modal(props) {
       break;
     case 'amenities':
       component = <AmenitiesModal amenities={amenities} />
+      break;
+    case 'create-review': 
+      component = <CreateReviewContainer listingId={listingId}/>
+      break;
+    case 'update-review':
+      component = <UpdateReviewContainer listingId={listingId} />
       break;
     default:
       return null;
