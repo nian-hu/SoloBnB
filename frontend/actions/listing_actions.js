@@ -19,6 +19,9 @@ export const receiveAllListings = listings => {
 //   }
 // }
 
+//listing is an object containing lots of keys
+// including amenities, listings, and reviews
+//includ bookings in here later too
 export const receiveListing = listing => {
   return {
     type: RECEIVE_LISTING,

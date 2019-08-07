@@ -1,4 +1,5 @@
 import { RECEIVE_ALL_BOOKINGS, RECEIVE_BOOKING, REMOVE_BOOKING } from '../actions/booking_actions';
+import { RECEIVE_LISTING } from '../actions/listing_actions';
 import { merge } from 'lodash';
 
 const bookingsReducer = (state = {}, action) => {
@@ -16,6 +17,10 @@ const bookingsReducer = (state = {}, action) => {
       const newState = merge({}, state);
       delete newState[action.bookingId];
       return newState;
+    }
+    case RECEIVE_LISTING: {
+      const bookings = action.listing.bookings;
+      return merge({}, bookings);
     }
     default: {
       return state;
