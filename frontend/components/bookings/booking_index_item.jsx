@@ -72,7 +72,7 @@ class BookingIndexItem extends React.Component {
     // only display review button if the booking end date has passed
     const reviewButton = moment(booking.end_date).isAfter(moment(), 'day') ? (
       // <button onClick={() => this.createReview(booking.listing.id)} className='review-button'>
-      <button onClick={() => dispatch(openReviewModal('create-review', booking.listing.id))} className='review-button</button>'>
+      <button onClick={() => dispatch(openReviewModal('create-review', booking.listing.id))} className='review-button'>
         Write Review
             {/* {reviewButtonText} */}
       </button>
@@ -98,12 +98,14 @@ class BookingIndexItem extends React.Component {
           {moment(booking.start_date).format("LL")} - {moment(booking.end_date).format("LL")}
           </h1>
 
+          <div className='button-container'> 
           {cancelButton}
           {/* <button onClick={() => this.cancelBooking(booking.id)} className='cancel-booking-button'>
             Cancel Booking
           </button> */}
 
           {reviewButton}
+          </div>
         </div>
 
         <div className='booking-index-item'>

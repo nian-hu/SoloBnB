@@ -46,9 +46,14 @@
 .booking-index-item-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.cancel-booking-button {
+.button-container {
+  display: flex;
+}
+
+.button-container button {
   background: transparent;
   font-size: 14px;
   padding: 10px;
@@ -56,14 +61,35 @@
   border: 1px solid lightgray;
 }
 
-.cancel-booking-button:hover {
+.button-container button:hover {
   cursor: pointer;
   // color: #008489;
   border: 1px solid #008489;
-  transition: transform 0.5s;
-  transform: scale(1.04);
+  // transition: transform 0.5s;
+  // transform: scale(1.04);
 }
 
-.cancel-booking-button:focus {
+.button-container button:focus {
   outline: none;
 }
+
+
+// .cancel-booking-button {
+//   background: transparent;
+//   font-size: 14px;
+//   padding: 10px;
+//   color: #484848;
+//   border: 1px solid lightgray;
+// }
+
+// .cancel-booking-button:hover {
+//   cursor: pointer;
+//   // color: #008489;
+//   border: 1px solid #008489;
+//   transition: transform 0.5s;
+//   transform: scale(1.04);
+// }
+
+// .cancel-booking-button:focus {
+//   outline: none;
+// }
