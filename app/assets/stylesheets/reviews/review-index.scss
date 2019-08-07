@@ -2,17 +2,24 @@
   font-size: 17px;
   color: #484848;
   padding-bottom: 20px;
+  padding-top: 25px;
+  border-top: 1px solid rgb(212, 212, 212);
 }
 
 .review-container {
 
 }
 
+.review-date {
+  font-size: 13px;
+  color: #484848;
+}
+
 .review-content {
   color: #484848;
   font-weight: lighter;
-  font-size: 15px;
-  line-height: 1.35;
+  font-size: 14.5px;
+  line-height: 1.5;
   padding-top: 25px;
   padding-bottom: 25px;
   border-bottom: 1px solid rgb(212, 212, 212);

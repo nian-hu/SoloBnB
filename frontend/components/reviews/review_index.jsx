@@ -15,13 +15,13 @@ class ReviewIndex extends React.Component {
       return <div className="loader">Loading...</div>
     }
 
-    // if (reviews.length === 0) {
-    //   return (
-    //     <div>
-    //       No reviews yet.
-    //     </div>
-    //   )
-    // }
+    if (reviews.length === 0) {
+      return (
+        <div className='review-content'>
+          No reviews yet.
+        </div>
+      )
+    }
 
     const reviewItems = reviews.map((review, idx) => {
       return (

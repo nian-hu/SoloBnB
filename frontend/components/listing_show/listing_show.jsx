@@ -52,7 +52,7 @@ class ListingShow extends React.Component {
               </div>
 
               <div className='listing-availability'>
-                <h1>Availability</h1>
+                <h1 className='availability-header'>Availability</h1>
                 <ListingAvailability listing={listing} />
               </div>
 

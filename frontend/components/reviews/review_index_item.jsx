@@ -7,7 +7,10 @@ const ReviewIndexItem = ({review}) => {
   return (
     <div className='review-container'>
       <div className='review-info'>
-        {date2}
+        <div className='review-date'>
+          {date2}
+        </div>
+        
       </div>
 
       <div className='review-content'>
