@@ -1,4 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { closeModal } from '../../actions/modal_actions';
+
+const mdp = dispatch => {
+  return {
+    closeModal: () => dispatch(closeModal())
+  }
+}
 
 class AmenitiesModal extends React.Component {
   render() {
@@ -26,4 +34,4 @@ class AmenitiesModal extends React.Component {
   }
 }
 
-export default AmenitiesModal;
+export default connect(null, mdp)(AmenitiesModal);

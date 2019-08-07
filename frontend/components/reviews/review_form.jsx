@@ -10,7 +10,6 @@ class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
     //check that props.listingId exists
-    debugger
     this.state = {
       body: '',
       accuracy: 0,
