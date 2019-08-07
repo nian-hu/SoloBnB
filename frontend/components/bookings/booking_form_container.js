@@ -94,6 +94,17 @@ const msp = (state, ownProps) => {
 
   // debugger
 
+  const reviews = Object.values(state.entities.reviews);
+  // debugger
+
+  let sumRating = 0;
+  reviews.forEach(review => {
+    sumRating += review.accuracy + review.check_in + review.cleanliness + review.communication + review.location + review.value;
+  })
+  let allRatings = 6 * reviews.length;
+  let avgRating = sumRating / allRatings; 
+  // debugger
+
   return {
     booking: {
       startDate: null,
@@ -103,7 +114,8 @@ const msp = (state, ownProps) => {
     //check if there's a user logged in
     //they can't make a booking if they're not logged in!
     userId: state.session.id,
-    bookedDates
+    bookedDates,
+    avgRating
   }
 }
 

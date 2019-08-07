@@ -33,6 +33,20 @@
   outline: none;
 }
 
+.dropdown-item a {
+  text-decoration: none;
+  color: #747474;  
+}
+
+.dropdown-item a:hover {
+  cursor: pointer;
+  color: teal;
+}
+
+.dropdown-item a:focus {
+  outline: none;
+}
+
 .dropdown-logout {
   border-bottom: 1px solid rgb(194, 194, 194);
   width: 85%;

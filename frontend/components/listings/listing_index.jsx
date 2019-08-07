@@ -43,12 +43,9 @@ class ListingIndex extends React.Component {
           {/* <div className='listings-index-container'> */}
           <div>
             <div className='no-listing-message'>
-              <h1>No available listings found</h1>
+              <h1>No available listings found.</h1>
               <p>
                 Try adjusting your search by moving or zooming out on the map.
-              </p>
-              <p>
-                Or try another set of dates to see if there are availabilities.
               </p>
             </div>
 

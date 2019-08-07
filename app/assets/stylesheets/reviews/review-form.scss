@@ -19,7 +19,7 @@
 .star-rating-container {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-around;
 
   .star-rating-col1: {
     width: 50%;
@@ -72,3 +72,4 @@
   background-color: white;
   color: #ff5a5f; 
 }
+

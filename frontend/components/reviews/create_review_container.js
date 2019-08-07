@@ -5,7 +5,7 @@ import { closeModal } from '../../actions/modal_actions';
 
 const msp = (state, ownProps) => {
   return {
-    formType: 'Create review',
+    formType: 'Write review',
     listingId: ownProps.listingId
   }
 }
