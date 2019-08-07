@@ -65,79 +65,88 @@ class ReviewForm extends React.Component {
     return (
       <div>
         <div className='close-button topleft' onClick={this.props.closeModal}>&times;</div>
+        <h1 className='review-form-title'>{formType}</h1>
 
-        <form onSubmit={this.handleSubmit}>
-          <h1 className='review-form-title'>{formType}</h1>
+        <form className='review-form-container' onSubmit={this.handleSubmit}>
+
+          <div className='star-rating-container'> 
+            <div className='star-rating-col1'> 
+            
+            <div className='star-rating'>
+              <h1>Accuracy</h1>
+              {/* <input
+                type="text"
+                value={this.state.accuracy}
+                onChange={this.handleChange('accuracy')}
+              /> */}
+              < i className={`${ this.state.accuracy >= 1 ? "fill" : "white" } fas fa-star`} onClick={this.handleRatingChange("accuracy", 1)} ></i >
+              < i className={`${ this.state.accuracy >= 2 ? "fill" : "white" } fas fa-star`} onClick={this.handleRatingChange("accuracy", 2)} ></i >
+              < i className={`${ this.state.accuracy >= 3 ? "fill" : "white" } fas fa-star`} onClick={this.handleRatingChange("accuracy", 3)} ></i >
+              < i className={`${ this.state.accuracy >= 4 ? "fill" : "white" } fas fa-star`} onClick={this.handleRatingChange("accuracy", 4)} ></i >
+              < i className={`${ this.state.accuracy >= 5 ? "fill" : "white" } fas fa-star`} onClick={this.handleRatingChange("accuracy", 5)} ></i >
+            </div>
+
+            <div className='star-rating'>
+              <h1>Communication</h1>
+              < i className={`${this.state.communication >= 1 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("communication", 1)} ></i >
+              < i className={`${this.state.communication >= 2 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("communication", 2)} ></i >
+              < i className={`${this.state.communication >= 3 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("communication", 3)} ></i >
+              < i className={`${this.state.communication >= 4 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("communication", 4)} ></i >
+              < i className={`${this.state.communication >= 5 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("communication", 5)} ></i >
+            </div>
+
+              <div className='star-rating'>
+              <h1>Cleanliness</h1>
+              < i className={`${this.state.cleanliness >= 1 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("cleanliness", 1)} ></i >
+              < i className={`${this.state.cleanliness >= 2 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("cleanliness", 2)} ></i >
+              < i className={`${this.state.cleanliness >= 3 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("cleanliness", 3)} ></i >
+              < i className={`${this.state.cleanliness >= 4 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("cleanliness", 4)} ></i >
+              < i className={`${this.state.cleanliness >= 5 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("cleanliness", 5)} ></i >
+            </div>
+          </div> 
+
+          <div className='star-rating-col2'>
+              <div className='star-rating'>
+            <h1>Location</h1>
+             < i className={`${this.state.location >= 1 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("location", 1)} ></i >
+            < i className={`${this.state.location >= 2 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("location", 2)} ></i >
+            < i className={`${this.state.location >= 3 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("location", 3)} ></i >
+            < i className={`${this.state.location >= 4 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("location", 4)} ></i >
+            < i className={`${this.state.location >= 5 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("location", 5)} ></i >
+          </div>
+
+              <div className='star-rating'>
+            <h1>Check-In</h1>
+            < i className={`${this.state.check_in >= 1 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("check_in", 1)} ></i >
+            < i className={`${this.state.check_in >= 2 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("check_in", 2)} ></i >
+            < i className={`${this.state.check_in >= 3 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("check_in", 3)} ></i >
+            < i className={`${this.state.check_in >= 4 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("check_in", 4)} ></i >
+            < i className={`${this.state.check_in >= 5 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("check_in", 5)} ></i >
+          </div>
+
+              <div className='star-rating'>
+            <h1>Value</h1>
+             < i className={`${this.state.value >= 1 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("value", 1)} ></i >
+            < i className={`${this.state.value >= 2 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("value", 2)} ></i >
+            < i className={`${this.state.value >= 3 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("value", 3)} ></i >
+            < i className={`${this.state.value >= 4 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("value", 4)} ></i >
+            < i className={`${this.state.value >= 5 ? "fill" : "white"} fas fa-star`} onClick={this.handleRatingChange("value", 5)} ></i >
+          </div>
+
+          </div>
+          
+          </div>
 
           <div>
-            <h1>Review</h1>
             <textarea 
               value={this.state.body}
-              placeholder="Review goes here"
+              placeholder="Tell us about your experience."
               onChange={this.handleChange('body')}
+              className='review-body-area'
             ></textarea>
           </div>
 
-          <div>
-            <h1>Accuracy</h1>
-            {/* <input
-              type="text"
-              value={this.state.accuracy}
-              onChange={this.handleChange('accuracy')}
-            /> */}
-            < i className={`${ this.state.accuracy >= 1 ? "fill" : "white" } fas fa-star`} onClick={this.handleRatingChange("accuracy", 1)} ></i >
-            < i className={`${ this.state.accuracy >= 2 ? "fill" : "white" } fas fa-star`} onClick={this.handleRatingChange("accuracy", 2)} ></i >
-            < i className={`${ this.state.accuracy >= 3 ? "fill" : "white" } fas fa-star`} onClick={this.handleRatingChange("accuracy", 3)} ></i >
-            < i className={`${ this.state.accuracy >= 4 ? "fill" : "white" } fas fa-star`} onClick={this.handleRatingChange("accuracy", 4)} ></i >
-            < i className={`${ this.state.accuracy >= 5 ? "fill" : "white" } fas fa-star`} onClick={this.handleRatingChange("accuracy", 5)} ></i >
-          </div>
-
-          <div>
-            <h1>Communication</h1>
-            <input
-              type="text"
-              value={this.state.communication}
-              onChange={this.handleChange('communication')}
-            />
-          </div>
-
-          <div>
-            <h1>Cleanliness</h1>
-            <input
-              type="text"
-              value={this.state.cleanliness}
-              onChange={this.handleChange('cleanliness')}
-            />
-          </div>
-
-          <div>
-            <h1>Location</h1>
-            <input
-              type="text"
-              value={this.state.location}
-              onChange={this.handleChange('location')}
-            />
-          </div>
-
-          <div>
-            <h1>Check-In</h1>
-            <input
-              type="text"
-              value={this.state.check_in}
-              onChange={this.handleChange('check_in')}
-            />
-          </div>
-
-          <div>
-            <h1>Value</h1>
-            <input
-              type="text"
-              value={this.state.value}
-              onChange={this.handleChange('value')}
-            />
-          </div>
-
-          <input type="submit" value="Submit"/>
+          <input className='review-submit-button' type="submit" value="Submit"/>
         </form>
       </div>
     )
