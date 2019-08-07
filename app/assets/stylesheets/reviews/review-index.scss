@@ -25,3 +25,28 @@
   border-bottom: 1px solid rgb(212, 212, 212);
 }
 
+// .review-stars {
+//   font-size: 14px;
+//   display: flex;
+// }
+
+.review-stars {
+  font-size: 14px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  .stars-col1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .stars-col2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.stars-row {
+  padding: 10px;
+}
