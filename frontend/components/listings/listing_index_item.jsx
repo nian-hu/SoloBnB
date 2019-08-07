@@ -39,11 +39,13 @@ class ListingIndexItem extends React.Component {
   }
 
   handleImage() {
-    debugger
     window.dispatchEvent(new Event('resize'))
   }
 
   render() {
+    if (!this.props.listing) {
+      return <div className="loader">Loading...</div>
+    }
     const { title, price, city } = this.props.listing
     const amenityIds = this.props.listing.amenity_ids;
     // debugger
