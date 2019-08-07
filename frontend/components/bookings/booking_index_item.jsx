@@ -51,7 +51,9 @@ class BookingIndexItem extends React.Component {
     // need to get listing!
     // const listing 
 
-    const { listing } = this.props;
+    // const { listing } = this.props;
+    // debugger
+    const listing = this.props.booking.listing;
 
     return (
       <div className='booking-index-item-content-container'>
@@ -66,7 +68,7 @@ class BookingIndexItem extends React.Component {
         </div>
 
         <div className='booking-index-item'>
-          <ListingIndexItem listing={booking.listing} />
+          <ListingIndexItem listing={listing} />
           {/* <h1>Figure this out</h1> */}
         </div>
       </div>

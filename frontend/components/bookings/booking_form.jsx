@@ -42,15 +42,18 @@ class BookingForm extends React.Component {
     e.preventDefault();
     if (userId) {
       // debugger
-      createBooking({
-        start_date: startDate,
-        end_date: endDate, // not showing up in controller?
-        guest_id: userId,
-        listing_id: this.props.listing.id
-      });
+      // createBooking({
+      //   start_date: startDate,
+      //   end_date: endDate, // not showing up in controller?
+      //   guest_id: userId,
+      //   listing_id: this.props.listing.id
+      // });
       // debugger
       // change this later!
-      this.props.history.push('/bookings');
+      // this.props.history.push('/bookings');
+      this.props.history.push(`/listings/${this.props.listing.id}/confirmation`)
+      // this.props.history.push(`/confirmation`)
+
     } else {
       openLoginModal();
     }
