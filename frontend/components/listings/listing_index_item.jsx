@@ -21,10 +21,26 @@ class ListingIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this)
+    this.handleImage = this.handleImage.bind(this)
   }
+
+  // componentDidMount() {
+  //   document.querySelectorAll('[aria-label="next"]').forEach(node => node.click())
+  // }
+
+  // componentDidMount() {
+  //   setTimeout(() => {
+  //     window.dispatchEvent(new Event('resize'));
+  //   }, 0);
+  // }
 
   handleClick() {
     this.props.history.push(`/listings/${this.props.listing.id}`)
+  }
+
+  handleImage() {
+    debugger
+    window.dispatchEvent(new Event('resize'))
   }
 
   render() {
@@ -86,7 +102,7 @@ class ListingIndexItem extends React.Component {
   
         <div className='listing-index-item-photo-container'>
           <Carousel width={"300px"} heightMode={"first"} wrapAround={true}>
-            <img src={this.props.listing.photoUrls[0]} />
+            <img onLoad={this.handleImage} src={this.props.listing.photoUrls[0]} />
             <img src={this.props.listing.photoUrls[1]} />
             <img src={this.props.listing.photoUrls[2]} />
             <img src={this.props.listing.photoUrls[3]} />

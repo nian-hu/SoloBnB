@@ -11,12 +11,15 @@ class Api::ListingsController < ApplicationController
     # debugger
 
     if params[:filterObj][:dates].values.any?('null')
-      @listings = Listing.with_attached_photos.includes(:amenities, :reviews).in_bounds(params[:filterObj][:bounds])
+      # @listings = Listing.with_attached_photos.includes(:amenities, :reviews).in_bounds(params[:filterObj][:bounds])
+      @listings = Listing.includes(:amenities, :reviews, photos_attachments: [:blob]).in_bounds(params[:filterObj][:bounds])
     elsif params[:filterObj][:dates].values.any?('')
       # debugger
-      @listings = Listing.with_attached_photos.includes(:amenities, :reviews).in_bounds(params[:filterObj][:bounds])
+      # @listings = Listing.with_attached_photos.includes(:amenities, :reviews).in_bounds(params[:filterObj][:bounds])
+      @listings = Listing.includes(:amenities, :reviews, photos_attachments: [:blob]).in_bounds(params[:filterObj][:bounds])
     else
-      @listings = Listing.with_attached_photos.includes(:amenities, :reviews).available_in_bounds(params[:filterObj][:bounds], params[:filterObj][:dates])
+      # @listings = Listing.with_attached_photos.includes(:amenities, :reviews).available_in_bounds(params[:filterObj][:bounds], params[:filterObj][:dates])
+      @listings = Listing.includes(:amenities, :reviews, photos_attachments: [:blob]).available_in_bounds(params[:filterObj][:bounds], params[:filterObj][:dates])
     end
 
     if @listings
@@ -27,7 +30,8 @@ class Api::ListingsController < ApplicationController
   end 
 
   def show
-    @listing = Listing.with_attached_photos.includes(:amenities, :reviews).find(params[:id])
+    # @listing = Listing.with_attached_photos.includes(:amenities, :reviews).find(params[:id])
+    @listing = Listing.includes(:amenities, :reviews, photos_attachments: [:blob]).find(params[:id])
     @amenities = @listing.amenities
 
     if @listing 
