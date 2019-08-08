@@ -6,11 +6,12 @@ class ChatChannel < ApplicationCable::Channel
   end
 
   def speak(data)
-    @message = @chat_channel.messages.new(body: data["message"])
+    message_data = data["message"]
+    @message = @chat_channel.messages.new(body: message_data['body'])
     @message.author_id = current_user.id
     @message.channel_id = @chat_channel.id
     if @message.save 
-      socket = { message: @message.body, type: "message" }
+      socket = { message: {body: @message.body, sender_id: @message.author_id}, type: "message" }
       ChatChannel.broadcast_to(@chat_channel, socket)
     end
   end 

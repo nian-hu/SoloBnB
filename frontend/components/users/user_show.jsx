@@ -7,7 +7,9 @@ import { openMessageModal } from '../../actions/modal_actions';
 
 const msp = (state, ownProps) => {
   const { userId } = ownProps.match.params;
-  const listings = Object.values(state.entities.listings).filter(obj => obj.host_id === userId)
+  // const listings = Object.values(state.entities.listings).filter(obj => obj.host_id === userId)
+  
+  const listings = Object.values(state.entities.listings) || [];
   const user = state.entities.users[userId] || {};
   
   // debugger
@@ -47,21 +49,21 @@ class UserShow extends React.Component {
       return <div className="loader">Loading...</div>
     } else {
 
-      // const { listings } = this.props;
-      // debugger
-      // const listingInfo = listings.length > 0 ? (
-      //   listings.map((listing, idx) => {
-      //     return (
-      //       <div>
-      //         <ListingIndexItem listing={listing} key={idx} />
-      //       </div>
-      //     )
-      //   })
-      // ) : (
-      //   <div>
-      //     <h1>No listings yet.</h1>
-      //   </div>
-      // )
+      const { listings } = this.props;
+      debugger
+      const listingInfo = listings.length > 0 ? (
+        listings.map((listing, idx) => {
+          return (
+            <div>
+              <ListingIndexItem listing={listing} key={idx} />
+            </div>
+          )
+        })
+      ) : (
+        <div>
+          <h1>No listings yet.</h1>
+        </div>
+      )
 
       return (
         <div>
@@ -72,10 +74,10 @@ class UserShow extends React.Component {
             <p>I love traveling alone. So far I've been to 35 countries. My favorite travel memories include snorkeling in the Great Barrier Reef, wine tasting in Santorini, and living out of a campervan in New Zealand for two weeks. Message me so we can be friends!</p>
           </div>
 
-          {/* <div className='user-listing-section'>
+          <div className='user-listing-section'>
             <h1>{`${user.fname}'s listings`}</h1>
             {listingInfo}
-          </div> */}
+          </div>
 
           <button
             className = 'user-message-button'

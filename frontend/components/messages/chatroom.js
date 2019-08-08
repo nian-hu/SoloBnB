@@ -1,5 +1,6 @@
 import React from 'react';
 import MessageForm from './message_form';
+import { connect } from 'react-redux';
 
 class ChatRoom extends React.Component {
   constructor(props) {
@@ -35,7 +36,9 @@ class ChatRoom extends React.Component {
       return (
         <li className='individual-message' key={idx}>
           <i className="user-image far fa-user-circle"></i>
-          {message}
+          {/* {message.sender_id} */}
+          {this.props.users[message.sender_id].fname}
+          {message.body}
           <div ref={this.bottom} />
         </li>
       )
@@ -52,4 +55,13 @@ class ChatRoom extends React.Component {
   }
 }
 
-export default ChatRoom;
+const msp = state => {
+  const users = state.entities.users
+
+  return {
+    users
+  }
+}
+
+export default connect(msp, null)(ChatRoom);
+

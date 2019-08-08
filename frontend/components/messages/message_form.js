@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 class MessageForm extends React.Component {
   constructor(props) {
@@ -16,13 +17,25 @@ class MessageForm extends React.Component {
     }
   }
 
+  // handleSubmit(e) {
+  //   e.preventDefault();
+  //   App.cable.subscriptions.subscriptions[0].speak({
+  //     message: this.state.body
+  //   })
+  //   this.setState({ body: '' })
+  // }
+
   handleSubmit(e) {
     e.preventDefault();
     App.cable.subscriptions.subscriptions[0].speak({
-      message: this.state.body
+      message: {
+        body: this.state.body,
+        id: this.props.currentUserId
+      }
     })
     this.setState({ body: '' })
   }
+
 
   render() {
     return (
@@ -42,4 +55,10 @@ class MessageForm extends React.Component {
   }
 }
 
-export default MessageForm;
+const msp = state => {
+  return {
+    currentUserId: state.session.id
+  }
+}
+
+export default connect(msp, null)(MessageForm);
