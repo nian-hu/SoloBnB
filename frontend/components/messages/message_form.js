@@ -35,7 +35,7 @@ class MessageForm extends React.Component {
             placeholder='Write your message here'
             className='message-form-input'
           />
-          <input type='submit' />
+          <input className='message-submit-button' type='submit' />
         </form>
       </div>
     )

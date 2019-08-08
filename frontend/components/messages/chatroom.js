@@ -33,7 +33,8 @@ class ChatRoom extends React.Component {
   render() {
     const messageList = this.state.messages.map((message, idx) => {
       return (
-        <li key={idx}>
+        <li className='individual-message' key={idx}>
+          <i className="user-image far fa-user-circle"></i>
           {message}
           <div ref={this.bottom} />
         </li>

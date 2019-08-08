@@ -11,6 +11,8 @@
   height: 300px;
   width: 400px;
   border: solid gray 1px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 // .load-button {
 //   position: absolute;
@@ -23,7 +25,9 @@
 }
 
 .message-form-input {
-  width: 100%;
+  width: 94%;
+  font-size: 15px;
+  padding: 10px;
 }
 
 .message-form-input:hover {
@@ -32,4 +36,37 @@
 
 .message-form-input:focus {
   outline: none;
+}
+
+.message-submit-button {
+  background-color: #ff5a5f;
+  color: white;
+  border-style: none;
+  font-size: 16px;
+  padding: 12px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.message-submit-button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #ff5a5f; 
+}
+
+.individual-message {
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.message-list {
+  padding: 10px;
+}
+
+.user-image {
+  padding-right: 5px;
 }
