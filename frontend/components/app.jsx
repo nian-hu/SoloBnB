@@ -10,6 +10,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import BookingIndexContainer from '../components/bookings/booking_index_container'; 
 import EntireListingIndex from '../components/listings/entire_listing_index';
 import UserShow from '../components/users/user_show';
+import ChatRoom from '../components/messages/chatroom';
 
 // import Background from '../components/splash/background';
 
@@ -31,6 +32,7 @@ const App = () => {
       <AuthRoute exact path='/' component={Splash} />
       <ProtectedRoute exact path='/bookings' component={BookingIndexContainer}/>
       <ProtectedRoute path='/users/:userId' component={UserShow}/>
+      <ProtectedRoute exact path='/messages' component={ChatRoom}/>
 
       <Route exact path='/listings' component={EntireListingIndex} /> 
       {/* <Route exact path='/listings' component={ListingIndexContainer}/>  */}

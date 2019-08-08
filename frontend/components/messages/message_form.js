@@ -31,7 +31,7 @@ class MessageForm extends React.Component {
           <input
             type='text'
             value={this.state.body}
-            onChange={this.handleChange}
+            onChange={this.handleChange('body')}
             placeholder='Write your message here'
           />
           <input type='submit' />
