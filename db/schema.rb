@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_06_202444) do
+ActiveRecord::Schema.define(version: 2019_08_08_140715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,22 @@ ActiveRecord::Schema.define(version: 2019_08_06_202444) do
     t.index ["listing_id"], name: "index_bookings_on_listing_id"
   end
 
+  create_table "channel_members", force: :cascade do |t|
+    t.integer "channel_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["channel_id"], name: "index_channel_members_on_channel_id"
+    t.index ["user_id"], name: "index_channel_members_on_user_id"
+  end
+
+  create_table "channels", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "owner_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "listing_amenities", force: :cascade do |t|
     t.integer "listing_id", null: false
     t.integer "amenity_id", null: false
@@ -76,6 +92,13 @@ ActiveRecord::Schema.define(version: 2019_08_06_202444) do
     t.index ["address"], name: "index_listings_on_address", unique: true
     t.index ["city"], name: "index_listings_on_city"
     t.index ["host_id"], name: "index_listings_on_host_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "body", null: false
+    t.integer "author_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
