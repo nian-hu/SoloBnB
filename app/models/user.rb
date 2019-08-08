@@ -42,19 +42,19 @@ class User < ApplicationRecord
   #   foreign_key: :owner_id,
   #   class_name: :Channel 
 
-  # has_many :channel_members,
-  #   primary_key: :id,
-  #   foreign_key: :user_id,
-  #   class_name: :ChannelMember 
+  has_many :channel_members,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :ChannelMember 
 
-  # has_many :channels,
-  #   through: :channel_members,
-  #   source: :Channel
+  has_many :channels,
+    through: :channel_members,
+    source: :channel
 
-  # has_many :messages,
-  #   primary_key: :id, 
-  #   foreign_key: :author_id,
-  #   class_name: :Message
+  has_many :messages,
+    primary_key: :id, 
+    foreign_key: :author_id,
+    class_name: :Message
 
   # def existing_chats_users
   #   existing_chat_users = []

@@ -13,6 +13,7 @@ User.destroy_all
 Amenity.destroy_all
 ListingAmenity.destroy_all
 Listing.destroy_all
+Channel.destroy_all
 
 
 
@@ -260,3 +261,10 @@ Review.create!(
   check_in: 5,
   value: 5
 )
+
+channel1 = Channel.create!(
+  name: 'myfirstchannel'
+)
+
+channel1.members << demo
+channel1.members << nian 
