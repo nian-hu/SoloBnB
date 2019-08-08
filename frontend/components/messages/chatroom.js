@@ -2,6 +2,7 @@ import React from 'react';
 import MessageForm from './message_form';
 import { connect } from 'react-redux';
 import { receiveMessage, fetchMessages } from '../../actions/message_actions';
+import { fetchUser } from '../../actions/user_actions';
 
 class ChatRoom extends React.Component {
   constructor(props) {
@@ -20,7 +21,11 @@ class ChatRoom extends React.Component {
           // this.setState({
           //   messages: this.state.messages.concat(data.message)
           // })
-          this.props.receiveMessage(data.message)
+          if (!this.props.users[data.message.author_id]) {
+            this.props.fetchUser(data.message.author_id).then(() => this.props.receiveMessage(data.message))
+          } else {
+            this.props.receiveMessage(data.message)
+          }
         },
         speak: function(data) {
           return this.perform('speak', data)
@@ -37,7 +42,17 @@ class ChatRoom extends React.Component {
   }
   
   render() {
+    // if (Object.values(this.props.users).length === 0) {
+    //   return <div className="loader">Loading...</div>
+    // }
+
+    if (this.props.messages.length === 0) {
+      return <div className="loader">Loading...</div>
+    }
+    debugger
+
     const messageList = this.props.messages.map((message, idx) => {
+      debugger
       return (
         <li className='individual-message' key={idx}>
           <i className="user-image far fa-user-circle"></i>
@@ -73,7 +88,8 @@ const msp = state => {
 const mdp = dispatch => {
   return {
     receiveMessage: (message) => dispatch(receiveMessage(message)),
-    fetchMessages: (id) => dispatch(fetchMessages(id))
+    fetchMessages: (id) => dispatch(fetchMessages(id)),
+    fetchUser: (id) => dispatch(fetchUser(id))
   }
 }
 
