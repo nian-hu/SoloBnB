@@ -11,5 +11,10 @@ Rails.application.routes.draw do
     end
     resources :bookings, only: [:index, :show, :update, :destroy]
     resources :reviews, only: [:update, :destroy]
+    resources :channels, only: [:create, :show, :destroy] do 
+      resources :messages, only: [:create, :index]
+    end
   end
+
+  mount ActionCable.server, at: '/cable'
 end
