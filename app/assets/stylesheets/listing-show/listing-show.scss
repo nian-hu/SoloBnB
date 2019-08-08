@@ -103,6 +103,23 @@
 .listing-header {
   padding-bottom: 20px;
   // padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.listing-host-container {
+  border: 1px solid rgb(177, 177, 177);
+  padding: 10px;
+}
+
+.listing-host-container:hover {
+  cursor: pointer;
+  border: 1px solid #008489;
+}
+
+.listing-host-container h1 {
+  font-size: 16px;
 }
 
 .listing-copy {
