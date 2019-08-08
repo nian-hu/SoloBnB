@@ -66,7 +66,7 @@ class UserShow extends React.Component {
         <div>
           <NavBarNormal />
           <div className='user-info-container'>
-            <h1>Hi, I'm {user.fname}</h1>
+            <h1>Hi, I'm {user.fname}!</h1>
           </div>
 
           {/* <div className='user-listing-section'>

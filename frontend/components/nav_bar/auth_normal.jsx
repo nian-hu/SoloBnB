@@ -70,8 +70,9 @@ class AuthNormal extends React.Component {
           <li className='dropdown-item' onClick={() => this.props.history.push('/bookings')}>
             Trips
           </li>
-          <li className='dropdown-item'>
-            <a href="https://github.com/nian-hu">Account</a>
+          <li className='dropdown-item' onClick={() => this.props.history.push(`/users/${currentUser.id}`)}>
+            Profile
+            {/* <a href="https://github.com/nian-hu">Account</a> */}
           </li>
           <li className='dropdown-logout'>
             <button className='logout-button' onClick={this.logout} >
