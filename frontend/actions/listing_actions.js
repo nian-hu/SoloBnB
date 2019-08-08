@@ -17,7 +17,8 @@ export const receiveListing = payload => {
     listing: payload.listing,
     amenities: payload.amenities,
     reviews: payload.reviews,
-    bookings: payload.bookings
+    bookings: payload.bookings,
+    host: payload.host
   }
 }
 

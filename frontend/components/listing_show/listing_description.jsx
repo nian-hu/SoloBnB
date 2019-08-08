@@ -3,12 +3,24 @@ import React from 'react';
 class ListingDescription extends React.Component {
   render() {
     const { listing } = this.props;
+
     return (
       <div className='listing-box'>
         <div className='listing-header'>
-          <h1 className='listing-title'>{listing.title}</h1>
-          {/* <h2 className='listing-price'>${listing.price}/night</h2> */}
-          <h2 className='listing-city'>{listing.city}</h2>
+          <div className='listing-title-container'>
+            <h1 className='listing-title'>{listing.title}</h1>
+            {/* <h2 className='listing-price'>${listing.price}/night</h2> */}
+            <h2 className='listing-city'>{listing.city}</h2>
+          </div>
+          
+          {/* <div className='listing-host-container'>
+            <img 
+              src={listing.host.photoUrl}
+              // src={photo}
+              className='host-profile-picture'
+            />
+          </div> */}
+
         </div>
         <p className='listing-copy'>{listing.description}</p>
       </div>

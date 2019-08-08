@@ -18,11 +18,6 @@ const msp = (state, ownProps) => {
   // const amenities = listing.amenity_ids.map(id => {
   //   state.entities.amenities[id]
   // })
-  // debugger;
-
-  
-
-  // debugger
 
   return {
     listing,

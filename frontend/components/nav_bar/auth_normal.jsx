@@ -54,7 +54,15 @@ class AuthNormal extends React.Component {
 
     // const { currentUser, logout, openModal } = this.props;
     const { currentUser, openModal } = this.props;
+    
 
+    // const photo = currentUser.photoUrl ? (
+    //   currentUser.photoUrl
+    // ) : ('/app/assets/images/users/profile_photo.jpg')
+
+    // const photo = currentUser.photoUrl ? (
+    //   currentUser.photoUrl
+    // ) : ('/app/assets/images/users/profile_photo.jpg')
 
     const dropdown = this.state.dropdown ? (
       <div className='dropdown-container'>
@@ -85,6 +93,7 @@ class AuthNormal extends React.Component {
           <img
             className='header-profile-picture'
             src={currentUser.photoUrl}
+            // src={photo}
             onClick={() => this.handleDropdown()}
           />
           {dropdown}

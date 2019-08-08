@@ -25,3 +25,9 @@ json.reviews do
     end
   end
 end
+
+json.host do 
+  json.set! @listing.host_id do
+    json.partial! 'api/users/user', user: @listing.host
+  end
+end

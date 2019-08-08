@@ -144,10 +144,16 @@ brooklyn.photos.attach(io: brooklyn4, filename: 'brooklyn4.jpg')
 brooklyn.photos.attach(io: brooklyn5, filename: 'brooklyn5.jpg')
 
 user1 = open("https://solobnb-seeds.s3.amazonaws.com/user1.jpg")
-user2 = open("https://solobnb-seeds.s3.amazonaws.com/user2.jpg")
+# user2 = open("https://solobnb-seeds.s3.amazonaws.com/user2.jpg")
 
 demo.photo.attach(io: user1, filename: 'user1.jpg')
-nian.photo.attach(io: user2, filename: 'user2.jpg')
+# nian.photo.attach(io: user1, filename: 'user1.jpg')
+# nian.photo.attach(io: user1, filename: 'user1.jpg')
+# rebecca.photo.attach(io: user1, filename: 'user1.jpg')
+# grant.photo.attach(io: user1, filename: 'user1.jpg')
+# claire.photo.attach(io: user1, filename: 'user1.jpg')
+# isabella.photo.attach(io: user1, filename: 'user1.jpg')
+# ashlyn.photo.attach(io: user1, filename: 'user1.jpg')
 
 
 # iceland = Listing.create!(host_id: 2,
