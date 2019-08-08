@@ -11,7 +11,9 @@ class BookingForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     // this.handleChange = this.handleChange.bind(this);
     this.isBlocked = this.isBlocked.bind(this);
-    this.avgRating = props.avgRating; 
+
+    // DO NOT DO THIS
+    // this.avgRating = props.avgRating; 
     // debugger
   }
 
@@ -98,7 +100,7 @@ class BookingForm extends React.Component {
             <p className='booking-price'>${this.props.listing.price}</p>
             <p className='per-night'>per night</p>
           </div>
-          <p className='booking-stars'>{this.renderStars(this.avgRating)}</p>
+          <p className='booking-stars'>{this.renderStars(this.props.avgRating)}</p>
         </div>
 
         <h1 className='booking-form-dates-title'>Dates</h1>

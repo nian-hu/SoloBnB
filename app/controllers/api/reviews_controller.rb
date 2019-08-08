@@ -13,7 +13,10 @@ class Api::ReviewsController < ApplicationController
   end 
 
   def index
-    @reviews = Review.where(listing_id: params[:review][:listing_id])
+    # debugger
+    # @reviews = Review.where(listing_id: params[:review][:listing_id])
+    @reviews = Review.where(listing_id: params[:listing_id])
+
     render :index
   end 
 

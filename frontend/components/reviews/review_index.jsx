@@ -1,12 +1,19 @@
 import React from 'react';
 import ReviewIndexItem from './review_index_item';
+import { withRouter } from 'react-router-dom';
 
 class ReviewIndex extends React.Component {
   // listing is being passed down as prop
   // unclear if I need it yet
 
   componentDidMount() {
-    // this.props.fetchReviews()
+    this.props.fetchReviews(this.props.match.params.listingId);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.listingId !== this.props.match.params.listingId) {
+      this.props.fetchReviews(this.props.match.params.listingId);
+    }
   }
 
   renderStars(num) {
@@ -137,4 +144,4 @@ class ReviewIndex extends React.Component {
   }
 }
 
-export default ReviewIndex;
+export default withRouter(ReviewIndex);

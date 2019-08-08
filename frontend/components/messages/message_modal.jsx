@@ -10,7 +10,7 @@ class MessageModal extends React.Component {
   render() {
     return (
       <div>
-      <h1>Hello {this.userId}</h1>
+      {/* <h1>Hello {this.userId}</h1> */}
       <ChatRoom />
       </div>
     )

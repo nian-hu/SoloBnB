@@ -17,3 +17,19 @@
 //   top: 5px;
 //   right: 5px;
 // }
+
+.message-form-container {
+  width: 100%;
+}
+
+.message-form-input {
+  width: 100%;
+}
+
+.message-form-input:hover {
+  border: 1px solid #008489;
+}
+
+.message-form-input:focus {
+  outline: none;
+}
