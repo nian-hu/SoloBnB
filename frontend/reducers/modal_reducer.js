@@ -1,4 +1,4 @@
-import { OPEN_MODAL, CLOSE_MODAL, OPEN_AMENITIES_MODAL, OPEN_REVIEW_MODAL } from '../actions/modal_actions'
+import { OPEN_MODAL, CLOSE_MODAL, OPEN_AMENITIES_MODAL, OPEN_REVIEW_MODAL, OPEN_MESSAGE_MODAL } from '../actions/modal_actions'
 
 const modalReducer = (state = null, action) => {
   Object.freeze(state);
@@ -21,6 +21,12 @@ const modalReducer = (state = null, action) => {
       return {
         modal: action.modal,
         listingId: action.listingId
+      }
+    }
+    case OPEN_MESSAGE_MODAL: {
+      return {
+        modal: action.modal,
+        userId: action.userId
       }
     }
     case CLOSE_MODAL: {

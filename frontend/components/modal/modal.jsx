@@ -7,6 +7,7 @@ import AmenitiesModal from '../listing_show/amenities_modal';
 // import ReviewModal from '../reviews/review_modal';
 import CreateReviewContainer from '../reviews/create_review_container';
 import UpdateReviewContainer from '../reviews/update_review_container';
+import MessageModal from '../messages/message_modal';
 
 //add functionality in here for clicking outside navbar dropdown?
 
@@ -27,6 +28,7 @@ function Modal(props) {
   const { closeModal } = props;
   let amenities;
   let listingId;
+  let userId;
   let modal;
 
   if (props.modal && typeof props.modal === 'object') {
@@ -38,6 +40,10 @@ function Modal(props) {
 
     if (props.modal.listingId) {
       listingId = props.modal.listingId;
+    }
+
+    if (props.modal.userId) {
+      userId = props.modal.userId;
     }
 
 
@@ -67,6 +73,9 @@ function Modal(props) {
       break;
     case 'update-review':
       component = <UpdateReviewContainer listingId={listingId} />
+      break;
+    case 'message':
+      component = <MessageModal userId={userId} />
       break;
     default:
       return null;
