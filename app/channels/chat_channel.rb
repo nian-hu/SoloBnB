@@ -11,7 +11,7 @@ class ChatChannel < ApplicationCable::Channel
     @message.author_id = current_user.id
     @message.channel_id = @chat_channel.id
     if @message.save 
-      socket = { message: {body: @message.body, sender_id: @message.author_id}, type: "message" }
+      socket = { message: @message, type: "message" }
       ChatChannel.broadcast_to(@chat_channel, socket)
     end
   end 

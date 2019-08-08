@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     end
     resources :bookings, only: [:index, :show, :update, :destroy]
     resources :reviews, only: [:update, :destroy]
+    get 'chatroom/:id/messages', to: 'chatroom#messages' 
+
     # resources :channels, only: [:create, :show, :destroy] do 
     #   resources :messages, only: [:create, :index]
     # end

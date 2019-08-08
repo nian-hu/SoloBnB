@@ -4,13 +4,15 @@ import listingsReducer from './listings_reducer';
 import amenitiesReducer from './amenities_reducer';
 import bookingsReducer from './bookings_reducer';
 import reviewsReducer from './reviews_reducer';
+import messagesReducer from './messages_reducer';
 
 const entitiesReducer = combineReducers({
   users: usersReducer,
   listings: listingsReducer,
   amenities: amenitiesReducer,
   bookings: bookingsReducer,
-  reviews: reviewsReducer
+  reviews: reviewsReducer,
+  messages: messagesReducer
 });
 
 export default entitiesReducer;

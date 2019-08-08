@@ -1,6 +1,7 @@
 import React from 'react';
 import MessageForm from './message_form';
 import { connect } from 'react-redux';
+import { receiveMessage, fetchMessages } from '../../actions/message_actions';
 
 class ChatRoom extends React.Component {
   constructor(props) {
@@ -16,15 +17,19 @@ class ChatRoom extends React.Component {
       { channel: 'ChatChannel' }, 
       {
         received: data => {
-          this.setState({
-            messages: this.state.messages.concat(data.message)
-          })
+          // this.setState({
+          //   messages: this.state.messages.concat(data.message)
+          // })
+          this.props.receiveMessage(data.message)
         },
         speak: function(data) {
           return this.perform('speak', data)
         }
       }
     )
+
+    this.props.fetchMessages(3);
+    // because we hard coded in chat channel
   }
 
   componentDidUpdate() {
@@ -32,12 +37,12 @@ class ChatRoom extends React.Component {
   }
   
   render() {
-    const messageList = this.state.messages.map((message, idx) => {
+    const messageList = this.props.messages.map((message, idx) => {
       return (
         <li className='individual-message' key={idx}>
           <i className="user-image far fa-user-circle"></i>
           {/* {message.sender_id} */}
-          {this.props.users[message.sender_id].fname}
+          {this.props.users[message.author_id].fname}
           {message.body}
           <div ref={this.bottom} />
         </li>
@@ -57,11 +62,20 @@ class ChatRoom extends React.Component {
 
 const msp = state => {
   const users = state.entities.users
+  const messages = Object.values(state.entities.messages)
 
   return {
-    users
+    users,
+    messages
   }
 }
 
-export default connect(msp, null)(ChatRoom);
+const mdp = dispatch => {
+  return {
+    receiveMessage: (message) => dispatch(receiveMessage(message)),
+    fetchMessages: (id) => dispatch(fetchMessages(id))
+  }
+}
+
+export default connect(msp, mdp)(ChatRoom);
 
