@@ -19,9 +19,13 @@ const msp = (state, ownProps) => {
   //   state.entities.amenities[id]
   // })
 
+  const hostId = listing.host_id;
+  const host = state.entities.users[hostId]
+
   return {
     listing,
     amenities,
+    host
     // bookedDates
   }
 }

@@ -28,7 +28,7 @@ class ListingShow extends React.Component {
   }
 
   render() {
-    const { listing, amenities, bookedDates } = this.props;
+    const { listing, amenities, host, bookedDates } = this.props;
     // debugger
     if (Object.keys(listing).length === 0) {
       // return <div>Fetching listing...</div>
@@ -44,7 +44,7 @@ class ListingShow extends React.Component {
             
             <div className='content'>
               <div className='listing-description'>
-                <ListingDescription listing={listing} />
+                <ListingDescription listing={listing} host={host} />
               </div>
 
               <div className='listing-amenities'>

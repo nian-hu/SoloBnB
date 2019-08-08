@@ -2,7 +2,7 @@ import React from 'react';
 
 class ListingDescription extends React.Component {
   render() {
-    const { listing } = this.props;
+    const { listing, host } = this.props;
 
     return (
       <div className='listing-box'>
@@ -13,13 +13,14 @@ class ListingDescription extends React.Component {
             <h2 className='listing-city'>{listing.city}</h2>
           </div>
           
-          {/* <div className='listing-host-container'>
-            <img 
+          <div className='listing-host-container'>
+            {/* <img 
               src={listing.host.photoUrl}
               // src={photo}
               className='host-profile-picture'
-            />
-          </div> */}
+            /> */}
+            <h1>{host.fname}</h1>
+          </div>
 
         </div>
         <p className='listing-copy'>{listing.description}</p>
