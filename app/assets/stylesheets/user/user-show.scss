@@ -1,3 +1,42 @@
-.user-info-container {
-  padding-top: 125px;
+.user-show-content {
+  margin-top: 125px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 10%;
+  padding-right: 20%;
+
+  .user-info-container {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(196, 195, 195);
+  }
+
+  .user-message-button {
+    width: 30%;
+    background: transparent;
+    font-size: 14px;
+    padding: 10px;
+    color: #484848;
+    border: 1px solid lightgray;
+  }
+
+  .user-message-button:hover {
+    cursor: pointer;
+    border: 1px solid #008489;
+  }
+
+  .user-message-button:focus {
+    outline: none;
+  }
+}
+
+.user-info-container h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.user-info-container p {
+  line-height: 1.4;
+  font-size: 16px;
 }

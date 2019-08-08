@@ -14,6 +14,9 @@ class ListingDescription extends React.Component {
 
   render() {
     const { listing, host } = this.props;
+    if (!host) {
+      return <div className="loader">Loading...</div>
+    }
 
     return (
       <div className='listing-box'>
