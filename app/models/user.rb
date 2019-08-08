@@ -56,6 +56,15 @@ class User < ApplicationRecord
   #   foreign_key: :author_id,
   #   class_name: :Message
 
+  # def existing_chats_users
+  #   existing_chat_users = []
+  #   self.channels.each do |channel|
+  #     existing_chat_users.concat(channel.channel_members.where.not(user_id: self.id).map {|channel_member| channel_member.user})
+  #   end
+  #   existing_chat_users.uniq
+  # end
+  
+
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     return user if user && user.is_password?(password)

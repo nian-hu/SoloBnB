@@ -1,4 +1,5 @@
 import React from 'react';
+import ChatRoom from '../messages/chatroom';
 
 class MessageModal extends React.Component {
   constructor(props) {
@@ -8,7 +9,10 @@ class MessageModal extends React.Component {
 
   render() {
     return (
+      <div>
       <h1>Hello {this.userId}</h1>
+      <ChatRoom />
+      </div>
     )
   }
 }
