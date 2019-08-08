@@ -37,6 +37,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jquery-rails'
 gem "aws-sdk-s3"
 # gem 'aws-sdk-s3', require: false
+gem 'active_model_serializers', '~> 0.10.0'
+
 
 
 group :development, :test do

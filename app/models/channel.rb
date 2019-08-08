@@ -15,17 +15,17 @@ class Channel < ApplicationRecord
   #   foreign_key: :owner_id,
   #   class_name: :User
 
-  # has_many :channel_members,
-  #   primary_key: :id,
-  #   foreign_key: :channel_id, 
-  #   class_name: :ChannelMember
+  has_many :channel_members,
+    primary_key: :id,
+    foreign_key: :channel_id, 
+    class_name: :ChannelMember
 
-  # has_many :members,
-  #   through: :channel_members,
-  #   source: :User
+  has_many :members,
+    through: :channel_members,
+    source: :User
 
-  # has_many :messages,
-  #   primary_key: :id, 
-  #   foreign_key: :messageable_id,
-  #   class_name: :Message
+  has_many :messages,
+    primary_key: :id, 
+    foreign_key: :messageable_id,
+    class_name: :Message
 end

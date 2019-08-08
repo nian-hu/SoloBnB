@@ -144,16 +144,21 @@ brooklyn.photos.attach(io: brooklyn4, filename: 'brooklyn4.jpg')
 brooklyn.photos.attach(io: brooklyn5, filename: 'brooklyn5.jpg')
 
 user1 = open("https://solobnb-seeds.s3.amazonaws.com/user1.jpg")
+user2 = open("https://solobnb-seeds.s3.amazonaws.com/user2.jpg")
+user3 = open("https://solobnb-seeds.s3.amazonaws.com/user3.jpg")
+user4 = open("https://solobnb-seeds.s3.amazonaws.com/user4.jpg")
+user5 = open("https://solobnb-seeds.s3.amazonaws.com/user5.jpg")
+user6 = open("https://solobnb-seeds.s3.amazonaws.com/user6.jpg")
+user7 = open("https://solobnb-seeds.s3.amazonaws.com/user7.jpg")
 # user2 = open("https://solobnb-seeds.s3.amazonaws.com/user2.jpg")
 
 demo.photo.attach(io: user1, filename: 'user1.jpg')
-# nian.photo.attach(io: user1, filename: 'user1.jpg')
-# nian.photo.attach(io: user1, filename: 'user1.jpg')
-# rebecca.photo.attach(io: user1, filename: 'user1.jpg')
-# grant.photo.attach(io: user1, filename: 'user1.jpg')
-# claire.photo.attach(io: user1, filename: 'user1.jpg')
-# isabella.photo.attach(io: user1, filename: 'user1.jpg')
-# ashlyn.photo.attach(io: user1, filename: 'user1.jpg')
+nian.photo.attach(io: user2, filename: 'user2.jpg')
+rebecca.photo.attach(io: user3, filename: 'user3.jpg')
+grant.photo.attach(io: user4, filename: 'user4.jpg')
+claire.photo.attach(io: user5, filename: 'user5.jpg')
+isabella.photo.attach(io: user6, filename: 'user6.jpg')
+ashlyn.photo.attach(io: user7, filename: 'user7.jpg')
 
 
 # iceland = Listing.create!(host_id: 2,

@@ -32,6 +32,7 @@ class UserShow extends React.Component {
   componentDidMount() {
     const { fetchUser } = this.props;
     fetchUser(this.props.match.params.userId);
+    window.scrollTo(0, 0);
   }
 
   componentDidUpdate(prevProps) {

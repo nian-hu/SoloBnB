@@ -11,9 +11,8 @@ Rails.application.routes.draw do
     end
     resources :bookings, only: [:index, :show, :update, :destroy]
     resources :reviews, only: [:update, :destroy]
-    resources :channels, only: [:create, :show, :destroy] do 
-      resources :messages, only: [:create, :index]
-    end
+    resources :conversations, only: [:index, :create]
+    resources :messages, only: [:create]
   end
 
   mount ActionCable.server, at: '/cable'
