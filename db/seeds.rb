@@ -10,12 +10,22 @@ require 'open-uri'
 
 
 User.destroy_all
-Amenity.destroy_all
-ListingAmenity.destroy_all
-Listing.destroy_all
-Channel.destroy_all
-ChannelMember.destroy_all
+User.reset_pk_sequence
 
+Amenity.destroy_all
+Amenity.reset_pk_sequence
+
+ListingAmenity.destroy_all
+ListingAmenity.reset_pk_sequence
+
+Listing.destroy_all
+Listing.reset_pk_sequence
+
+Channel.destroy_all
+Channel.reset_pk_sequence
+
+ChannelMember.destroy_all
+ChannelMember.reset_pk_sequence
 
 
 ################

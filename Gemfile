@@ -37,6 +37,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jquery-rails'
 gem "aws-sdk-s3"
 # gem 'aws-sdk-s3', require: false
+gem 'activerecord-reset-pk-sequence'
 
 
 group :development, :test do

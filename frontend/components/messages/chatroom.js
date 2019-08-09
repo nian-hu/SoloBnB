@@ -33,12 +33,12 @@ class ChatRoom extends React.Component {
       }
     )
 
-    this.props.fetchMessages(4);
+    this.props.fetchMessages(1);
     // because we hard coded in chat channel
   }
 
   componentDidUpdate() {
-    this.bottom.current.scrollIntoView();
+    // this.bottom.current.scrollIntoView();
   }
   
   render() {
