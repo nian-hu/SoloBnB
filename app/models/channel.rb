@@ -9,9 +9,9 @@
 #
 
 class Channel < ApplicationRecord
-  has_many :messages, dependent: :destroy 
-  has_many :channel_members, dependent: :destroy
-  has_many :users, through: :channel_members 
+  # has_many :messages, dependent: :destroy 
+  # has_many :channel_members, dependent: :destroy
+  # has_many :users, through: :channel_members 
 
   validates :name, presence: true, uniqueness: true, case_sensitive: false
 

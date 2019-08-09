@@ -33,7 +33,7 @@ class ChatRoom extends React.Component {
       }
     )
 
-    this.props.fetchMessages(3);
+    this.props.fetchMessages(4);
     // because we hard coded in chat channel
   }
 
@@ -42,13 +42,14 @@ class ChatRoom extends React.Component {
   }
   
   render() {
+    // debugger
     // if (Object.values(this.props.users).length === 0) {
     //   return <div className="loader">Loading...</div>
     // }
 
-    if (this.props.messages.length === 0) {
-      return <div className="loader">Loading...</div>
-    }
+    // if (this.props.messages.length === 0) {
+    //   return <div className="loader">Loading...</div>
+    // }
 
     const messageList = this.props.messages.map((message, idx) => {
       return (

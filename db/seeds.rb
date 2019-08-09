@@ -14,6 +14,7 @@ Amenity.destroy_all
 ListingAmenity.destroy_all
 Listing.destroy_all
 Channel.destroy_all
+ChannelMember.destroy_all
 
 
 
@@ -89,10 +90,10 @@ brooklyn = nian.listings.create!(host_id: nian.id,
 iceland = isabella.listings.create!(host_id: isabella.id,
                           title: "Whimsical cottage in Iceland",
                           description: "For the intrepid traveler who craves solitude and space for contemplation, this remote cottage located seemingly in the middle of nowhere of Iceland may be your calling. Based on the grounds of a family-run horse farm, this whimsical little hidey-hole is perfect for someone who needs to escape civilization for one, two, maybe seven days. Dive deep into the bleakness of the black sand beaches, feel the wild winds whip around your face as you stand atop a mountain, and gaze awe-struck at the sheer power of unbridled nature. If vast, wind-blown expanses and fog-filled landscapes strike excitement rather than fear in your heart, then look no further — this house is for you.",
-                          address: "Hofdabrekku 871",
+                          address: "26 870, Víkurbraut",
                           city: "Vík, Iceland",
-                          lat: 64.426811,
-                          long: -14.623470,
+                          lat: 63.417760,
+                          long: -19.013610,
                           price: 50,
                           # amenity_ids: [heat.id, laundry.id, kitchen.id]
                         )
@@ -106,6 +107,36 @@ bali = ashlyn.listings.create!(host_id: ashlyn.id,
                       long: 115.266617, 
                       price: 40,
                       # amenity_ids: [wifi.id, ac.id, laundry.id]
+                    )
+
+dolomites = isabella.listings.create!(host_id: isabella.id, 
+                      title: "Lakeside cabin in the Dolomites",
+                      description: "For the creative soul who needs to reawaken their senses after a long stretch of monotony and mundane concerns, consider embarking on a solo trip to northern Italy. After all, nothing invigorates the spirit more than waking up to a misty morning in the mountains and taking an early morning paddle around the still lake before retiring indoors to sip on some warm tea and get started on your creative endeavor. Whether it be painting or writing, photography or film, let the Dolomites be your muse. Who knows? Perhaps this cabin, located mere yards away from the famous Lago di Braies, will be the birthplace of the next great novel or cinematic masterpiece.",
+                      address: "St. Veit 27",
+                      city: "Braies, Italy",
+                      lat: 46.698959,
+                      long: 12.084640,
+                      price: 45
+                    )
+
+copenhagen = nian.listings.create!(host_id: nian.id,
+                      title: "Minimalist studio in Copenhagen",
+                      description: "For the urbane traveler who lives for the simple things in life, this minimalist studio is a space that you can call your own. Decorated in classic Scandinavian fashion with clean lines and sparse furnishings, this apartment provides a light-filled and relaxing space for tired travelers to lay down their suitcases and do the things they love, whether it’s reading a book or getting some work done on their laptop before heading out to explore the thriving metropolis that is Copenhagen. Explore the city’s canals by bike, spend an afternoon sipping lattes at a cafe, or wander around an art museum and soak up some of Europe’s finest artistic masterpieces. Then, once the sun has set and your feet have grown tired, you can come back to your home away from home.",
+                      address: "Adelgade 5-7, 1304",
+                      city: "Copenhagen, Denmark",
+                      lat: 55.682671,
+                      long: 12.582340,
+                      price: 50
+                    )
+
+tulum = ashlyn.listings.create!(host_id: ashlyn.id, 
+                      title: "Beachside resort in Tulum",
+                      description: "For the spontaneous traveler who revels in last-minute adventures and wild nights out with new friends from all across the world, this villa in Tulum offers the chance to make memories that you will never forget. Soak up the hot Mexican sun all day long, then party it up by the pool with your fellow villa-mates all night long. With a cold margarita in one hand and a beach ball in another, there’s no way you’re not going to enjoy yourself here. And once you get sick of lounging by a pool all day long, why not grab a bicycle and take a trip down to some of the local attractions? Dazzling blue cenotes and breathtaking archaeological sites are only a few pedals away. Don’t be disappointed that your friends from home can’t travel with you — you have dozens more waiting for you here.",
+                      address: "Av. Tulum Mza 39, Centro",
+                      city: "Tulum, Mexico",
+                      lat: 21.153350,
+                      long: -86.825270,
+                      price: 40
                     )
 
 bali1 = open("https://solobnb-seeds.s3.amazonaws.com/bali1.jpg")
@@ -144,17 +175,57 @@ brooklyn.photos.attach(io: brooklyn3, filename: 'brooklyn3.jpg')
 brooklyn.photos.attach(io: brooklyn4, filename: 'brooklyn4.jpg')
 brooklyn.photos.attach(io: brooklyn5, filename: 'brooklyn5.jpg')
 
+dolomites1 = open("https://solobnb-seeds.s3.amazonaws.com/dolomites1.jpg")
+dolomites2 = open("https://solobnb-seeds.s3.amazonaws.com/dolomites2.jpg")
+dolomites3 = open("https://solobnb-seeds.s3.amazonaws.com/dolomites3.jpg")
+dolomites4 = open("https://solobnb-seeds.s3.amazonaws.com/dolomites4.jpg")
+dolomites5 = open("https://solobnb-seeds.s3.amazonaws.com/dolomites5.jpg")
+
+dolomites.photos.attach(io: dolomites1, filename: 'dolomites1.jpg')
+dolomites.photos.attach(io: dolomites2, filename: 'dolomites2.jpg')
+dolomites.photos.attach(io: dolomites3, filename: 'dolomites3.jpg')
+dolomites.photos.attach(io: dolomites4, filename: 'dolomites4.jpg')
+dolomites.photos.attach(io: dolomites5, filename: 'dolomites5.jpg')
+
+copenhagen1 = open("https://solobnb-seeds.s3.amazonaws.com/copenhagen1.jpg")
+copenhagen2 = open("https://solobnb-seeds.s3.amazonaws.com/copenhagen2.jpg")
+copenhagen3 = open("https://solobnb-seeds.s3.amazonaws.com/copenhagen3.jpg")
+copenhagen4 = open("https://solobnb-seeds.s3.amazonaws.com/copenhagen4.jpg")
+copenhagen5 = open("https://solobnb-seeds.s3.amazonaws.com/copenhagen5.jpg")
+
+copenhagen.photos.attach(io: copenhagen1, filename: 'copenhagen1.jpg')
+copenhagen.photos.attach(io: copenhagen2, filename: 'copenhagen2.jpg')
+copenhagen.photos.attach(io: copenhagen3, filename: 'copenhagen3.jpg')
+copenhagen.photos.attach(io: copenhagen4, filename: 'copenhagen4.jpg')
+copenhagen.photos.attach(io: copenhagen5, filename: 'copenhagen5.jpg')
+
+tulum1 = open("https://solobnb-seeds.s3.amazonaws.com/tulum1.jpg")
+tulum2 = open("https://solobnb-seeds.s3.amazonaws.com/tulum2.jpg")
+tulum3 = open("https://solobnb-seeds.s3.amazonaws.com/tulum3.jpg")
+tulum4 = open("https://solobnb-seeds.s3.amazonaws.com/tulum4.jpg")
+tulum5 = open("https://solobnb-seeds.s3.amazonaws.com/tulum5.jpg")
+
+tulum.photos.attach(io: tulum1, filename: 'tulum1.jpg')
+tulum.photos.attach(io: tulum2, filename: 'tulum2.jpg')
+tulum.photos.attach(io: tulum3, filename: 'tulum3.jpg')
+tulum.photos.attach(io: tulum4, filename: 'tulum4.jpg')
+tulum.photos.attach(io: tulum5, filename: 'tulum5.jpg')
+
 user1 = open("https://solobnb-seeds.s3.amazonaws.com/user1.jpg")
-# user2 = open("https://solobnb-seeds.s3.amazonaws.com/user2.jpg")
+user2 = open("https://solobnb-seeds.s3.amazonaws.com/user2.jpg")
+user3 = open("https://solobnb-seeds.s3.amazonaws.com/user3.jpg")
+user4 = open("https://solobnb-seeds.s3.amazonaws.com/user4.jpg")
+user5 = open("https://solobnb-seeds.s3.amazonaws.com/user5.jpg")
+user6 = open("https://solobnb-seeds.s3.amazonaws.com/user6.jpg")
+user7 = open("https://solobnb-seeds.s3.amazonaws.com/user7.jpg")
 
 demo.photo.attach(io: user1, filename: 'user1.jpg')
-# nian.photo.attach(io: user1, filename: 'user1.jpg')
-# nian.photo.attach(io: user1, filename: 'user1.jpg')
-# rebecca.photo.attach(io: user1, filename: 'user1.jpg')
-# grant.photo.attach(io: user1, filename: 'user1.jpg')
-# claire.photo.attach(io: user1, filename: 'user1.jpg')
-# isabella.photo.attach(io: user1, filename: 'user1.jpg')
-# ashlyn.photo.attach(io: user1, filename: 'user1.jpg')
+nian.photo.attach(io: user2, filename: 'user2.jpg')
+rebecca.photo.attach(io: user3, filename: 'user3.jpg')
+grant.photo.attach(io: user4, filename: 'user4.jpg')
+claire.photo.attach(io: user5, filename: 'user5.jpg')
+isabella.photo.attach(io: user6, filename: 'user6.jpg')
+ashlyn.photo.attach(io: user7, filename: 'user7.jpg')
 
 
 # iceland = Listing.create!(host_id: 2,
@@ -243,6 +314,61 @@ ListingAmenity.create!(
 ListingAmenity.create!(
   amenity_id: laundry.id, 
   listing_id: bali.id
+)
+
+ListingAmenity.create!(
+  amenity_id: wifi.id, 
+  listing_id: copenhagen.id
+)
+
+ListingAmenity.create!(
+  amenity_id: ac.id, 
+  listing_id: copenhagen.id
+)
+
+ListingAmenity.create!(
+  amenity_id: heat.id, 
+  listing_id: copenhagen.id
+)
+
+ListingAmenity.create!(
+  amenity_id: laundry.id, 
+  listing_id: copenhagen.id
+)
+
+ListingAmenity.create!(
+  amenity_id: kitchen.id, 
+  listing_id: copenhagen.id
+)
+
+ListingAmenity.create!(
+  amenity_id: heat.id, 
+  listing_id: dolomites.id
+)
+
+ListingAmenity.create!(
+  amenity_id: laundry.id, 
+  listing_id: dolomites.id
+)
+
+ListingAmenity.create!(
+  amenity_id: kitchen.id, 
+  listing_id: dolomites.id
+)
+
+ListingAmenity.create!(
+  amenity_id: wifi.id, 
+  listing_id: tulum.id
+)
+
+ListingAmenity.create!(
+  amenity_id: ac.id, 
+  listing_id: tulum.id
+)
+
+ListingAmenity.create!(
+  amenity_id: laundry.id, 
+  listing_id: tulum.id
 )
 
 
