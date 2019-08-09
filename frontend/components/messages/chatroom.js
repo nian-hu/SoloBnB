@@ -49,16 +49,19 @@ class ChatRoom extends React.Component {
     if (this.props.messages.length === 0) {
       return <div className="loader">Loading...</div>
     }
-    debugger
 
     const messageList = this.props.messages.map((message, idx) => {
-      debugger
       return (
         <li className='individual-message' key={idx}>
-          <i className="user-image far fa-user-circle"></i>
-          {/* {message.sender_id} */}
-          {this.props.users[message.author_id].fname}
-          {message.body}
+          <div className='individual-message-user'>
+            <i className="user-image far fa-user-circle"></i>
+            {this.props.users[message.author_id].fname}
+           </div>
+          
+          <div className='individual-message-body'>
+            {message.body}
+          </div>
+
           <div ref={this.bottom} />
         </li>
       )

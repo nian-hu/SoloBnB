@@ -50,7 +50,6 @@ class UserShow extends React.Component {
     } else {
 
       const { listings } = this.props;
-      debugger
       const listingInfo = listings.length > 0 ? (
         listings.map((listing, idx) => {
           return (
