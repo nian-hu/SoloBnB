@@ -39,4 +39,21 @@
 .user-info-container p {
   line-height: 1.4;
   font-size: 16px;
+  padding-bottom: 20px;
+}
+
+.user-listing-section h1 {
+  padding-bottom: 20px;
+}
+
+.user-listing-section .listing-index-item-container {
+  border: 1px solid rgb(190, 190, 190);
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.user-listing-section .listing-index-item-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0,0,0,0.13);
+  cursor: pointer;
 }

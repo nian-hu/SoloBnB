@@ -72,6 +72,11 @@ class UserShow extends React.Component {
           <div className='user-info-container'>
             <h1>Hi, I'm {user.fname}!</h1>
             <p>I love traveling alone. So far I've been to 35 countries. My favorite travel memories include snorkeling in the Great Barrier Reef, wine tasting in Santorini, and living out of a campervan in New Zealand for two weeks. Message me so we can be friends!</p>
+            <button
+                className='user-message-button'
+                onClick={() => dispatch(openMessageModal('message', user.id))}>
+                Message User
+          </button>
           </div>
 
           <div className='user-listing-section'>
@@ -79,11 +84,6 @@ class UserShow extends React.Component {
             {listingInfo}
           </div>
 
-          <button
-            className = 'user-message-button'
-            onClick={() => dispatch(openMessageModal('message', user.id))}>
-          Message User
-          </button>
           </div>
         </div>
       )
