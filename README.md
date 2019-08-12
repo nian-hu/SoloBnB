@@ -4,6 +4,8 @@
 
 SoloBnB is a single-page, full-stack web application modeled after Airbnb and geared toward solo travelers. It uses Ruby on Rails with a PostgresSQL database on the back-end, and React.js and Redux on the front-end. For image hosting, it utilizes Amazon Web Services. For live messaging, it uses Action Cable to integrate WebSockets with the rest of the Rails application.
 
+![](app/assets/images/readme/solobnb-demo.gif)
+
 ## Why solo travel?
 
 It started entirely by accident. I was 14 years old, and like most 14-year-olds, I was restless. I had a mind full of grand visions and an undeterred spirit that had not yet known the crushing bite of failure. All I knew was that I had spent my entire life in New York and I wanted to see things I had never seen before, like stars peppering the night sky and vast expanses of desolate nature where not a single skyscraper dominated the landscape. 
@@ -46,11 +48,16 @@ And so, SoloBnB is not just a travel booking application. It's also an ode to th
 #### Bookings
 * Users are able to book listings for a given date range. If the listing is unavailable during those dates, users will not be permitted to select those dates.
 * Users are able to access their own bookings under the "Trips" section of the navigational bar dropdown.
-* Users are able to cancel bookings if the start date has not yet occurred.
-* Users are able to write reviews for bookings if the end date has already passed.
+* Users are only able to cancel bookings if the start date has not yet occurred.
+* Users are only able to write reviews for bookings if the end date has already passed.
+
+### Reviews
+* Users are able to write reviews for past bookings and also provide ratings in the form of stars, from one to five.
+* Users are able to rate bookings across six categories — accuracy, communication, cleanliness, location, check-in, and value.
+* Listings display an overall average rating that is recalculated every time a new rating is submitted.
+* Listings also display an average rating for each of the six categories. Each category rating is also recalculated every time a new rating is submitted.
 
 #### User Profiles + Messaging
-
 * Users are able to access their own profile under the "Profile" section of the navigational bar dropdown.
 * Users can visit a host's profile by clicking on the host's name on the listing page.
 * Profiles display a short text description as well as the user's listings. If the user has no listings, it will say that the user has no listings at this time.
