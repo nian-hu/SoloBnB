@@ -35,8 +35,6 @@ And so, SoloBnB is not just a travel booking application. It's also an ode to th
 
 #### User Authentication
 
-![](app/assets/images/readme/solobnb-user-auth.gif)
-
 * Users can sign up or log in with an existing account.
 * Invalid login or signup attempts would trigger both front-end and back-end errors.
 
@@ -91,6 +89,7 @@ end
 #### Listings + Search
 * Listings are shown according to the position of the map. As users zoom out and move around, more listings are displayed.
 
+![](app/assets/images/readme/solobnb-listing-map.gif)
 ```
 class Listing < ApplicationRecord
   //...
@@ -108,6 +107,8 @@ end
 
 * Users are able to search for listings with Google Maps Places API, namely the Autocomplete widget.
 * Users can filter listings based on availability by selecting a date range on the splash page. Unavailable listings will not be displayed.
+
+![](app/assets/images/readme/solobnb-listing-search.gif)
 
 ```
 class ListingMap extends React.Component {
@@ -216,6 +217,9 @@ class BookingIndexItem extends React.Component {
 ### Reviews
 * Users are able to write reviews for past bookings and also provide ratings in the form of stars, from one to five.
 * Users are able to rate bookings across six categories — accuracy, communication, cleanliness, location, check-in, and value.
+
+![](app/assets/images/readme/solobnb-review.gif)
+
 * Listings display an overall average rating that is recalculated every time a new rating is submitted.
 * Listings also display an average rating for each of the six categories. Each category rating is also recalculated every time a new rating is submitted.
 
@@ -258,6 +262,9 @@ class ReviewIndex extends React.Component {
 * Users can visit a host's profile by clicking on the host's name on the listing page.
 * Profiles display a short text description as well as the user's listings. If the user has no listings, it will say that the user has no listings at this time.
 * Users are able to send live messages to each other with a button accessible on every user's profile page.
+
+![](app/assets/images/readme/solobnb-messaging.gif)
+
 ```
 class ChatChannel < ApplicationCable::Channel
   def subscribed 
