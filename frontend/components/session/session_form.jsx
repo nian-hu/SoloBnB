@@ -91,7 +91,7 @@ class SessionForm extends React.Component {
     };
     this.props.processForm(user).then(() => {
       this.props.closeModal();
-      this.props.history.push('/listings');
+      // this.props.history.push('/listings');
     })
   }
 
@@ -107,7 +107,7 @@ class SessionForm extends React.Component {
     const demo_user = { email: 'demo_user@gmail.com', password: 'hunter12' }
     this.props.processForm(demo_user).then(() => {
       this.props.closeModal();
-      this.props.history.push('/listings');
+      // this.props.history.push('/listings');
     })
   }
 
