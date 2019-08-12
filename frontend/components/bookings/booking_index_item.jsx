@@ -72,7 +72,7 @@ class BookingIndexItem extends React.Component {
 
     // only display review button if the booking end date has passed
     //change this to BEFORE
-    const reviewButton = moment(booking.end_date).isAfter(moment(), 'day') ? (
+    const reviewButton = moment(booking.end_date).isBefore(moment(), 'day') ? (
       // <button onClick={() => this.createReview(booking.listing.id)} className='review-button'>
       <button onClick={() => dispatch(openReviewModal('create-review', booking.listing.id))} className='review-button'>
         Write Review

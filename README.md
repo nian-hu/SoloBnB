@@ -34,6 +34,9 @@ And so, SoloBnB is not just a travel booking application. It's also an ode to th
 #### [SoloBnB Design Documents](https://github.com/nian-hu/solobnb/wiki)
 
 #### User Authentication
+
+![](app/assets/images/readme/solobnb-user-auth.gif)
+
 * Users can sign up or log in with an existing account.
 * Invalid login or signup attempts would trigger both front-end and back-end errors.
 * Logged in users can access features such as making reservations, accessing host profiles, and messaging hosts.
