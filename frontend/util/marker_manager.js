@@ -41,7 +41,7 @@ export default class MarkerManager {
       listingId: listing.id,
       // icon: markerIcon,
       label: {
-        text: `${listing.price}`,
+        text: `$${listing.price}`,
         fontSize: "12px",
         fontWeight: "bold",
         color: "white"

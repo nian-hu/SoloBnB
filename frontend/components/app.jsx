@@ -32,6 +32,7 @@ const App = () => {
       <AuthRoute exact path='/' component={Splash} />
       <ProtectedRoute exact path='/bookings' component={BookingIndexContainer}/>
       <ProtectedRoute path='/users/:userId' component={UserShow}/>
+      {/* <Route path='/users/:userId' component={UserShow} /> */}
       <ProtectedRoute exact path='/messages' component={ChatRoom}/>
 
       <Route exact path='/listings' component={EntireListingIndex} /> 

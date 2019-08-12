@@ -4,6 +4,7 @@ import { fetchUser } from '../../actions/user_actions';
 import NavBarNormal from '../nav_bar/nav_bar_normal';
 import ListingIndexItem from '../listings/listing_index_item';
 import { openMessageModal } from '../../actions/modal_actions';
+import { openModal } from '../../actions/modal_actions';
 
 const msp = (state, ownProps) => {
   const { userId } = ownProps.match.params;
@@ -29,6 +30,7 @@ const mdp = dispatch => {
 class UserShow extends React.Component {
   constructor(props) {
     super(props);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -40,6 +42,15 @@ class UserShow extends React.Component {
   componentDidUpdate(prevProps) {
     if (prevProps.match.params.userId !== this.props.match.params.userId) {
       this.props.fetchUser(this.props.match.params.userId);
+    }
+  }
+
+  handleClick(str, id) {
+    const { user } = this.props;
+    if (user) {
+      openMessageModal(str, id)
+    } else {
+      openModal('login');
     }
   }
 
@@ -73,7 +84,9 @@ class UserShow extends React.Component {
             <p>I love traveling alone. So far I've been to 35 countries. My favorite travel memories include snorkeling in the Great Barrier Reef, wine tasting in Santorini, and living out of a campervan in New Zealand for two weeks. Message me so we can be friends!</p>
             <button
                 className='user-message-button'
-                onClick={() => dispatch(openMessageModal('message', user.id))}>
+                onClick={() => dispatch(openMessageModal('message', user.id))}
+                // onClick={this.handleClick('message', user.id)}
+                >
                 Message User
           </button>
           </div>
