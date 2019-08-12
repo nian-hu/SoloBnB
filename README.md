@@ -188,6 +188,8 @@ end
 * Users are only able to cancel bookings if the start date has not yet occurred.
 * Users are only able to write reviews for bookings if the end date has already passed.
 
+![](app/assets/images/readme/solobnb-booking.gif)
+
 ```
 class BookingIndexItem extends React.Component {
     // ...
