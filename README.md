@@ -22,7 +22,7 @@ And so, SoloBnB is not just a travel booking application. It's also an ode to th
 
 * React / Redux
 * Ruby on Rails
-* PostgreSQL
+* PostgresSQL
 * Javascript
 * CSS
 * Webpack
